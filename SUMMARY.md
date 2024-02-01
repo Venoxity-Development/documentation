@@ -13,3 +13,4 @@
 ## SimpleCTRL
 
 * [🚔 What is SimpleCTRL?](simplectrl/what-is-simplectrl.md)
+* [📃 Resource Installation](simplectrl/resource-installation.md)
