@@ -5,17 +5,17 @@ description: Instructions on how to use SimpleCTRL in game.
 # 🎮 In Game Use Guide
 
 ### Controls
-| Key              | Description            |
-|------------------|------------------------|
-| DOWN ARROW       | Hazard Key             |       
-|       E          | Refuel Key             |
-|       I          | Park Key               |
-| LEFT ARROW       | Left Blinker Key       |
-| LEFT CONTROL KEY | Park Modifier Key      |
-| LEFT SHIFT KEY   | Blinker Modifier Key   |
-| RIGHT ARROW      | Right Blinker Key      |
-| RIGHT SHIFT KEY  | Shuffle Key            |
-|      T           | Engine Toggle Key      |
+| Key              | Description              |
+|------------------|--------------------------|
+| DOWN ARROW       | Activates Hazard Lights  |       
+|       E          | Initiates Refueling      |
+|       I          | Engages Parking Mode     |
+| LEFT ARROW       | Activates Left Blinker   |
+| LEFT CONTROL KEY | Modifier for Parking     |
+| LEFT SHIFT KEY   | Modifier for Blinker     |
+| RIGHT ARROW      | Activates Right Blinker  |
+| RIGHT SHIFT KEY  | Shuffle Seats            |
+|      T           | Toggles Engine On/Off    |
 
 ### Commands
 ```Hood```
