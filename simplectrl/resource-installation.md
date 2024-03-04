@@ -1,8 +1,8 @@
+# 📃 Resource Installation
+
 {% hint style="info" %}
 Current Stable release is 1.0.5.1.
 {% endhint %}
-
-# 📃 Resource Installation
 
 ## Required dependencies for SimpleCTRL
 
