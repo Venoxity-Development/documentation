@@ -8,7 +8,7 @@ description: Instructions on how to use SimpleCTRL in game.
 | Key              | Description              |
 |------------------|--------------------------|
 | DOWN ARROW       | Activates Hazard Lights  |       
-|       E          | Initiates Refueling      |
+| <div align="center">E</div>          | Initiates Refueling      |
 |       I          | Engages Parking Mode     |
 | LEFT ARROW       | Activates Left Blinker   |
 | LEFT CONTROL KEY | Modifier for Parking     |
