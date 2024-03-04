@@ -18,8 +18,8 @@ description: Instructions on how to use SimpleCTRL in game.
 |        T        | Toggles Engine On/Off   | Long Press         |
 
 ### Commands
-```Hood```
+```Hood``` opens the front cover of the car.
 
-```Trunk```
+```Trunk``` opens the rear storage compartment of the car.
 
-```Shuffle``` same as ```RIGHT SHIFT Key```, allows you to switch seats.
+```Shuffle``` same as ```RIGHT SHIFT Key```, enabling passengers to swiftly switch seats.
