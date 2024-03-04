@@ -22,4 +22,4 @@ description: Instructions on how to use SimpleCTRL in game.
 
 ```Trunk```
 
-```Shuffle``` same as ```RIGHT SHIFT Key```, allows you to shuffle seats.
+```Shuffle``` same as ```RIGHT SHIFT Key```, allows you to switch seats.
