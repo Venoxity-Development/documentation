@@ -1,5 +1,6 @@
 ---
-description: {% hint style="info" %}
+description: 
+{% hint style="info" %}
 Current Stable release is 1.0.5.1.
 {% endhint %}
 ---
