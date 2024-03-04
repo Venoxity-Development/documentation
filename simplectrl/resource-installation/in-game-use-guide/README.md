@@ -7,6 +7,6 @@ description: Instructions on how to use SimpleCTRL in game.
 ### Controls
 | Key | Description | Type |
 |-----|-------------|------|
-
+| 1   | 2           |  3   |
 ### Commands
 ```Command```
