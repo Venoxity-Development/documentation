@@ -16,6 +16,7 @@ description: Instructions on how to use SimpleCTRL in game.
 | RIGHT ARROW      | Activates Right Blinker |
 | RIGHT SHIFT KEY  | Shuffle Seats           |
 |      T           | Toggles Engine On/Off   |
+
 ### Commands
 ```Hood```
 
