@@ -11,8 +11,8 @@ description: Instructions on how to use SimpleCTRL in game.
 |        E        | Initiates Refueling     | Quick Press                |
 |        I        | Engages Parking Mode    | Quick Press & Modifier Key |
 | LEFT ARROW      | Activates Left Blinker  | Quick Press & Modifier Key |  
-| LEFT CONTROL KEY|                         | Modifier Key               |
-| LEFT SHIFT KEY  |                         | Modifier Key               |
+| LEFT CONTROL KEY| Modifier for Parking    | Modifier Key               |
+| LEFT SHIFT KEY  | Modifier for Blinker    | Modifier Key               |
 | RIGHT ARROW     | Activates Right Blinker | Quick Press & Modifier Key | 
 | RIGHT SHIFT KEY | Shuffle Seats           | Double Quick Press         |
 |        T        | Toggles Engine On/Off   | Long Press                 |
