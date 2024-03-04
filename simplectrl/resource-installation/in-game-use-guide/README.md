@@ -11,6 +11,7 @@ description: Instructions on how to use SimpleCTRL in game.
 | LEFT ARROW     | Left Blinker Key     |
 | RIGHT ARROW    | Right Blinker Key    |
 | LEFT SHIFT KEY | Blinker Modifier Key |
+| T              | Engine Toggle Key    |
 
 ### Commands
 ```Hood```
