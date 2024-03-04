@@ -1,2 +1,5 @@
 # 🎮 In Game Use Guide
-instructions on how to use SimpleCTRL in game.
+Instructions on how to use SimpleCTRL in game.
+
+
+### Controls
