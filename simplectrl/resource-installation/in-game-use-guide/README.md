@@ -10,4 +10,6 @@ description: Instructions on how to use SimpleCTRL in game.
 | 1    | 2           | 3    |
 
 ### Commands
-```Command```
+```Hood```
+```Trunk```
+```Shuffle```
