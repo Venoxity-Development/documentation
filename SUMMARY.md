@@ -5,10 +5,6 @@
 ## SimpleHUD
 
 * [🗺 What is SimpleHUD?](simplehud/what-is-simplehud.md)
-* [📃 Resource Installation](simplehud/resource-installation.md)
-  * [© Configure Base Settings](simplehud/resource-installation/configure-base-settings.md)
-  * [🎮 In Game Use Guide](simplehud/resource-installation/in-game-use-guide/README.md)
-    * [SimpleHUD Menu](simplehud/resource-installation/in-game-use-guide/simplehud-menu.md)
 
 ## SimpleCTRL
 
