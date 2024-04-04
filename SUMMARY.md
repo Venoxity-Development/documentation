@@ -10,4 +10,4 @@
 
 ## WeaponControl
 
-* [🚔 What is WeaponControl?](weaponcontrol/what-is-weaponcontrol.md)
+* [<img src="../.gitbook/assets/gun.svg" alt="Emoji"> What is WeaponControl?](weaponcontrol/what-is-weaponcontrol.md)
