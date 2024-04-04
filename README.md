@@ -31,3 +31,7 @@ layout: landing
 {% endcontent-ref %}
 
 {% embed url="https://www.lcpdfr.com/downloads/gta5mods/scripts/43666-simplectrl/" %}
+
+## LicensePlateChanger
+
+## WeaponControl
