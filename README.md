@@ -42,7 +42,7 @@ layout: landing
 
 <div align="left">
 
-<figure><img src=".gitbook/assets/Final2.png" alt="" width="375"><figcaption><p>WeaponControl Logo</p></figcaption></figure>
+<figure><img src=".gitbook/assets/FINAL2.png" alt="" width="375"><figcaption><p>WeaponControl Logo</p></figcaption></figure>
 
 </div>
 
