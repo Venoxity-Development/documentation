@@ -30,6 +30,12 @@ layout: landing
 
 ## LicensePlateChanger
 
+<div align="left">
+
+<figure><img src=".gitbook/assets/LPCThumbnail.png" alt="" width="375"><figcaption><p>LicensePlateChanger Logo</p></figcaption></figure>
+
+</div>
+
 {% embed url="https://www.lcpdfr.com/downloads/gta5mods/scripts/47126-licenseplatechanger/" %}
 
 ## WeaponControl
