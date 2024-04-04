@@ -40,4 +40,10 @@ layout: landing
 
 ## WeaponControl
 
+<div align="left">
+
+<figure><img src=".gitbook/assets/Final2.png" alt="" width="375"><figcaption><p>WeaponControl Logo</p></figcaption></figure>
+
+</div>
+
 {% embed url="https://www.lcpdfr.com/downloads/gta5mods/scripts/47141-weaponcontrol/" %}
