@@ -1,1 +1,1 @@
-# 🚔 What is SimpleEmotes?
+# 😀 What is SimpleEmotes?
