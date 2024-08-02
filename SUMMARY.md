@@ -11,3 +11,7 @@
 ## WeaponControl
 
 * [<img src=".gitbook/assets/gun.svg" alt="Emoji"> What is WeaponControl?](weaponcontrol/what-is-weaponcontrol.md)
+
+## SimpleEmotes
+
+* [<img src=".gitbook/assets/gun.svg" alt="Emoji"> What is WeaponControl?](simpleemotes/what-is-simpleemotes.md)
