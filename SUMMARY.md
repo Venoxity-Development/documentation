@@ -6,3 +6,7 @@
 ## Getting Started
 
 * [Quickstart](getting-started/quickstart.md)
+
+## Basics
+
+* [Essential Knowledge](basics/essential-knowledge.md)
