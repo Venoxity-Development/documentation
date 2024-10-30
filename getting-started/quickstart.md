@@ -7,7 +7,7 @@ description: A Brief Overview of Getting Started with Venoxity Development Plugi
 
 <div align="left">
 
-<figure><img src="../.gitbook/assets/ReadyEnhanceBanner.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/QuickStartBanner.png" alt=""><figcaption></figcaption></figure>
 
 </div>
 
@@ -17,22 +17,75 @@ In this article, I’ll guide you through how to get started with Venoxity Devel
 If you're already a **user of our plugins** and have them **installed**, you can skip to the [**Essential Knowledge**](../basics/essential-knowledge.md) section for **advanced tips** and **updates**.
 {% endhint %}
 
-## ExtraManager
+## 1. 🛠️ ExtraManager
 
-Effortless Control Over Vehicle Extras
+**Tagline:** **Effortless Control Over Vehicle Extras**
 
-## LicensePlateChanger
+### **Overview**
 
-Switch Plates, Change Fate: LPC
+Description coming soon!
 
-## SimpleCTRL
+### **Installation Instructions**
 
-Simplifying Vehicle Functions: Control, Customize, Conquer with SimpleCTRL.
+**Coming Soon!**\
+Check back later for detailed installation instructions.
 
-## SimpleHUD
+***
 
-Seamlessly display your location, compass, and time in-game
+## 2. 🏷️ LicensePlateChanger
 
-## WeaponControl
+**Tagline:** **Switch Plates, Change Fate: LPC**
 
-Keep your friends close and your weapons under lock and key: because even guns need a timeout!
+### **Overview**
+
+_Description coming soon!_
+
+### **Installation Instructions**
+
+**Coming Soon!**\
+Check back later for detailed installation instructions.
+
+***
+
+## 3. ⚙️ SimpleCTRL
+
+**Tagline:** **Simplifying Vehicle Functions: Control, Customize, Conquer**
+
+### **Overview**
+
+_Description coming soon!_
+
+### **Installation Instructions**
+
+**Coming Soon!**\
+Check back later for detailed installation instructions.
+
+***
+
+## 4. 🗺️ SimpleHUD
+
+**Tagline:** **Seamlessly Display Your Location, Compass, and Time In-Game**
+
+### **Overview**
+
+_Description coming soon!_
+
+### **Installation Instructions**
+
+**Coming Soon!**\
+Check back later for detailed installation instructions.
+
+***
+
+## 5. 🔒 WeaponControl
+
+**Tagline:** **Keep Your Friends Close and Your Weapons Under Lock and Key**
+
+### **Overview**
+
+_Description coming soon!_
+
+### **Installation Instructions**
+
+**Coming Soon!**\
+Check back later for detailed installation instructions.
