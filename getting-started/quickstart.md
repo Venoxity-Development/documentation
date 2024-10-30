@@ -19,10 +19,20 @@ If you're already a **user of our plugins** and have them **installed**, you can
 
 ## ExtraManager
 
+Effortless Control Over Vehicle Extras
+
 ## LicensePlateChanger
+
+Switch Plates, Change Fate: LPC
 
 ## SimpleCTRL
 
+Simplifying Vehicle Functions: Control, Customize, Conquer with SimpleCTRL.
+
 ## SimpleHUD
 
+Seamlessly display your location, compass, and time in-game
+
 ## WeaponControl
+
+Keep your friends close and your weapons under lock and key: because even guns need a timeout!
