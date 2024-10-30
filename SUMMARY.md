@@ -1,6 +1,6 @@
 # Table of contents
 
-* [Welcome to Venoxity](README.md)
+* [Welcome](README.md)
 
 ## SimpleCTRL
 
@@ -8,7 +8,7 @@
 
 ## WeaponControl
 
-* [🔫 What is WeaponControl?](weaponcontrol/what-is-weaponcontrol.md)
+* [🚔 What is WeaponControl?](weaponcontrol/what-is-weaponcontrol.md)
 
 ## SimpleEmotes
 

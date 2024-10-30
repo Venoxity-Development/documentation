@@ -1,1 +1,2 @@
-# <img src="../.gitbook/assets/gun.svg" alt="Emoji"> What is WeaponControl?
+# 🚔 What is WeaponControl?
+
