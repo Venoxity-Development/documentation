@@ -7,7 +7,7 @@ description: A Brief Overview of Getting Started with Venoxity Development Plugi
 
 <div align="left">
 
-<figure><img src="../.gitbook/assets/QuickStartBanner (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/ReadyEnhanceBanner.png" alt=""><figcaption></figcaption></figure>
 
 </div>
 
