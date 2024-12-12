@@ -29,4 +29,8 @@ icon: scroll
 * Redesigned the postal map for a more accurate and modern look.
 * Rewritten from **C# (ScriptHookVDotNet)** to **C++ (ScriptHookV)** for improved performance and stability.
 * Introduced a proximity-based **"Near"** prefix system for better location awareness on the HUD.
-* Added checks in `DrawTextOnScreen` for radar status, player state, and UI visibility to ensure text is displayed appropriately.
+
+## MessageBoards 1.0.0 (12/12/24)
+
+* Initial Release
+
