@@ -34,3 +34,13 @@ icon: scroll
 
 * Initial Release
 
+## License Plate Changer 1.0.1 (12/23/24)
+
+### 🛠️ **Fixes**
+* Complete Rewrite: The script has undergone a complete overhaul to boost performance and expand functionality.
+
+### ✨ **Improvements**
+* New API System: A robust API built for developers, ensuring seamless compatibility with both RagePluginHook (RPH) and ScriptHookVDotNet (SHVDN).  
+* Trailer Support: Now includes full support for various plate formats and types tailored to trailers.
+* Enhanced Vehicle Data Configuration: The `vehicleData.toml` file now supports multiple plate sets, offering different plate types and formats for more flexible vehicle configurations.  
+
