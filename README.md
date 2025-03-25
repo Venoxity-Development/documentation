@@ -21,7 +21,7 @@ Then open [http://localhost:3000](http://localhost:3000) in your browser.
 ## What’s Inside
 
 - 🧩 **Fumadocs** – Fast, flexible documentation powered by MDX.
-- 📘 **Orama** – Built-in search and AI Search integration.
+- 📘 **Orama** – Built-in search and AI Search integration. (Note: Uncomment Orama in providers.tsx)
 - 🧠 **AI SDK** – Supports the [Vercel AI SDK](https://sdk.vercel.ai) for advanced AI chat features.
 - 🧱 **MCP-Ready** – Easily extend with an optional MCP Server for more advanced workflows.
 
