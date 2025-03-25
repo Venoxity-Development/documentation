@@ -12,16 +12,11 @@ export async function createAiSdkEngine(): Promise<Engine> {
     onUpdate?: (full: string) => void,
     onEnd?: (full: string) => void,
   ) {
+    console.log(messages)
     controller = new AbortController();
 
     try {
       let textContent = '';
-
-      messages.push({
-        id: generateId(),
-        role: 'assistant',
-        content: '',
-      });
 
       await callChatApi({
         api: '/api/chat',
@@ -39,11 +34,14 @@ export async function createAiSdkEngine(): Promise<Engine> {
           messages = messages.slice(0, messages.length - 1);
         },
         onResponse: undefined,
-        onUpdate({ message, data }) {
-          if (!message) return;
+        onUpdate({ message }) {
+          const lastMessage = messages[messages.length - 1];
+          const replaceLastMessage = lastMessage?.role === 'assistant';
 
           messages = [
-            ...messages.slice(0, messages.length - 1),
+            ...(replaceLastMessage
+              ? messages.slice(0, messages.length - 1)
+              : messages),
             message
           ];
           textContent = message.content;
