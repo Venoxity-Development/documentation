@@ -8,9 +8,10 @@ const SearchDialog = dynamic(() => import('@/components/search')); // lazy load
 export function Providers({ children }: { children: ReactNode }) {
   return (
     <RootProvider
-      search={{
-        SearchDialog,
-      }}
+      // todo: uncomment for orama search
+      // search={{
+      //   SearchDialog,
+      // }}
     >
       {children}
     </RootProvider>
