@@ -17,6 +17,12 @@ export async function createAiSdkEngine(): Promise<Engine> {
     try {
       let textContent = '';
 
+      messages.push({
+        id: generateId(),
+        role: 'assistant',
+        content: '',
+      });
+
       await callChatApi({
         api: '/api/chat',
         body: {
@@ -29,10 +35,17 @@ export async function createAiSdkEngine(): Promise<Engine> {
         credentials: undefined,
         headers: undefined,
         abortController: () => controller,
-        restoreMessagesOnFailure() { },
+        restoreMessagesOnFailure() {
+          messages = messages.slice(0, messages.length - 1);
+        },
         onResponse: undefined,
-        onUpdate({ message }) {
+        onUpdate({ message, data }) {
           if (!message) return;
+
+          messages = [
+            ...messages.slice(0, messages.length - 1),
+            message
+          ];
           textContent = message.content;
           onUpdate?.(textContent);
         },
@@ -71,12 +84,7 @@ export async function createAiSdkEngine(): Promise<Engine> {
         content: text,
       });
 
-      const response = await fetchStream(messages, onUpdate, onEnd);
-      messages.push({
-        id: generateId(),
-        role: 'assistant',
-        content: response,
-      });
+      await fetchStream(messages, onUpdate, onEnd);
     },
     async regenerateLast(onUpdate, onEnd) {
       const last = messages.at(-1);
@@ -86,20 +94,10 @@ export async function createAiSdkEngine(): Promise<Engine> {
 
       messages.pop();
 
-      const response = await fetchStream(messages, onUpdate, onEnd);
-      messages.push({
-        id: generateId(),
-        role: 'assistant',
-        content: response,
-      });
+      await fetchStream(messages, onUpdate, onEnd);
     },
     getHistory() {
-      return messages
-        .filter((msg) => msg.role === 'assistant' || msg.role === 'user')
-        .map((msg) => ({
-          role: msg.role as MessageRecord['role'],
-          content: msg.content,
-        }));
+      return messages as MessageRecord[];
     },
     clearHistory() {
       messages = [];
