@@ -12,7 +12,6 @@ export async function createAiSdkEngine(): Promise<Engine> {
     onUpdate?: (full: string) => void,
     onEnd?: (full: string) => void,
   ) {
-    console.log(messages)
     controller = new AbortController();
 
     try {
