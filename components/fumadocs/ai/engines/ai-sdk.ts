@@ -1,7 +1,7 @@
 import type { Engine, MessageRecord } from '@/components/fumadocs/ai/context';
-import { processChatResponse } from '@/lib/ai/process-chat-response';
+import { callChatApi } from '@ai-sdk/ui-utils';
 import { generateId } from 'ai';
-import type { Message, ToolCall, } from "ai";
+import type { Message } from "ai";
 
 export async function createAiSdkEngine(): Promise<Engine> {
   let messages: Message[] = [];
@@ -15,52 +15,47 @@ export async function createAiSdkEngine(): Promise<Engine> {
     controller = new AbortController();
 
     try {
-      const response = await fetch('/api/chat', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify({
+      let textContent = '';
+
+      await callChatApi({
+        api: '/api/chat',
+        body: {
           messages: userMessages.map((msg) => ({
             role: msg.role,
             content: msg.content,
           })),
-        }),
-        signal: controller.signal,
+        },
+        streamProtocol: 'data',
+        credentials: undefined,
+        headers: undefined,
+        abortController: () => controller,
+        restoreMessagesOnFailure() { },
+        onResponse: undefined,
+        onUpdate({ message }) {
+          if (!message) return;
+          textContent = message.content;
+          onUpdate?.(textContent);
+        },
+        onToolCall({ toolCall }) {
+          console.log('calling tool', toolCall.toolName);
+        },
+        onFinish(message) {
+          onEnd?.(message?.content || '');
+        },
+        generateId,
+        fetch,
+        lastMessage: messages[messages.length - 1] ? {
+          ...messages[messages.length - 1],
+          parts: [],
+        } : undefined,
       });
-
-      if (!response.ok) {
-        throw new Error(`HTTP error! status: ${response.status}`);
-      }
-
-      let textContent = '';
-
-      if (response.body) {
-        await processChatResponse({
-          stream: response.body,
-          update: (chunk) => {
-            textContent = chunk.message.content;
-            onUpdate?.(textContent);
-          },
-          lastMessage: messages[messages.length - 1] ? { ...messages[messages.length - 1], parts: [] } : undefined,
-          onToolCall({ toolCall }) {
-            console.log('calling tool', toolCall.toolName);
-          },
-          onFinish({ message, finishReason }) {
-            onEnd?.(message?.content || '');
-          },
-          generateId,
-        });
-      } else {
-        throw new Error('Response body is null');
-      }
 
       return textContent;
     } catch (error) {
       if (error instanceof Error && error.name !== 'AbortError') {
+        controller = null;
         console.error('Error in AI stream:', error);
-        const errorMessage =
-          'Sorry, an error occurred while generating a response.';
+        const errorMessage = 'Sorry, an error occurred while generating a response.';
         onEnd?.(errorMessage);
         return errorMessage;
       }
