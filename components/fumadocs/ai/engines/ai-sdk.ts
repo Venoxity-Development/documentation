@@ -57,7 +57,7 @@ export async function createAiSdkEngine(): Promise<Engine> {
         fetch,
         lastMessage: messages[messages.length - 1] ? {
           ...messages[messages.length - 1],
-          parts: [],
+          parts: messages[messages.length - 1].parts ?? [],
         } : undefined,
       });
 
