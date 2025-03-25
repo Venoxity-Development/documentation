@@ -42,10 +42,7 @@ export async function createAiSdkEngine(): Promise<Engine> {
             textContent = chunk.message.content;
             onUpdate?.(textContent);
           },
-          lastMessage: {
-            ...messages[messages.length - 1],
-            parts: []
-          },
+          lastMessage: messages[messages.length - 1] ? { ...messages[messages.length - 1], parts: [] } : undefined,
           onToolCall({ toolCall }) {
             console.log('calling tool', toolCall.toolName);
           },
