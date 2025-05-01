@@ -20,8 +20,7 @@ const config: NextConfig = {
   serverExternalPackages: [
     'ts-morph',
     'typescript',
-    'oxc-transform',
-    '@shikijs/twoslash',
+    'oxc-transform'
   ],
   images: {
     unoptimized: true,
