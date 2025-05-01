@@ -22,7 +22,7 @@ function Footer(): React.ReactElement {
         <div>
           <p className="mb-1 text-sm font-semibold">Docs</p>
           <p className="text-xs">
-            An example on how to use Fumadocs with the Vercel AI SDK.
+            A starter-template for Fumadocs.
           </p>
         </div>
       </div>

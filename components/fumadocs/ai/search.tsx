@@ -30,7 +30,7 @@ import {
     DialogTitle,
 } from '@radix-ui/react-dialog';
 import { useChat, type UseChatHelpers, type Message } from '@ai-sdk/react';
-import type { ProvideLinksToolSchema } from '@/lib/chat/inkeep-qa-schema';
+import type { ProvideLinksToolSchema } from '@/lib/chat/qa-schema';
 import type { z } from 'zod';
 
 const ChatContext = createContext<UseChatHelpers | null>(null);

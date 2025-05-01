@@ -8,7 +8,7 @@ export default function DocsPage(): React.ReactElement {
     <main className="container flex flex-col py-16">
       <h1 className="text-2xl font-semibold md:text-3xl">Welcome to My App</h1>
       <p className="text-fd-muted-foreground text-lg mt-1">
-        Get started with Fumadocs and the AI SDK.
+        Get started with Fumadocs.
       </p>
       <div className="mt-8 grid grid-cols-1 gap-4 text-left md:grid-cols-2">
         <Item href="/docs/ui">

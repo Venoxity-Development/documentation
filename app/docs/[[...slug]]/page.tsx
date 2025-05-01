@@ -5,6 +5,7 @@ import {
   DocsDescription,
   DocsTitle,
 } from 'fumadocs-ui/page';
+import { APIPage } from 'fumadocs-openapi/ui';
 import { notFound } from 'next/navigation';
 import defaultMdxComponents from 'fumadocs-ui/mdx';
 import { createMetadata } from '@/lib/metadata';
@@ -40,7 +41,7 @@ export default async function Page(props: {
       <DocsDescription>{page.data.description}</DocsDescription>
       <DocsBody>
         <MDX
-          components={{ ...defaultMdxComponents, APIPage: openapi.APIPage }}
+          components={{ ...defaultMdxComponents, APIPage }}
         />
       </DocsBody>
     </DocsPage>
