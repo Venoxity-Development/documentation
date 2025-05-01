@@ -10,7 +10,7 @@ export async function generateDocs() {
 
   await Promise.all([
     OpenAPI.generateFiles({
-      input: ['./openapi.json'],
+      input: ['./openapi.yml'],
       output: './content/docs/openapi',
       per: 'operation',
       includeDescription: true,
