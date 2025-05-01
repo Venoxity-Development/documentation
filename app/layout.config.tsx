@@ -10,7 +10,7 @@ export const linkItems: LinkItemType[] = [
   // },
   {
     type: 'icon',
-    url: 'https://github.com/techwithanirudh/fumadocs-mcp',
+    url: 'https://github.com/techwithanirudh/fumadocs-changelog',
     text: 'Github',
     icon: (
       <svg role="img" viewBox="0 0 24 24" fill="currentColor">

@@ -31,7 +31,7 @@ export default async function Page(props: {
         single: false,
       }}
       editOnGithub={{
-        repo: 'fumadocs-mcp',
+        repo: 'fumadocs-changelog',
         owner: 'techwithanirudh',
         sha: 'main',
         path,

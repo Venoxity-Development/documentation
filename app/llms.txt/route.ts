@@ -23,7 +23,7 @@ export async function GET() {
 
   const files = await fg([
     './content/docs/**/*.mdx',
-    '!./content/docs/api/reference/**/*',
+    '!./content/docs/openapi/**/*',
   ]);
 
   type DocEntry = { title: string; description: string; file: string };

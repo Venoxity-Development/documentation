@@ -1,10 +1,8 @@
-import { DocsLayout, type DocsLayoutProps } from 'fumadocs-ui/layouts/docs';
+import { DocsLayout, type DocsLayoutProps } from 'fumadocs-ui/layouts/notebook';
 import type { ReactNode } from 'react';
-import { MessageCircle } from 'lucide-react';
 import { baseOptions } from '@/app/layout.config';
 import 'fumadocs-twoslash/twoslash.css';
 import { source } from '@/lib/source';
-import { AISearchTrigger } from '@/components/fumadocs/ai';
 import DocsBackground from '@/components/docs-background';
 
 const docsOptions: DocsLayoutProps = {
@@ -42,13 +40,9 @@ const docsOptions: DocsLayoutProps = {
 
 export default function Layout({ children }: { children: ReactNode }) {
   return (
-    <DocsLayout {...docsOptions}>
+    <DocsLayout {...docsOptions} nav={{ ...docsOptions.nav, mode: 'top' }}>
       <DocsBackground />
       {children}
-      <AISearchTrigger>
-        <MessageCircle className="size-4" />
-        Ask AI
-      </AISearchTrigger>
     </DocsLayout>
   );
 }

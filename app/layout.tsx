@@ -5,6 +5,8 @@ import { Inter } from 'next/font/google';
 import type { ReactNode } from 'react';
 import { Body } from './layout.client';
 import { Providers } from './providers';
+import { AISearchTrigger } from '@/components/fumadocs/ai';
+import { MessageCircle } from 'lucide-react';
 
 const inter = Inter({
   subsets: ['latin'],
@@ -34,7 +36,13 @@ export default function Layout({ children }: { children: ReactNode }) {
       suppressHydrationWarning
     >
       <Body>
-        <Providers>{children}</Providers>
+        <Providers>
+          {children}
+          <AISearchTrigger>
+            <MessageCircle className="size-4" />
+            Ask AI
+          </AISearchTrigger>
+        </Providers>
       </Body>
     </html>
   );
