@@ -7,10 +7,27 @@ import {
 } from 'fumadocs-ui/page';
 import { APIPage } from 'fumadocs-openapi/ui';
 import { notFound } from 'next/navigation';
-import defaultMdxComponents from 'fumadocs-ui/mdx';
 import { createMetadata } from '@/lib/metadata';
 import { metadataImage } from '@/lib/metadata-image';
-import { Updates, Update } from '@/components/fumadocs/updates';
+import { getMDXComponents } from "@/mdx-components";
+import { Callout } from "fumadocs-ui/components/callout";
+import {
+  HoverCard,
+  HoverCardContent,
+  HoverCardTrigger,
+} from "@/components/ui/hover-card";
+import Link from 'next/link';
+import { AutoTypeTable } from "fumadocs-typescript/ui";
+import {
+  type ComponentProps,
+  type FC,
+  type ReactElement,
+  type ReactNode,
+} from "react";
+import { createGenerator } from 'fumadocs-typescript';
+
+const generator = createGenerator();
+export const revalidate = false;
 
 export default async function Page(props: {
   params: Promise<{ slug?: string[] }>;
@@ -28,13 +45,13 @@ export default async function Page(props: {
       toc={page.data.toc}
       full={page.data.full}
       tableOfContent={{
-        style: 'clerk',
+        style: "clerk",
         single: false,
       }}
       editOnGithub={{
-        repo: 'fumadocs-changelog',
-        owner: 'techwithanirudh',
-        sha: 'main',
+        repo: "fumadocs-changelog",
+        owner: "techwithanirudh",
+        sha: "main",
         path,
       }}
     >
@@ -42,7 +59,41 @@ export default async function Page(props: {
       <DocsDescription>{page.data.description}</DocsDescription>
       <DocsBody>
         <MDX
-          components={{ ...defaultMdxComponents, APIPage, Updates, Update }}
+          components={getMDXComponents({
+            a: ({ href, ...props }) => {
+              const found = source.getPageByHref(href ?? "", {
+                dir: page.file.dirname,
+              });
+
+              if (!found) return <Link href={href} {...props} />;
+
+              return (
+                <HoverCard>
+                  <HoverCardTrigger asChild>
+                    <Link
+                      href={
+                        found.hash
+                          ? `${found.page.url}#${found.hash}`
+                          : found.page.url
+                      }
+                      {...props}
+                    />
+                  </HoverCardTrigger>
+                  <HoverCardContent className="text-sm">
+                    <p className="font-medium">{found.page.data.title}</p>
+                    <p className="text-fd-muted-foreground">
+                      {found.page.data.description}
+                    </p>
+                  </HoverCardContent>
+                </HoverCard>
+              );
+            },
+            AutoTypeTable: (props) => (
+              <AutoTypeTable generator={generator} {...props} />
+            ),
+            blockquote: Callout as unknown as FC<ComponentProps<"blockquote">>,
+            APIPage: (props) => <APIPage {...openapi.getAPIPageProps(props)} />
+          })}
         />
       </DocsBody>
     </DocsPage>
