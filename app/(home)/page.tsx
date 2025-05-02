@@ -6,7 +6,9 @@ import Link from 'next/link';
 export default function DocsPage(): React.ReactElement {
   return (
     <main className="container flex flex-col py-16">
-      <h1 className="text-2xl font-semibold md:text-3xl">Welcome to My App</h1>
+      <h1 className="text-2xl font-semibold md:text-3xl">
+        Welcome to the Starter Kit
+      </h1>
       <p className="text-fd-muted-foreground text-lg mt-1">
         Get started with Fumadocs.
       </p>
@@ -21,11 +23,11 @@ export default function DocsPage(): React.ReactElement {
           </p>
         </Item>
 
-        <Item href="/docs/openapi">
-          <Icon className="openapi">
+        <Item href="/docs/api-reference">
+          <Icon className="api-reference">
             <RocketIcon className="size-full" />
           </Icon>
-          <h2 className="mb-2 text-lg font-semibold">OpenAPI</h2>
+          <h2 className="mb-2 text-lg font-semibold">API Reference</h2>
           <p className="text-sm text-fd-muted-foreground">
             Learn how to use the OpenAPI. Get started with the API reference and
             the SDKs.

@@ -40,7 +40,7 @@ export const baseOptions: BaseLayoutProps = {
         >
           <circle cx={10} cy={10} r={10} fill="currentColor" />
         </svg>
-        <span className="font-medium in-[header]:text-[15px]">My App</span>
+        <span className="font-medium in-[header]:text-[15px]">Starter Kit</span>
       </>
     ),
     transparentMode: 'top',

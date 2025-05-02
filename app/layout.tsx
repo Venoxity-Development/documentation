@@ -14,8 +14,8 @@ const inter = Inter({
 
 export const metadata = createMetadata({
   title: {
-    template: '%s | My App',
-    default: 'My App',
+    template: '%s | Starter Kit',
+    default: 'Starter Kit',
   },
   description: 'The Next.js framework for building documentation sites',
   metadataBase: baseUrl,
