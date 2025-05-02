@@ -1,7 +1,3 @@
-import { promises as fs } from 'node:fs';
-import fg from 'fast-glob';
-import matter from 'gray-matter';
-import path from 'node:path';
 import { baseUrl } from '@/lib/metadata';
 import { source } from '@/lib/source';
 import { getLLMSummary } from '@/lib/get-llm-text';
