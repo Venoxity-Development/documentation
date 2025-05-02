@@ -40,11 +40,11 @@ export default async function Page(props: {
 
   const path = `content/docs/${page.file.path}`;
 
-  const MDX = page.data.body;
+  const { body: Mdx, toc } = await page.data.load();
 
   return (
     <DocsPage
-      toc={page.data.toc}
+      toc={toc}
       full={page.data.full}
       tableOfContent={{
         style: "clerk",
@@ -62,7 +62,7 @@ export default async function Page(props: {
         />
       </div>
       <DocsBody>
-        <MDX
+        <Mdx
           components={getMDXComponents({
             a: ({ href, ...props }) => {
               const found = source.getPageByHref(href ?? "", {
