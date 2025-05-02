@@ -33,8 +33,7 @@ const docsOptions: DocsLayoutProps = {
             </div>
           ),
         };
-      },
-      className: ''
+      }
     },
   },
 };
