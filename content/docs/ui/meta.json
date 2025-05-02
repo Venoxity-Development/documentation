@@ -3,5 +3,5 @@
   "description": "Set up your documentation",
   "icon": "Book",
   "root": true,
-  "pages": ["---Getting Started---", "index", "test", "changelog", "..."]
+  "pages": ["---Getting Started---", "index", "quickstart", "---Essentials---", "...essentials", "..."]
 }

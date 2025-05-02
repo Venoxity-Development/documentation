@@ -7,6 +7,7 @@ import { Body } from './layout.client';
 import { Providers } from './providers';
 import { AISearchTrigger } from '@/components/fumadocs/ai';
 import { MessageCircle } from 'lucide-react';
+import 'katex/dist/katex.css';
 
 const inter = Inter({
   subsets: ['latin'],

@@ -9,6 +9,8 @@ import { Updates, Update } from "@/components/fumadocs/updates";
 import { TypeTable } from "fumadocs-ui/components/type-table";
 import * as Twoslash from "fumadocs-twoslash/ui";
 import { Mermaid } from "@/components/mdx/mermaid";
+import { Callout } from "fumadocs-ui/components/callout";
+import { CodeBlock, Pre } from 'fumadocs-ui/components/codeblock';
 
 export function getMDXComponents(components?: MDXComponents): MDXComponents {
   return {
@@ -24,9 +26,14 @@ export function getMDXComponents(components?: MDXComponents): MDXComponents {
     Accordions,
     Updates,
     Update,
-
     Mermaid,
     TypeTable,
+    Callout,
+    // pre: ({ ref: _ref, ...props }) => (
+    //   <CodeBlock {...props}>
+    //     <Pre>{props.children}</Pre>
+    //   </CodeBlock>
+    // ),
     ...components,
   };
 }
