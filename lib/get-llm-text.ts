@@ -7,6 +7,7 @@ import remarkMdx from 'remark-mdx';
 import { remarkAutoTypeTable } from 'fumadocs-typescript';
 import { remarkInclude } from 'fumadocs-mdx/config';
 import { type Page } from '@/lib/source';
+import { owner, repo } from './github';
 
 
 const categoryMap: Record<string, string> = {
@@ -32,12 +33,13 @@ export async function getLLMText(page: Page) {
     path: page.data._file.absolutePath,
     value: page.data.content,
   });
+  const path = `content/docs/${page.file.path}`;
 
   return `# ${category}: ${page.data.title}
 URL: ${page.url}
-Source: https://raw.githubusercontent.com/fuma-nama/fumadocs/refs/heads/main/apps/docs/content/docs/${page.file.path}
+Source: https://raw.githubusercontent.com/${owner}/${repo}/refs/head/main/${path}
 
-${page.data.description}
+${page.data.description || 'No description available'}
         
 ${processed}`;
 }
@@ -49,7 +51,7 @@ export async function getLLMSummary(page: Page) {
   return {
     category,
     title: page.data.title,
-    description: page.data.description,
+    description: page.data.description || 'No description available',
     slugs: page.slugs,
     url: page.url,
   };

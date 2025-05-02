@@ -31,7 +31,7 @@ export async function GET() {
   Object.entries(groupedItems).forEach(([category, items]) => {
     markdownOutput += `## ${category}\n\n`;
     items.forEach(({ title, description, url: docUrl }) => {
-      markdownOutput += `- [${title}](${url(docUrl)}): ${description || 'No description available'}\n`;
+      markdownOutput += `- [${title}](${url(docUrl)}): ${description}\n`;
     });
     markdownOutput += '\n';
   });
