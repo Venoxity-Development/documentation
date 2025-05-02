@@ -1,13 +1,22 @@
 import { LinkItemType } from 'fumadocs-ui/layouts/docs';
 import type { BaseLayoutProps } from 'fumadocs-ui/layouts/shared';
+import Logo from "@/public/logo.svg";
+import Image from 'next/image';
+
+export const logo = (
+  <>
+    <Image
+      alt="Starter Kit"
+      src={Logo}
+      sizes="100px"
+      className="size-6 in-[header]:size-7"
+      aria-label="Starter Kit"
+    />
+  </>
+);
+
 
 export const linkItems: LinkItemType[] = [
-  // {
-  //   icon: <AlbumIcon />,
-  //   text: 'Blog',
-  //   url: '/blog',
-  //   active: 'nested-url',
-  // },
   {
     type: 'icon',
     url: 'https://github.com/techwithanirudh/fumadocs-changelog',
@@ -32,14 +41,7 @@ export const baseOptions: BaseLayoutProps = {
   nav: {
     title: (
       <>
-        <svg
-          width="20"
-          height="20"
-          xmlns="http://www.w3.org/2000/svg"
-          aria-label="Logo"
-        >
-          <circle cx={10} cy={10} r={10} fill="currentColor" />
-        </svg>
+        {logo}
         <span className="font-medium in-[header]:text-[15px]">Starter Kit</span>
       </>
     ),

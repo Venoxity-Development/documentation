@@ -1,5 +1,5 @@
 import { cn } from '@/lib/cn';
-import { Building2Icon, RocketIcon } from 'lucide-react';
+import { BookIcon, RocketIcon } from "lucide-react";
 import type { LinkProps } from 'next/link';
 import Link from 'next/link';
 
@@ -15,9 +15,9 @@ export default function DocsPage(): React.ReactElement {
       <div className="mt-8 grid grid-cols-1 gap-4 text-left md:grid-cols-2">
         <Item href="/docs/ui">
           <Icon className="ui">
-            <Building2Icon className="size-full" />
+            <BookIcon className="size-full" />
           </Icon>
-          <h2 className="mb-2 text-lg font-semibold">Framework</h2>
+          <h2 className="mb-2 text-lg font-semibold">Documentation</h2>
           <p className="text-sm text-fd-muted-foreground">
             Get started with the Fumadocs framework.
           </p>
