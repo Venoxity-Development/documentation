@@ -1,17 +1,52 @@
-import { metadataImage } from '@/lib/metadata-image';
-import { generateOGImage } from 'fumadocs-ui/og';
+import { readFileSync } from 'node:fs';
+import { generateOGImage } from '@/app/og/[...slug]/og';
+import { source } from '@/lib/source';
+import { notFound } from 'next/navigation';
 
-export const GET = metadataImage.createAPI((page) => {
+const font = readFileSync('./app/og/[...slug]/fonts/Inter-Regular.ttf');
+const fontSemiBold = readFileSync(
+  './app/og/[...slug]/fonts/Inter-SemiBold.ttf',
+);
+const fontBold = readFileSync('./app/og/[...slug]/fonts/Inter-Bold.ttf');
+
+export async function GET(
+  _req: Request,
+  { params }: { params: Promise<{ slug: string[] }> },
+) {
+  const { slug } = await params;
+  const page = source.getPage(slug.slice(0, -1));
+  if (!page) notFound();
+
   return generateOGImage({
+    primaryTextColor: 'rgb(240,240,240)',
     title: page.data.title,
     description: page.data.description,
-    site: 'Fumadocs',
-    // 176 100% 43% - replace the hex codes too
-    primaryColor: '#13c9bd',
-    primaryTextColor: '#13c9bd',
+    tag: page.slugs[0],
+    fonts: [
+      {
+        name: 'Inter',
+        data: font,
+        weight: 400,
+      },
+      {
+        name: 'Inter',
+        data: fontSemiBold,
+        weight: 600,
+      },
+      {
+        name: 'Inter',
+        data: fontBold,
+        weight: 700,
+      }
+    ],
   });
-});
+}
 
-export function generateStaticParams() {
-  return metadataImage.generateParams();
+export function generateStaticParams(): {
+  slug: string[];
+}[] {
+  return source.generateParams().map((page) => ({
+    ...page,
+    slug: [...page.slug, 'image.png'],
+  }));
 }

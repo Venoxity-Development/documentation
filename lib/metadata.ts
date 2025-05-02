@@ -1,3 +1,4 @@
+import { title } from '@/app/layout.config';
 import type { Metadata } from 'next/types';
 
 export function createMetadata(override: Metadata): Metadata {
@@ -8,7 +9,7 @@ export function createMetadata(override: Metadata): Metadata {
       description: override.description ?? undefined,
       url: 'https://fumadocs-changelog.vercel.app',
       images: '/banner.png',
-      siteName: 'Starter Kit',
+      siteName: title,
       ...override.openGraph,
     },
     twitter: {

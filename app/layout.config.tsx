@@ -3,14 +3,16 @@ import type { BaseLayoutProps } from 'fumadocs-ui/layouts/shared';
 import Logo from "@/public/logo.svg";
 import Image from 'next/image';
 
+export const title = 'Starter Kit';
+
 export const logo = (
   <>
     <Image
-      alt="Starter Kit"
+      alt={title}
       src={Logo}
       sizes="100px"
       className="size-6 in-[header]:size-7"
-      aria-label="Starter Kit"
+      aria-label={title}
     />
   </>
 );
@@ -42,7 +44,7 @@ export const baseOptions: BaseLayoutProps = {
     title: (
       <>
         {logo}
-        <span className="font-medium in-[header]:text-[15px]">Starter Kit</span>
+        <span className="font-medium in-[header]:text-[15px]">{title}</span>
       </>
     ),
     transparentMode: 'top',
