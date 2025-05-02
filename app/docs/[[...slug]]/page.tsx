@@ -8,7 +8,6 @@ import {
 import { APIPage } from 'fumadocs-openapi/ui';
 import { notFound } from 'next/navigation';
 import { createMetadata } from '@/lib/metadata';
-import { metadataImage } from '@/lib/metadata-image';
 import { getMDXComponents } from "@/mdx-components";
 import { Callout } from "fumadocs-ui/components/callout";
 import {
@@ -25,6 +24,7 @@ import {
   type ReactNode,
 } from "react";
 import { createGenerator } from 'fumadocs-typescript';
+import type { Metadata } from 'next';
 
 const generator = createGenerator();
 export const revalidate = false;
@@ -100,27 +100,36 @@ export default async function Page(props: {
   );
 }
 
-export async function generateStaticParams() {
-  return source.generateParams();
-}
 
 export async function generateMetadata(props: {
-  params: Promise<{ slug?: string[] }>;
-}) {
-  const params = await props.params;
-  const page = source.getPage(params.slug);
+  params: Promise<{ slug: string[] }>;
+}): Promise<Metadata> {
+  const { slug = [] } = await props.params;
+  const page = source.getPage(slug);
   if (!page) notFound();
 
   const description =
     page.data.description ?? 'The library for building documentation sites';
 
-  return createMetadata(
-    metadataImage.withImage(page.slugs, {
-      title: page.data.title,
-      description,
-      openGraph: {
-        url: `/docs/${page.slugs.join('/')}`,
-      },
-    }),
-  );
+  const image = {
+    url: ['/og', ...slug, 'image.png'].join('/'),
+    width: 1200,
+    height: 630,
+  };
+
+  return createMetadata({
+    title: page.data.title,
+    description,
+    openGraph: {
+      url: `/docs/${page.slugs.join('/')}`,
+      images: [image],
+    },
+    twitter: {
+      images: [image],
+    },
+  });
+}
+
+export function generateStaticParams() {
+  return source.generateParams();
 }
