@@ -41,7 +41,11 @@ const docsOptions: DocsLayoutProps = {
 
 export default function Layout({ children }: { children: ReactNode }) {
   return (
-    <DocsLayout {...docsOptions}>
+    <DocsLayout
+      {...docsOptions}
+      // nav={{ ...docsOptions.nav }}
+      // tabMode="navbar"
+    >
       <DocsBackground />
       {children}
     </DocsLayout>

@@ -24,7 +24,7 @@ const processor = remark()
 export async function GET() {
     const files = await fg([
         './content/docs/**/*.mdx',
-        '!./content/docs/openapi/**/*',
+        '!./content/docs/api-reference/**/*',
     ]);
 
     const scan = files.map(async (file) => {

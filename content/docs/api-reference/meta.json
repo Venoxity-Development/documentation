@@ -1,0 +1,7 @@
+{
+  "title": "API Reference",
+  "description": "A demo for Fumadocs OpenAPI",
+  "root": true,
+  "icon": "Rocket",
+  "pages": ["---API Reference---", "index", "---Events---", "...events", "---Tickets---", "...tickets", "---Operations---", "...operations", "---Other---", "..."]
+}
