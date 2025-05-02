@@ -1,2 +1,2 @@
-export const repo = 'techwithanirudh';
-export const owner = 'fumadocs-changelog';
+export const owner = 'techwithanirudh';
+export const repo = 'fumadocs-changelog';

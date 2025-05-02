@@ -37,7 +37,7 @@ export async function getLLMText(page: Page) {
 
   return `# ${category}: ${page.data.title}
 URL: ${page.url}
-Source: https://raw.githubusercontent.com/${owner}/${repo}/refs/head/main/${path}
+Source: https://raw.githubusercontent.com/${owner}/${repo}/refs/heads/main/${path}
 
 ${page.data.description || 'No description available'}
         
