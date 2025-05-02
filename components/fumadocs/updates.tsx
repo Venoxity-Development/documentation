@@ -35,7 +35,7 @@ export function Update({ children, label, id, className }: UpdateProps) {
       )}
     >
       <div className="lg:sticky top-[112px] group flex flex-col w-full lg:w-[160px] items-start flex-shrink-0 justify-start">
-        <Badge variant='default' className="px-2 py-1 h-fit rounded-lg flex-grow-0 text-sm">
+        <Badge variant='secondary' className="px-2 py-1 h-fit rounded-lg flex-grow-0 text-sm">
           {label}
         </Badge>
       </div>

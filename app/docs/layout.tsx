@@ -1,4 +1,4 @@
-import { DocsLayout, type DocsLayoutProps } from 'fumadocs-ui/layouts/notebook';
+import { DocsLayout, type DocsLayoutProps } from 'fumadocs-ui/layouts/docs';
 import type { ReactNode } from 'react';
 import { baseOptions } from '@/app/layout.config';
 import 'fumadocs-twoslash/twoslash.css';
@@ -34,13 +34,14 @@ const docsOptions: DocsLayoutProps = {
           ),
         };
       },
+      className: ''
     },
   },
 };
 
 export default function Layout({ children }: { children: ReactNode }) {
   return (
-    <DocsLayout {...docsOptions} nav={{ ...docsOptions.nav, mode: 'top' }} tabMode='navbar'>
+    <DocsLayout {...docsOptions}>
       <DocsBackground />
       {children}
     </DocsLayout>

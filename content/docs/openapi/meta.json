@@ -1,6 +1,7 @@
 {
-  "title": "OpenAPI",
+  "title": "API Reference",
   "description": "A demo for Fumadocs OpenAPI",
   "root": true,
-  "icon": "Rocket"
+  "icon": "Rocket",
+  "pages": ["---API Reference---", "index", "..."]
 }
