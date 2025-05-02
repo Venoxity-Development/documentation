@@ -25,6 +25,8 @@ import {
 } from "react";
 import { createGenerator } from 'fumadocs-typescript';
 import type { Metadata } from 'next';
+import { owner, repo } from '@/lib/github';
+import { EditOnGitHub, LLMCopyButton } from '../[...slug]/page.client';
 
 const generator = createGenerator();
 export const revalidate = false;
@@ -48,15 +50,17 @@ export default async function Page(props: {
         style: "clerk",
         single: false,
       }}
-      editOnGithub={{
-        repo: "fumadocs-changelog",
-        owner: "techwithanirudh",
-        sha: "main",
-        path,
-      }}
     >
       <DocsTitle>{page.data.title}</DocsTitle>
-      <DocsDescription>{page.data.description}</DocsDescription>
+      <DocsDescription className="mb-2">
+        {page.data.description}
+      </DocsDescription>
+      <div className="flex flex-row gap-2 items-center">
+        <LLMCopyButton />
+        <EditOnGitHub
+          url={`https://github.com/${owner}/${repo}/blob/dev/${path}`}
+        />
+      </div>
       <DocsBody>
         <MDX
           components={getMDXComponents({

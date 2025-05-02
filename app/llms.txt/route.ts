@@ -3,60 +3,35 @@ import fg from 'fast-glob';
 import matter from 'gray-matter';
 import path from 'node:path';
 import { baseUrl } from '@/lib/metadata';
+import { source } from '@/lib/source';
+import { getLLMSummary } from '@/lib/get-llm-text';
 
 export const revalidate = false;
-
-const removeExtension = (filePath: string) =>
-  path.join(path.dirname(filePath), path.basename(filePath, path.extname(filePath)));
-
-const normalizeUrlPath = (filePath: string): string => {
-  let relPath = filePath.replace('./content/docs/', '');
-  let normalized = removeExtension(relPath);
-  if (path.basename(normalized) === 'index') {
-    normalized = path.dirname(normalized);
-  }
-  return '/docs/' + normalized;
-};
 
 export async function GET() {
   const url = (p: string): string => new URL(p, baseUrl).toString();
 
-  const files = await fg([
-    './content/docs/**/*.mdx',
-    '!./content/docs/api-reference/**/*',
-  ]);
+  const scan = source
+    .getPages()
+    .filter((file) => file.slugs[0] !== 'openapi')
+    .map(getLLMSummary);
+  const scanned = await Promise.all(scan);
 
-  type DocEntry = { title: string; description: string; file: string };
-  const groupedDocs: Record<string, DocEntry[]> = {};
+  let markdownOutput = '## Docs\n\n';
 
-  const categoryMapping: Record<string, string> = {
-    ui: 'UI Framework'
-  };
+  const groupedItems = scanned.reduce((acc, item) => {
+    const category = item.category || 'Uncategorized';
+    if (!acc[category]) {
+      acc[category] = [];
+    }
+    acc[category].push(item);
+    return acc;
+  }, {} as Record<string, typeof scanned>);
 
-  for (const file of files) {
-    const fileContent = await fs.readFile(file, 'utf8');
-    const { data } = matter(fileContent);
-    const dir = path.dirname(file).split(path.sep).at(3) ?? '';
-    const category = categoryMapping[dir] ?? 'Others';
-
-    if (!groupedDocs[category]) groupedDocs[category] = [];
-    groupedDocs[category].push({
-      title: data.title || 'Untitled',
-      description:
-        data.description ||
-        `More information about ${category}'s ${data.title || 'Untitled'}`,
-      file,
-    });
-  }
-
-  let markdownOutput = '# Docs\n\n';
-
-  Object.entries(groupedDocs).forEach(([category, docs]) => {
+  Object.entries(groupedItems).forEach(([category, items]) => {
     markdownOutput += `## ${category}\n\n`;
-    docs.forEach(({ title, description, file }) => {
-      const normalizedPath = normalizeUrlPath(file);
-      const docUrl = url(normalizedPath);
-      markdownOutput += `- [${title}](${docUrl}): ${description}\n`;
+    items.forEach(({ title, description, url: docUrl }) => {
+      markdownOutput += `- [${title}](${url(docUrl)}): ${description || 'No description available'}\n`;
     });
     markdownOutput += '\n';
   });
