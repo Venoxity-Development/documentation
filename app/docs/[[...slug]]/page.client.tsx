@@ -31,7 +31,7 @@ export function LLMCopyButton() {
         buttonVariants({
           variant: 'secondary',
           size: 'sm',
-          className: 'gap-2',
+          className: 'gap-2 p-1.5 text-xs h-fit w-fit',
         }),
       )}
       onClick={onClick}
@@ -49,7 +49,7 @@ export function EditOnGitHub({ url }: { url: string }) {
         buttonVariants({
           variant: 'secondary',
           size: 'sm',
-          className: 'gap-2',
+          className: 'gap-2 p-1.5 text-xs h-fit w-fit',
         }),
       )}
       href={url}
