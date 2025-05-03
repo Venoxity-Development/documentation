@@ -9,11 +9,12 @@ export async function GET() {
 
   const scan = source
     .getPages()
+    .filter((file) => file.slugs[0] !== 'api-reference')
     .filter((file) => file.slugs[0] !== 'openapi')
     .map(getLLMSummary);
   const scanned = await Promise.all(scan);
 
-  let markdownOutput = '## Docs\n\n';
+  let markdownOutput = '# Docs\n\n';
 
   const groupedItems = scanned.reduce((acc, item) => {
     const category = item.category || 'Uncategorized';
