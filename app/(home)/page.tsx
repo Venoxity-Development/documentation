@@ -29,7 +29,7 @@ export default function DocsPage(): React.ReactElement {
           </Icon>
           <h2 className="mb-2 text-lg font-semibold">API Reference</h2>
           <p className="text-sm text-fd-muted-foreground">
-            Get started with Fumadocs's API reference feature. 
+            Get started with Fumadocs&apos;s API reference feature. 
           </p>
         </Item>
       </div>

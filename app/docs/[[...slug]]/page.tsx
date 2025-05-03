@@ -19,14 +19,14 @@ import Link from 'next/link';
 import { AutoTypeTable } from "fumadocs-typescript/ui";
 import {
   type ComponentProps,
-  type FC,
-  type ReactElement,
-  type ReactNode,
+  type FC
 } from "react";
 import { createGenerator } from 'fumadocs-typescript';
 import type { Metadata } from 'next';
 import { owner, repo } from '@/lib/github';
-import { EditOnGitHub, LLMCopyButton } from '../[...slug]/page.client';
+import { EditOnGitHub, LLMCopyButton } from './page.client';
+import { Card, Cards } from 'fumadocs-ui/components/card';
+import { getPageTreePeers } from 'fumadocs-core/server';
 
 const generator = createGenerator();
 export const revalidate = false;
@@ -92,6 +92,9 @@ export default async function Page(props: {
                 </HoverCard>
               );
             },
+            DocsCategory: ({ url }) => {
+              return <DocsCategory url={url ?? page.url} />;
+            },
             AutoTypeTable: (props) => (
               <AutoTypeTable generator={generator} {...props} />
             ),
@@ -104,6 +107,17 @@ export default async function Page(props: {
   );
 }
 
+function DocsCategory({ url }: { url: string }) {
+  return (
+    <Cards>
+      {getPageTreePeers(source.pageTree, url).map((peer) => (
+        <Card key={peer.url} title={peer.name} href={peer.url}>
+          {peer.description}
+        </Card>
+      ))}
+    </Cards>
+  );
+}
 
 export async function generateMetadata(props: {
   params: Promise<{ slug: string[] }>;

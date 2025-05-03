@@ -92,9 +92,6 @@ importers:
       oxc-transform:
         specifier: ^0.56.5
         version: 0.56.5
-      prettier:
-        specifier: ^3.5.3
-        version: 3.5.3
       react:
         specifier: ^19.1.0
         version: 19.1.0
@@ -186,12 +183,18 @@ importers:
       postcss:
         specifier: ^8.5.3
         version: 8.5.3
+      prettier:
+        specifier: ^3.5.3
+        version: 3.5.3
       source-map-support:
         specifier: ^0.5.21
         version: 0.5.21
       tailwindcss:
         specifier: ^4.0.15
         version: 4.0.15
+      ts-morph:
+        specifier: ^25.0.1
+        version: 25.0.1
       tsx:
         specifier: ^4.19.3
         version: 4.19.3

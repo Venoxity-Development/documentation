@@ -3,5 +3,14 @@
   "description": "Set up your documentation",
   "icon": "Book",
   "root": true,
-  "pages": ["---Getting Started---", "index", "quickstart", "---Essentials---", "...essentials", "..."]
+  "pages": [
+    "---Getting Started---",
+    "index",
+    "quickstart",
+    "---Essentials---",
+    "...essentials",
+    "---Features---",
+    "...features",
+    "..."
+  ]
 }

@@ -43,7 +43,6 @@
     "next": "15.3.1",
     "next-themes": "^0.4.6",
     "oxc-transform": "^0.56.5",
-    "prettier": "^3.5.3",
     "react": "^19.1.0",
     "react-dom": "^19.1.0",
     "rehype-katex": "^7.0.1",
@@ -76,8 +75,10 @@
     "gray-matter": "^4.0.3",
     "next-validate-link": "^1.5.2",
     "postcss": "^8.5.3",
+    "prettier": "^3.5.3",
     "source-map-support": "^0.5.21",
     "tailwindcss": "^4.0.15",
+    "ts-morph": "^25.0.1",
     "tsx": "^4.19.3",
     "typescript": "^5.8.2"
   },

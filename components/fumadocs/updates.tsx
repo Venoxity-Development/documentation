@@ -2,7 +2,6 @@
 
 import { ReactNode } from "react";
 import { cn } from "@/lib/cn";
-import { LinkIcon } from "lucide-react";
 import { Badge } from "@/components/ui/badge";
 
 export interface UpdatesProps {
