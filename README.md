@@ -1,4 +1,4 @@
-# Fumadocs MCP
+# Fumadocs Starter
 
 This is a starter template for building documentation using [Fumadocs](https://fumadocs.vercel.app), integrated with OpenAPI and designed to work seamlessly with the Vercel AI SDK.
 
@@ -21,9 +21,10 @@ Then open [http://localhost:3000](http://localhost:3000) in your browser.
 ## What’s Inside
 
 - 🧩 **Fumadocs** – Fast, flexible documentation powered by MDX.
-- 📘 **Orama** – Built-in search and AI Search integration. (Note: Uncomment Orama in providers.tsx)
+- 📘 **Orama** – Built-in search integration.
 - 🧠 **AI SDK** – Supports the [Vercel AI SDK](https://sdk.vercel.ai) for advanced AI chat features.
 - 🧱 **MCP-Ready** – Easily extend with an optional MCP Server for more advanced workflows.
+- ⚡️ **Twoslash** – Embed live, type-checked code examples with rich editor features (errors, completions, hovers) directly in your docs.
 
 ## Learn More
 
