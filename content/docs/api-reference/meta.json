@@ -3,5 +3,5 @@
   "description": "A demo for Fumadocs OpenAPI",
   "root": true,
   "icon": "Rocket",
-  "pages": ["---API Reference---", "index", "---Events---", "...events", "---Tickets---", "...tickets", "---Operations---", "...operations", "---Other---", "..."]
+  "pages": ["---API Reference---", "index", "...", "---Events---", "...(generated)/events", "---Tickets---", "...(generated)/tickets", "---Operations---", "...(generated)/operations", "---Other---", "...(generated)"]
 }
