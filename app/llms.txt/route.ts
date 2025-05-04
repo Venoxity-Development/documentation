@@ -1,39 +1,24 @@
-import { baseUrl } from '@/lib/metadata';
+import { categoryMap } from '@/lib/get-llm-text';
 import { source } from '@/lib/source';
-import { getLLMSummary } from '@/lib/get-llm-text';
 
 export const revalidate = false;
 
 export async function GET() {
-  const url = (p: string): string => new URL(p, baseUrl).toString();
+  const scanned: string[] = [];
+  scanned.push('# Docs');
+  const map = new Map<string, string[]>();
 
-  const scan = source
-    .getPages()
-    .filter((file) => file.slugs[0] !== 'api-reference')
-    .filter((file) => file.slugs[0] !== 'openapi')
-    .map(getLLMSummary);
-  const scanned = await Promise.all(scan);
+  for (const page of source.getPages()) {
+    const dir = page.slugs[0];
+    const list = map.get(dir) ?? [];
+    list.push(`- [${page.data.title}](${page.url}): ${page.data.description}`);
+    map.set(dir, list);
+  }
 
-  let markdownOutput = '# Docs\n\n';
+  for (const [key, value] of map) {
+    scanned.push(`## ${categoryMap[key]}`);
+    scanned.push(value.join('\n'));
+  }
 
-  const groupedItems = scanned.reduce((acc, item) => {
-    const category = item.category || 'Uncategorized';
-    if (!acc[category]) {
-      acc[category] = [];
-    }
-    acc[category].push(item);
-    return acc;
-  }, {} as Record<string, typeof scanned>);
-
-  Object.entries(groupedItems).forEach(([category, items]) => {
-    markdownOutput += `## ${category}\n\n`;
-    items.forEach(({ title, description, url: docUrl }) => {
-      markdownOutput += `- [${title}](${url(docUrl)}): ${description}\n`;
-    });
-    markdownOutput += '\n';
-  });
-
-  return new Response(markdownOutput, {
-    headers: { 'Content-Type': 'text/markdown' },
-  });
+  return new Response(scanned.join('\n\n'));
 }

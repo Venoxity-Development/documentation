@@ -12,8 +12,6 @@ Large language models waste tokens crawling HTML, JS and site chrome. By shippin
 
 This two-part pattern makes retrieval fast, reliable and predictable.
 
----
-
 ## `/llms.txt`
 
 - Lists each section and page in your docs
@@ -54,4 +52,24 @@ Source: content/docs/api-reference/operations/museum-hours.mdx
 
 This is generated at build time by globbing `content/docs/**/*.mdx` and joining in sidebar order.
 
----
+## `/llms.mdx/*`
+
+- Provides the raw MDX/Markdown of the requested page
+- Preserves headings, paragraphs, code samples and frontmatter
+
+Example: `/llms.mdx/ui`
+```md
+# UI Framework: Introduction
+URL: /docs/ui
+Source: https://raw.githubusercontent.com/techwithanirudh/fumadocs-starter/refs/heads/main/content/docs/ui/index.mdx
+
+Welcome to your new documentation
+        
+## Getting Started
+
+The first step to creating amazing documentation is setting up your editing environment.
+...
+```
+
+This is generated at build time by globbing `content/docs/**/*.mdx` and joining in sidebar order.
+

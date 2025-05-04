@@ -2,15 +2,13 @@
 import { remark } from 'remark';
 import remarkGfm from 'remark-gfm';
 import { fileGenerator, remarkDocGen, remarkInstall } from 'fumadocs-docgen';
-import remarkStringify from 'remark-stringify';
 import remarkMdx from 'remark-mdx';
 import { remarkAutoTypeTable } from 'fumadocs-typescript';
 import { remarkInclude } from 'fumadocs-mdx/config';
 import { type Page } from '@/lib/source';
 import { owner, repo } from './github';
 
-
-const categoryMap: Record<string, string> = {
+export const categoryMap: Record<string, string> = {
   ui: 'UI Framework',
   'api-reference': 'API Reference',
   'changelog': 'Changelog',
@@ -22,8 +20,7 @@ const processor = remark()
   .use(remarkGfm)
   .use(remarkAutoTypeTable)
   .use(remarkDocGen, { generators: [fileGenerator()] })
-  .use(remarkInstall)
-  .use(remarkStringify);
+  .use(remarkInstall);
 
 export async function getLLMText(page: Page) {
   const category =
@@ -39,20 +36,7 @@ export async function getLLMText(page: Page) {
 URL: ${page.url}
 Source: https://raw.githubusercontent.com/${owner}/${repo}/refs/heads/main/${path}
 
-${page.data.description || 'No description available'}
+${page.data.description}
         
-${processed}`;
-}
-
-export async function getLLMSummary(page: Page) {
-  const category =
-    categoryMap[page.slugs[0]] ?? page.slugs[0];
-
-  return {
-    category,
-    title: page.data.title,
-    description: page.data.description || 'No description available',
-    slugs: page.slugs,
-    url: page.url,
-  };
+${processed.value}`;
 }

@@ -39,7 +39,7 @@ const config: NextConfig = {
     return [
       {
         source: '/docs/:path*.mdx',
-        destination: '/llms.txt/:path*',
+        destination: '/llms.mdx/:path*',
       },
       {
         source: '/docs/ui/changelog',
