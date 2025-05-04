@@ -13,27 +13,49 @@ export default function DocsPage(): React.ReactElement {
         Get started with Fumadocs.
       </p>
       <div className="mt-8 grid grid-cols-1 gap-4 text-left md:grid-cols-2">
-        <Item href="/docs/ui">
-          <Icon className="ui">
-            <BookIcon className="size-full" />
-          </Icon>
-          <h2 className="mb-2 text-lg font-semibold">Documentation</h2>
-          <p className="text-sm text-fd-muted-foreground">
-            Get started with the Fumadocs framework.
-          </p>
-        </Item>
+        <DocumentationItem
+          title="Documentation"
+          description="Get started with the Fumadocs framework."
+          icon={BookIcon}
+          id="ui"
+          href="/docs/ui"
+        />
 
-        <Item href="/docs/api-reference">
-          <Icon className="api-reference">
-            <RocketIcon className="size-full" />
-          </Icon>
-          <h2 className="mb-2 text-lg font-semibold">API Reference</h2>
-          <p className="text-sm text-fd-muted-foreground">
-            Get started with Fumadocs&apos;s API reference feature. 
-          </p>
-        </Item>
+        <DocumentationItem
+          title="API Reference"
+          description="Get started with Fumadocs&apos;s API reference feature."
+          icon={RocketIcon}
+          id="api-reference"
+          href="/docs/api-reference"
+        />
       </div>
     </main>
+  );
+}
+
+function DocumentationItem({
+  title,
+  description,
+  icon: ItemIcon,
+  id,
+  href
+}: {
+  title: string;
+  description: string;
+  id: string;
+  icon: React.ComponentType<{ className?: string }>;
+  href: string;
+}): React.ReactElement {
+  return (
+    <Item href={href}>
+      <Icon className={id}>
+        <ItemIcon className="size-full" />
+      </Icon>
+      <h2 className="mb-2 text-lg font-semibold">{title}</h2>
+      <p className="text-sm text-fd-muted-foreground">
+        {description}
+      </p>
+    </Item>
   );
 }
 
