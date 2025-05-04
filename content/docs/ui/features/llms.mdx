@@ -6,12 +6,11 @@ icon: Bot
 
 ## Introduction
 
-Large language models waste tokens crawling HTML, JS, and site chrome. By shipping two simple Markdown files, you give AI agents exactly what they need:
+Large language models waste tokens crawling HTML, JS, and site chrome. By shipping a few simple endpoints, you can provide a more efficient way for LLMs to access your documentation.
 
 1. **`/llms.txt`**: a concise sitemap with titles, URLs, and summaries
 2. **`/llms-full.txt`**: a full Markdown dump of every document
-
-This two-part pattern makes retrieval fast, reliable, and predictable.
+3. **`/llms.mdx/*`**: the raw MDX/Markdown content of a requested page
 
 ## `/llms.txt`
 
