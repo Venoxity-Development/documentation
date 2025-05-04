@@ -117,7 +117,28 @@ Update the base styles to apply the new color:
 }
 ```
 
-### Step 5: Create a New Page
+### Step 5: Create `meta.json` in the New Folder
+Create a `meta.json` file in your new `cli` folder:
+
+```bash
+touch content/docs/cli/meta.json
+```
+
+Add the following content to `meta.json`:
+
+```json
+{ // [!code ++] 
+  "title": "CLI", // [!code ++] 
+  "description": "Learn how to use the Fumadocs CLI", // [!code ++] 
+  "root": true, // [!code ++] 
+  "icon": "ChevronRight", // [!code ++] 
+  "pages": ["---Getting Started---", "index", "..."] // [!code ++] 
+} // [!code ++] 
+```
+
+This file defines the metadata for your new folder, including its title, description, and icon.
+
+### Step 6: Create a New Page
 
 Create an `index.mdx` page in your new `cli` folder:
 
