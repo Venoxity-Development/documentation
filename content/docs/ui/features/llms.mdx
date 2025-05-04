@@ -5,18 +5,19 @@ icon: Bot
 ---
 
 ## Introduction
-Large language models waste tokens crawling HTML, JS and site chrome. By shipping two simple Markdown files, you give AI agents exactly what they need:
 
-1. **`/llms.txt`**: a concise site map with titles, URLs and summaries
-2. **`/llms-full.txt`**: a full Markdown dump of every doc
+Large language models waste tokens crawling HTML, JS, and site chrome. By shipping two simple Markdown files, you give AI agents exactly what they need:
 
-This two-part pattern makes retrieval fast, reliable and predictable.
+1. **`/llms.txt`**: a concise sitemap with titles, URLs, and summaries
+2. **`/llms-full.txt`**: a full Markdown dump of every document
+
+This two-part pattern makes retrieval fast, reliable, and predictable.
 
 ## `/llms.txt`
 
-- Lists each section and page in your docs
+- Lists each section and page in your documentation
 - Includes optional one-line descriptions from frontmatter
-- No boilerplate or styling, just the outline
+- No boilerplate or styling—just the outline
 
 ```md
 # Docs
@@ -29,15 +30,13 @@ This two-part pattern makes retrieval fast, reliable and predictable.
 - [Quickstart](/docs/ui/quickstart): Start building awesome documentation in under 5 minutes
 ```
 
-This file is generated at the root of your deployed site so agents can discover it at `https://<your-domain>/llms.txt`.
-
----
+This file is generated at the root of your deployed site, enabling agents to discover it at `https://<your-domain>/llms.txt`.
 
 ## `/llms-full.txt`
 
 - Concatenates the raw MDX/Markdown of every page
-- Preserves headings, paragraphs, code samples and frontmatter
-- Lets an LLM ingest your entire corpus in one fetch
+- Preserves headings, paragraphs, code samples, and frontmatter
+- Lets an LLM ingest your entire documentation corpus in a single fetch
 
 ```md
 # API Reference: Get museum hours
@@ -50,26 +49,24 @@ Source: content/docs/api-reference/operations/museum-hours.mdx
 ...full MDX content...
 ```
 
-This is generated at build time by globbing `content/docs/**/*.mdx` and joining in sidebar order.
+This file is generated at build time by globbing `content/docs/**/*.mdx` and joining files in sidebar order.
 
 ## `/llms.mdx/*`
 
-- Provides the raw MDX/Markdown of the requested page
-- Preserves headings, paragraphs, code samples and frontmatter
+- Provides the raw MDX/Markdown content of a requested page
+- Preserves headings, paragraphs, code samples, and frontmatter
 
 Example: `/llms.mdx/ui`
+
 ```md
 # UI Framework: Introduction
 URL: /docs/ui
-Source: https://raw.githubusercontent.com/techwithanirudh/fumadocs-starter/refs/heads/main/content/docs/ui/index.mdx
+Source: https://raw.githubusercontent.com/techwithanirudh/fumadocs-starter/main/content/docs/ui/index.mdx
 
-Welcome to your new documentation
-        
+Welcome to your new documentation.
+
 ## Getting Started
 
 The first step to creating amazing documentation is setting up your editing environment.
 ...
 ```
-
-This is generated at build time by globbing `content/docs/**/*.mdx` and joining in sidebar order.
-
