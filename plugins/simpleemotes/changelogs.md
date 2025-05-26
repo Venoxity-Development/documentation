@@ -1,6 +1,6 @@
 ---
 icon: scroll
-description: Want to know what’s new or what’s been fixed? This is where you’ll find all the latest updates to SimpleEmotes — including new features, improvements, and bug fixes. If it’s been updated, it’s logged here.
+description: Looking for the latest changes to SimpleEmotes? This section covers it all — new features, improvements, and bug fixes. Every update is listed here so you can keep track of what’s been added or refined.
 layout:
   cover:
     visible: false
