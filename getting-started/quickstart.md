@@ -22,13 +22,40 @@ If you're already a **user of our plugins** and have them **installed**, you can
 ## MessageBoards
 
 ## SimpleEmotes
-<a href="https://example.com/1" style="display:inline-block; padding:10px 20px; background-color:#007acc; color:white; text-decoration:none; border-radius:5px; margin-right:10px;">
+<a href="https://example.com/1" style="
+  display: inline-block; 
+  padding: 10px 20px; 
+  background-color: #007acc; 
+  color: white; 
+  text-decoration: none; 
+  border-radius: 5px; 
+  margin-right: 12px; 
+  cursor: pointer;
+  user-select: none;
+">
   Button 1
-</a>
-<a href="https://example.com/2" style="display:inline-block; padding:10px 20px; background-color:#28a745; color:white; text-decoration:none; border-radius:5px; margin-right:10px;">
+</a><a href="https://example.com/2" style="
+  display: inline-block; 
+  padding: 10px 20px; 
+  background-color: #28a745; 
+  color: white; 
+  text-decoration: none; 
+  border-radius: 5px; 
+  margin-right: 12px; 
+  cursor: pointer;
+  user-select: none;
+">
   Button 2
-</a>
-<a href="https://example.com/3" style="display:inline-block; padding:10px 20px; background-color:#dc3545; color:white; text-decoration:none; border-radius:5px;">
+</a><a href="https://example.com/3" style="
+  display: inline-block; 
+  padding: 10px 20px; 
+  background-color: #dc3545; 
+  color: white; 
+  text-decoration: none; 
+  border-radius: 5px; 
+  cursor: pointer;
+  user-select: none;
+">
   Button 3
 </a>
 
