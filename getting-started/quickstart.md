@@ -39,8 +39,8 @@ Realistic vehicle control and immersive driving—built right into GTA V.
 
 ## SimpleHUD
 
-N/A
+Location, compass, and time—always visible, never distracting.
 
 ## WeaponControl
 
-N/A
+Enhanced weapon mechanics for a more realistic GTA V combat experience.
