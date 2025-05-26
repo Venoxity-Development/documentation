@@ -19,73 +19,20 @@ If you're already a **user of our plugins** and have them **installed**, you can
 
 ## 1. 🛠️ ExtraManager
 
-**Tagline:** **Effortless Control Over Vehicle Extras**
-
-### **Overview**
-
-Description coming soon!
-
-### **Installation Instructions**
-
-**Coming Soon!**\
-Check back later for detailed installation instructions.
-
 ***
 
 ## 2. 🏷️ LicensePlateChanger
-
-**Tagline:** **Switch Plates, Change Fate: LPC**
-
-### **Overview**
-
-_Description coming soon!_
-
-### **Installation Instructions**
-
-**Coming Soon!**\
-Check back later for detailed installation instructions.
 
 ***
 
 ## 3. ⚙️ SimpleCTRL
 
-**Tagline:** **Simplifying Vehicle Functions: Control, Customize, Conquer**
-
-### **Overview**
-
-_Description coming soon!_
-
-### **Installation Instructions**
-
-**Coming Soon!**\
-Check back later for detailed installation instructions.
-
 ***
 
 ## 4. 🗺️ SimpleHUD
-
-**Tagline:** **Seamlessly Display Your Location, Compass, and Time In-Game**
-
-### **Overview**
-
-_Description coming soon!_
-
-### **Installation Instructions**
-
-**Coming Soon!**\
-Check back later for detailed installation instructions.
 
 ***
 
 ## 5. 🔒 WeaponControl
 
-**Tagline:** **Keep Your Friends Close and Your Weapons Under Lock and Key**
-
-### **Overview**
-
-_Description coming soon!_
-
-### **Installation Instructions**
-
-**Coming Soon!**\
-Check back later for detailed installation instructions.
+***
