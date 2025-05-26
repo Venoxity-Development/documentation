@@ -9,5 +9,4 @@
 ## Summary
 
 * Group 1
-  * Subgroup
-    * [Nested Page](group1/subgroup/nested.md)
+  * [Page A](group1/page-a.md)
