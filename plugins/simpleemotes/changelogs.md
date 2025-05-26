@@ -14,5 +14,10 @@ layout:
     visible: false
 ---
 
-## v1.0.0 – May 11, 2025
-- Initial Release
+# Hello, World! #1
+## Hello, World! #2
+### Hello, World! #3
+
+{% hint style="info" %}
+This article is work in progress, please come back at some later time to enjoy it in its full beauty 🫡
+{% endhint %}
