@@ -24,6 +24,7 @@ layout:
 * 133 Walking Styles, 39 Scenarios, 34 Facial Expressions, and 553 Regular Animations for a wide variety of expressive options
 * **Pointing Gesture:** Mimic GTA V Online’s pointing by pressing **B** or double-pressing the **left joystick**
 * **Crawl / Prone / Crouch:** Toggle stealthy or tactical movement stances with **Left Ctrl** and **Right Ctrl**
+* **Binoculars:** Activate binoculars by opening the Rage console (`F4`) and typing `Binoculars` to zoom and look into the distance
 
 ## Requirements
 
