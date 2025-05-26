@@ -1,6 +1,7 @@
 ---
 icon: book
-description: A lightweight script for Grand Theft Auto V that displays your location, compass, and time in a clean, customizable HUD keeping important info visible without cover: ../../.gitbook/assets/IMG_7869.png
+description: A lightweight script for Grand Theft Auto V that displays your location, compass, and time in a clean, customizable HUD keeping important info visible without distraction.
+cover: ../../.gitbook/assets/IMG_7869.png
 coverY: 0
 layout:
   cover:
