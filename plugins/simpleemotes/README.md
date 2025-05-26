@@ -19,8 +19,6 @@ layout:
     visible: false
 ---
 
-# 1
+## Requirements
 
-## 2
-
-### 3
+## Installation
