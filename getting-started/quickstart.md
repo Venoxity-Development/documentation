@@ -34,5 +34,8 @@ A dynamic plugin for Grand Theft Auto V that adds realistic variable message sig
 A user-friendly plugin that adds a built-in emote menu and smooth animation controls to Grand Theft Auto V, making player expression quick and immersive.
 
 ## SimpleCTRL
+
+A friendly, feature-packed plugin that brings realistic vehicle control and immersive driving mechanics to Grand Theft Auto V.
+
 ## SimpleHUD
 ## WeaponControl
