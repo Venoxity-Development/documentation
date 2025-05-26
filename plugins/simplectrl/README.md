@@ -1,7 +1,7 @@
 ---
 icon: wrench
 description: A friendly, feature-packed plugin that brings realistic vehicle control and immersive driving mechanics to Grand Theft Auto V.
-cover: ../../.gitbook/assets/IMG_7869.png
+cover: ../../.gitbook/assets/IMG_7871.png
 coverY: 0
 layout:
   cover:
