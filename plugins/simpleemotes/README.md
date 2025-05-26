@@ -52,7 +52,7 @@ That’s it! Now you’re ready to launch the game and enjoy SimpleEmotes.
 ## Credits
 
 SimpleEmotes wouldn’t exist without the amazing people behind it and the strong support from the community. A big thanks to:
-- Rockstar Games
+- [Rockstar Games](https://store.steampowered.com/app/271590/Grand_Theft_Auto_V_Legacy/)
 -	BoringNeptune
 -	BzzziProps
 -	CrunchyCat
