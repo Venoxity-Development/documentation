@@ -29,6 +29,12 @@ Customize GTA V vehicle extras exactly how you want—every time, with XML.
 
 ## [LicensePlateChanger](../plugins/licenseplatechanger/README.md)  
 
+<div align="left">
+
+<figure><img src="../.gitbook/assets/IMG_7868.png" alt=""><figcaption></figcaption></figure>
+
+</div>
+
 Bring variety and realism to GTA V with smart license plate customization.
 
 ## [MessageBoards](../plugins/messageboards/README.md)  
