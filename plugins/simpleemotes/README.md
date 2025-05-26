@@ -71,3 +71,7 @@ SimpleEmotes wouldn’t exist without the amazing people behind it and the stron
 We’re truly grateful to all the contributors, testers, and supporters who helped make SimpleEmotes a success.
 
 ## Support & Feedback
+
+Need help or want to share your thoughts? We’d love to hear from you!
+- **Join our Discord:**
+- **Found a bug or have suggestions?**  | Let us know in Discord—your feedback helps us make SimpleEmotes even better!
