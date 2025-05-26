@@ -1,6 +1,6 @@
 ---
-icon: filemedia
-description: A dynamic plugin for Grand Theft Auto V that adds realistic variable message signs, showing real-time road conditions and weather alerts to enhance in-game immersion.
+icon: file-media
+description: dynamic plugin for Grand Theft Auto V that adds realistic variable message signs, showing real-time road conditions and weather alerts to enhance in-game immersion.
 ---
 
 {% hint style="info" %}
