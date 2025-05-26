@@ -1,5 +1,6 @@
 ---
 icon: check
+description: A simple, effective plugin for Grand Theft Auto V that lets you configure and control vehicle extras using XML so your setup looks exactly how you want, every time.
 ---
 
 {% hint style="info" %}
