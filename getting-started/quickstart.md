@@ -19,6 +19,12 @@ If you're already a **user of our plugins** and have them **installed**, you can
 
 ## [ExtraManager](../plugins/extramanager/README.md)  
 
+<div align="left">
+
+<figure><img src="../.gitbook/assets/QuickStartBanner.png" alt=""><figcaption></figcaption></figure>
+
+</div>
+
 Customize GTA V vehicle extras exactly how you want—every time, with XML.
 
 ## [LicensePlateChanger](../plugins/licenseplatechanger/README.md)  
