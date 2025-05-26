@@ -23,19 +23,19 @@ Customize GTA V vehicle extras exactly how you want—every time, with XML.
 
 ## LicensePlateChanger
 
-N/A
+Bring variety and realism to GTA V with smart license plate customization.
 
 ## MessageBoards
 
-N/A
+Smarter roads. Real-time signs. A more immersive GTA V.
 
 ## SimpleEmotes
 
-N/A 
+Easy emotes, smooth moves—better expression in GTA V.
 
 ## SimpleCTRL
 
-N/A
+Realistic vehicle control and immersive driving—built right into GTA V.
 
 ## SimpleHUD
 
