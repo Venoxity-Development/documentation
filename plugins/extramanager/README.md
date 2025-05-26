@@ -1,5 +1,5 @@
 ---
-icon: settings
+icon: cog
 ---
 
 {% hint style="info" %}
