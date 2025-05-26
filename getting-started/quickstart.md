@@ -30,6 +30,9 @@ A flexible, detailed plugin for Grand Theft Auto V that lets you customize licen
 A dynamic plugin for Grand Theft Auto V that adds realistic variable message signs, showing real-time road conditions and weather alerts to enhance in-game immersion.
 
 ## SimpleEmotes
+
+A user-friendly plugin that adds a built-in emote menu and smooth animation controls to Grand Theft Auto V, making player expression quick and immersive.
+
 ## SimpleCTRL
 ## SimpleHUD
 ## WeaponControl
