@@ -19,9 +19,7 @@ If you're already a **user of our plugins** and have them **installed**, you can
 
 ## [ExtraManager](#)
 
-[![Btn1](https://img.shields.io/badge/Button_1-blue?style=flat)](https://example.com/1)
-[![Btn2](https://img.shields.io/badge/Button_2-green?style=flat)](https://example.com/2)
-[![Btn3](https://img.shields.io/badge/Button_3-red?style=flat)](https://example.com/3)
+[Button 1](https://example.com/1) [Button 2](https://example.com/2) [Button 3](https://example.com/3)
 
 A simple, effective plugin for Grand Theft Auto V that lets you configure and control vehicle extras using XML so your setup looks exactly how you want, every time.
 
