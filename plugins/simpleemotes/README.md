@@ -46,3 +46,5 @@ layout:
 8. Go back to the `SimpleEmotes` folder.
 9. Open the `Grand Theft Auto V` folder inside it. It will match the structure of your main GTA V game folder.
 10. Drag and drop **everything** inside this `Grand Theft Auto V` folder directly into your main GTA V game folder. This includes important files like `Venoxity.Common.dll` and all the libraries.
+
+That’s it! Now you’re ready to launch the game and enjoy SimpleEmotes.
