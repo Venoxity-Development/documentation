@@ -49,6 +49,12 @@ Smarter roads. Real-time signs. A more immersive GTA V.
 
 ## [SimpleEmotes](../plugins/simpleemotes/README.md)  
 
+<div align="left">
+
+<figure><img src="../.gitbook/assets/IMG_7716.png" alt=""><figcaption></figcaption></figure>
+
+</div>
+
 Easy emotes, smooth moves—better expression in GTA V.
 
 ## [SimpleCTRL](../plugins/simplectrl/README.md)  
