@@ -51,20 +51,21 @@ That’s it! Now you’re ready to launch the game and enjoy SimpleEmotes.
 
 ## Credits
 
-A big Thank You to everybody who contributed!
+SimpleEmotes wouldn’t exist without the amazing people behind it and the strong support from the community. A big thanks to:
+	*	Rockstar Games
+	*	BoringNeptune
+	*	BzzziProps
+	*	CrunchyCat
+	*	Dark Animations
+	*	EnchantedBrownie
+	*	KaykayMods
+	*	MissySnowie
+	*	MrWitt
+	*	Queen’s Sister
+	*	SapphireMods
+	*	Soomay
+	*	Struggleville
+  * SUSHi1221
+  * ...and everyone else who has contributed in any way!
 
-* Rockstar Games 
-* BoringNeptune
-* BzzziProps
-* CrunchyCat
-* Dark Animations
-* EnchantedBrownie
-* KaykayMods
-* MissySnowie
-* MrWitt
-* Queen’s Sister
-* SapphireMods
-* Soomay
-* Struggleville
-* SUSHi1221
-* …and everybody else who has contributed anything!
+We’re truly grateful to all the contributors, testers, and supporters who helped make SimpleEmotes a success.
