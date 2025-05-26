@@ -26,6 +26,9 @@ A simple, effective plugin for Grand Theft Auto V that lets you configure and co
 A flexible, detailed plugin for Grand Theft Auto V that lets you customize license plates with realistic formats based on vehicle class—bringing authenticity and variety to every ride.
 
 ## MessageBoards
+
+A dynamic plugin for Grand Theft Auto V that adds realistic variable message signs, showing real-time road conditions and weather alerts to enhance in-game immersion.
+
 ## SimpleEmotes
 ## SimpleCTRL
 ## SimpleHUD
