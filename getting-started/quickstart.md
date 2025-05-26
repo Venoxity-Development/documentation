@@ -82,9 +82,10 @@ Location, compass, and time—always visible, never distracting.
 ## [WeaponControl](../plugins/weaponcontrol/README.md)  
 
 <div align="left">
-
-<figure><img src="../.gitbook/assets/IMG_7873.png" alt=""><figcaption></figcaption></figure>
-
+  <figure>
+    <img src="../.gitbook/assets/IMG_7873.png" alt="" width="375">
+    <figcaption></figcaption>
+  </figure>
 </div>
 
 Enhanced weapon mechanics for a more realistic GTA V combat experience.
