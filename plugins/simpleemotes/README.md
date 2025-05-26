@@ -1,3 +1,3 @@
 ---
-icon: emoji-emotions
+icon: face
 ---
