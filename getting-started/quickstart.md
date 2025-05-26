@@ -71,9 +71,10 @@ Realistic vehicle control and immersive driving—built right into GTA V.
 ## [SimpleHUD](../plugins/simplehud/README.md)  
 
 <div align="left">
-
-<figure><img src="../.gitbook/assets/IMG_7404.png" alt=""><figcaption></figcaption></figure>
-
+  <figure>
+    <img src="../.gitbook/assets/IMG_7404.png" alt="" width="375">
+    <figcaption></figcaption>
+  </figure>
 </div>
 
 Location, compass, and time—always visible, never distracting.
