@@ -22,7 +22,9 @@ If you're already a **user of our plugins** and have them **installed**, you can
 ## MessageBoards
 
 ## SimpleEmotes
-{% page-ref page="#" %}
+[![Status](https://img.shields.io/badge/visibility-private-informational?style=flat-square)](#)
+[![License](https://img.shields.io/badge/license-internal--use--only-lightgrey?style=flat-square)](#)
+[![Maintained by](https://img.shields.io/badge/maintainer-GravityScriptsV2-blue?style=flat-square)](#)
 
 ## SimpleCTRL
 ## SimpleHUD
