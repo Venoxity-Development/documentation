@@ -54,18 +54,18 @@ That’s it! Now you’re ready to launch the game and enjoy SimpleEmotes.
 SimpleEmotes wouldn’t exist without the amazing people behind it and the strong support from the community. A big thanks to:
 - [Rockstar Games](https://store.steampowered.com/app/271590/Grand_Theft_Auto_V_Legacy/)
 -	[BoringNeptune](https://www.gta5-mods.com/users/BoringNeptune)
--	BzzziProps
+-	[BzzziProps](https://www.gta5-mods.com/users/BzZz)
 -	[CrunchyCat](https://www.gta5-mods.com/users/crunchycat)
 - [Darks Animations](https://www.gta5-mods.com/users/Darks%20Animations)
--	EnchantedBrownie
--	KaykayMods
--	MissySnowie
--	MrWitt
-- Queen’s Sister
-- SapphireMods
-- Soomay
-- Struggleville
-- SUSHi1221
+-	[EnchantedBrownie](https://www.gta5-mods.com/users/EnchantedBrownie)
+-	[KaykayMods](https://www.gta5-mods.com/users/kaykaymods)
+-	[MissySnowie](https://www.gta5-mods.com/users/MissySnowie)
+-	[MrWitt](https://www.gta5-mods.com/users/MrWitt)
+- [Queen’s Sister](https://www.gta5-mods.com/users/Queens%20Sister)
+- [SapphireMods](https://www.gta5-mods.com/users/SapphireMods)
+- [Soomay](https://www.gta5-mods.com/users/Soomay)
+- [Struggleville](https://www.gta5-mods.com/users/struggleville)
+- [SUSHi1221](https://www.gta5-mods.com/users/SUSHi1221)
 - ...and everyone else who has contributed in any way!
 
 We’re truly grateful to all the contributors, testers, and supporters who helped make SimpleEmotes a success.
