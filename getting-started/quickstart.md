@@ -59,12 +59,30 @@ Easy emotes, smooth moves—better expression in GTA V.
 
 ## [SimpleCTRL](../plugins/simplectrl/README.md)  
 
+<div align="left">
+
+<figure><img src="../.gitbook/assets/IMG_7871.png" alt=""><figcaption></figcaption></figure>
+
+</div>
+
 Realistic vehicle control and immersive driving—built right into GTA V.
 
 ## [SimpleHUD](../plugins/simplehud/README.md)  
 
+<div align="left">
+
+<figure><img src="../.gitbook/assets/IMG_7404.png" alt=""><figcaption></figcaption></figure>
+
+</div>
+
 Location, compass, and time—always visible, never distracting.
 
 ## [WeaponControl](../plugins/weaponcontrol/README.md)  
+
+<div align="left">
+
+<figure><img src="../.gitbook/assets/IMG_7873.png" alt=""><figcaption></figcaption></figure>
+
+</div>
 
 Enhanced weapon mechanics for a more realistic GTA V combat experience.
