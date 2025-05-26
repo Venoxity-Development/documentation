@@ -42,3 +42,5 @@ A friendly, feature-packed plugin that brings realistic vehicle control and imme
 A lightweight script for Grand Theft Auto V that displays your location, compass, and time in a clean, customizable HUD keeping important info visible without distraction.
 
 ## WeaponControl
+
+A lightweight, intuitive plugin that adds custom firing modes, safety toggles, and smarter weapon handling to Grand Theft Auto V for more realistic combat control.
