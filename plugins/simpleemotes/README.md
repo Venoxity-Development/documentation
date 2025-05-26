@@ -21,4 +21,4 @@ layout:
 
 # Wtf?
 
-## Contents
+## buddy
