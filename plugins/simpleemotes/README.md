@@ -33,3 +33,7 @@ layout:
 * [OpenIV](https://openiv.com)
 * [RagePluginHook](https://www.lcpdfr.com/downloads/gta5mods/g17media/7792-lspd-first-response)
 * [RAGENativeUI](https://github.com/alexguirre/ragenativeui/releases)
+
+## Installation
+
+1. **Download and unzip** the latest release. Put the `SimpleEmotes` folder somewhere easy to find (like your Desktop).
