@@ -22,6 +22,7 @@ layout:
 ## Features
 
 * 133 Walking Styles, 39 Scenarios, 34 Facial Expressions, and 553 Regular Animations for a wide variety of expressive options
+* **Pointing Gesture:** Mimic GTA V Online’s pointing by pressing **B** or double-pressing the left joystick
 
 ## Requirements
 
