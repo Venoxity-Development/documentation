@@ -14,8 +14,5 @@ layout:
     visible: false
 ---
 
-# 1
-
-## 2
-
-## 3
+## v1.0.0 – May 11, 2025
+- Initial Release
