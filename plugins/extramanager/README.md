@@ -1,3 +1,3 @@
 ---
-icon: build
+icon: tools
 ---
