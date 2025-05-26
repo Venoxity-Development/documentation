@@ -37,4 +37,4 @@ layout:
 ## Installation
 
 1. **Download and unzip** the latest release. Put the `SimpleEmotes` folder somewhere easy to find (like your Desktop).
-2. Go to:
+2. Go to: ```test```
