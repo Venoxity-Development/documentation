@@ -19,6 +19,8 @@ layout:
     visible: true
 ---
 
-# Wtf?
+# Welcome
 
-## buddy
+## Introduction
+
+Welcome 
