@@ -1,3 +1,3 @@
 ---
-icon: tag
+icon: theater-comedy
 ---
