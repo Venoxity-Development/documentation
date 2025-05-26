@@ -17,6 +17,4 @@ layout:
     visible: false
 ---
 
-# Hello, World! #1
-## Hello, World! #2
-### Hello, World! #3
+## v1.0.0 – May 11, 2025
