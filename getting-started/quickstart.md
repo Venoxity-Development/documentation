@@ -21,7 +21,7 @@ If you're already a **user of our plugins** and have them **installed**, you can
 
 <div align="left">
 
-<figure><img src="../.gitbook/assets/IMG_7867.png.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/IMG_7867.png" alt=""><figcaption></figcaption></figure>
 
 </div>
 
