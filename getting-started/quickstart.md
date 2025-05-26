@@ -20,7 +20,10 @@ If you're already a **user of our plugins** and have them **installed**, you can
 ## ExtraManager
 ## LicensePlateChanger
 ## MessageBoards
+
 ## SimpleEmotes
+[<span style="font-size:1.5em;">`🛠️ Changelog`</span>](#)
+
 ## SimpleCTRL
 ## SimpleHUD
 ## WeaponControl
