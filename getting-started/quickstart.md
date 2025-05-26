@@ -38,4 +38,7 @@ A user-friendly plugin that adds a built-in emote menu and smooth animation cont
 A friendly, feature-packed plugin that brings realistic vehicle control and immersive driving mechanics to Grand Theft Auto V.
 
 ## SimpleHUD
+
+A lightweight script for Grand Theft Auto V that displays your location, compass, and time in a clean, customizable HUD keeping important info visible without distraction.
+
 ## WeaponControl
