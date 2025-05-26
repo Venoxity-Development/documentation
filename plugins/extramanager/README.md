@@ -1,5 +1,5 @@
 ---
-icon: construction
+icon: check
 ---
 
 {% hint style="info" %}
