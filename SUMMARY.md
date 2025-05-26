@@ -12,6 +12,7 @@
 * [LicensePlateChanger](plugins/licenseplatechanger/README.md)  
 * [MessageBoards](plugins/messageboards/README.md)  
 * [SimpleEmotes](plugins/simpleemotes/README.md)  
+ * [Changelogs](plugins/simpleemotes/changelogs.md)
 * [SimpleCTRL](plugins/simplectrl/README.md)  
 * [SimpleHUD](plugins/simplehud/README.md)  
 * [WeaponControl](plugins/weaponcontrol/README.md)
