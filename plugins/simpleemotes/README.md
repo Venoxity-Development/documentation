@@ -38,3 +38,4 @@ layout:
 
 1. **Download and unzip** the latest release. Put the `SimpleEmotes` folder somewhere easy to find (like your Desktop).
 2. Go to: ```SimpleEmotes > Required Content > DLC Package```
+3. Open **OpenIV**, enable Edit Mode, and go to:
