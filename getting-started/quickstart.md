@@ -32,7 +32,7 @@ Customize GTA V vehicle extras exactly how you want—every time, with XML.
 
 <div align="left">
   <figure>
-    <img src="../.gitbook/assets/IMG_7868.png" alt="" width="375" height="275"
+    <img src="../.gitbook/assets/IMG_7868.png" alt="" width="375" height="fit"
     <figcaption></figcaption>
   </figure>
 </div>
