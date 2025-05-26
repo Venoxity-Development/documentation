@@ -43,3 +43,6 @@ layout:
 5. Now go to: ```mods > update > update.rpf > common > data```
 6. Open `dlclist.xml` and add this line inside the `<Paths>` section: ```<Item>dlcpacks:/animpack/</Item>```
 7. Save and close.
+8. Go back to the `SimpleEmotes` folder.
+9. Open the `Grand Theft Auto V` folder inside it. It will match the structure of your main GTA V game folder.
+10. Drag and drop **everything** inside this `Grand Theft Auto V` folder directly into your main GTA V game folder. This includes important files like `Venoxity.Common.dll` and all the libraries.
