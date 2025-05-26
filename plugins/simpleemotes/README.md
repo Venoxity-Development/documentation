@@ -1,18 +1,16 @@
 ---
-icon: hand-wave
-description: >-
-  Discover Venoxity’s powerful plugins designed to enhance your GTA V experience
-  with seamless integration and rich functionality.
-cover: .gitbook/assets/image_2024-10-30_172400807.png
+icon: persob
+description: A user-friendly plugin that adds a built-in emote menu and smooth animation controls to Grand Theft Auto V, making player expression quick and immersive.
+cover: ../../.gitbook/assets/IMG_7716.png
 coverY: 0
 layout:
   cover:
     visible: false
     size: full
   title:
-    visible: false
+    visible: true
   description:
-    visible: false
+    visible: true
   tableOfContents:
     visible: false
   outline:
@@ -21,16 +19,8 @@ layout:
     visible: false
 ---
 
-# Welcome
+# 1
 
-## Introduction
+# 2
 
-Welcome to the documentation site for Venoxity Development. Here, you’ll find all the information you need to get started with our suite of plugins for GTA V. Explore the fundamentals of using our plugins, along with detailed guides and resources to enhance your gameplay experience.
-
-## What is Venoxity Development?
-
-**Venoxity Development** specializes in creating **innovative plugins** for **Grand Theft Auto V (GTA V)**, such as **SimpleCTRL** and **SimpleHUD**. Our mission is to enhance the **gameplay experience** with **seamless integrations** and **unique features** tailored for the community. We are dedicated to delivering **quality solutions** that empower players and enrich their time in the game.
-
-### Jump right in
-
-<table data-view="cards"><thead><tr><th></th><th></th><th></th><th></th><th data-hidden data-card-target data-type="content-ref"></th><th data-hidden data-card-cover data-type="files"></th></tr></thead><tbody><tr><td>Quickstart</td><td>Install Venoxity Development plugins and enhance your gameplay experience.</td><td></td><td></td><td><a href="getting-started/quickstart.md">quickstart.md</a></td><td></td></tr><tr><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td></td><td></td><td></td><td></td><td></td><td></td></tr></tbody></table>
+# 3
