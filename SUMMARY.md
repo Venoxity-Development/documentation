@@ -9,3 +9,4 @@
 ## Plugins
 
 * [ExtraManager](plugins/extramanager/README.md)
+* [LicensePlateChanger](plugins/licenseplatechanger/README.md)
