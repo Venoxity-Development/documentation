@@ -55,8 +55,8 @@ SimpleEmotes wouldn’t exist without the amazing people behind it and the stron
 - [Rockstar Games](https://store.steampowered.com/app/271590/Grand_Theft_Auto_V_Legacy/)
 -	[BoringNeptune](https://www.gta5-mods.com/users/BoringNeptune)
 -	BzzziProps
--	CrunchyCat
-- Dark Animations
+-	[CrunchyCat](https://www.gta5-mods.com/users/crunchycat)
+- [Darks Animations](https://www.gta5-mods.com/users/Darks%20Animations)
 -	EnchantedBrownie
 -	KaykayMods
 -	MissySnowie
