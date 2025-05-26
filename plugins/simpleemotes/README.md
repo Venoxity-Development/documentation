@@ -8,15 +8,15 @@ layout:
     visible: true
     size: full
   title:
-    visible: true
+    visible: falss
   description:
-    visible: true
+    visible: false
   tableOfContents:
-    visible: true
+    visible: false
   outline:
     visible: false
   pagination:
-    visible: true
+    visible: false
 ---
 
 # Hello, World!
