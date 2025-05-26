@@ -1,3 +1,3 @@
 ---
-icon: theater-comedy
+icon: bullseye-arrow
 ---
