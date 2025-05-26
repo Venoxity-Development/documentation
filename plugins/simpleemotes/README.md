@@ -42,3 +42,4 @@ layout:
 4. Drop the `animpack` folder into the `dlcpacks` folder.
 5. Now go to: ```mods > update > update.rpf > common > data```
 6. Open `dlclist.xml` and add this line inside the `<Paths>` section: ```<Item>dlcpacks:/animpack/</Item>```
+7. Save and close.
