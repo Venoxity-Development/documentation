@@ -9,4 +9,3 @@
 ## Plugins
 
 * [ExtraManager](plugins/extramanager/README.md)
-  * [Changelogs](plugins/extramanager/changelogs.md)
