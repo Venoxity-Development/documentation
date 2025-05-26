@@ -17,4 +17,5 @@ layout:
     visible: false
 ---
 
-# SimpleEmotes for GTA V – Changelog
+## v1.0.0 - May 11, 2025
+* Initial Release
