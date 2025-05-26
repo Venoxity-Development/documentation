@@ -38,7 +38,7 @@ layout:
 
 1. **Download and unzip** the latest release. Put the `SimpleEmotes` folder somewhere easy to find (like your Desktop).
 2. Go to: ```SimpleEmotes > Required Content > DLC Package```
-3. Open **OpenIV**, enable Edit Mode, and go to: ```mods > update > x64 > dlcpacks```
+3. Open **OpenIV**, enable *Edit Mode*, and go to: ```mods > update > x64 > dlcpacks```
 4. Drop the `animpack` folder into the `dlcpacks` folder.
 5. Now go to: ```mods > update > update.rpf > common > data```
 6. Open `dlclist.xml` and add this line inside the `<Paths>` section: ```<Item>dlcpacks:/animpack/</Item>```
