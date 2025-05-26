@@ -69,3 +69,5 @@ SimpleEmotes wouldn’t exist without the amazing people behind it and the stron
 - ...and everyone else who has contributed in any way!
 
 We’re truly grateful to all the contributors, testers, and supporters who helped make SimpleEmotes a success.
+
+## Support & Feedback
