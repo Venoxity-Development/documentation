@@ -1,7 +1,7 @@
 ---
 icon: tag
 description: A flexible, detailed plugin for Grand Theft Auto V that lets you customize license plates with realistic formats based on vehicle class—bringing authenticity and variety to every ride.
-cover: ../../.gitbook/assets/IMG_7867.png
+cover: ../../.gitbook/assets/IMG_7868.png
 coverY: 0
 layout:
   cover:
