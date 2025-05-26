@@ -19,12 +19,10 @@ layout:
     visible: false
 ---
 
-## Contents
-
 ## Requirements
 
 * [Grand Theft Auto V](https://www.rockstargames.com/gta-v)
-* [RAGENativeUI](https://github.com/alexguirre/ragenativeui/releases)
 * [RagePluginHook](https://www.lcpdfr.com/downloads/gta5mods/g17media/7792-lspd-first-response)
+* [RAGENativeUI](https://github.com/alexguirre/ragenativeui/releases)
 
 ## Installation
