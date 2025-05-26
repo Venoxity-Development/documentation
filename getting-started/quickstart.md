@@ -54,7 +54,7 @@ Smarter roads. Real-time signs. A more immersive GTA V.
 
 <div align="left">
   <figure>
-    <img src="../.gitbook/assets/IMG_7716.png" alt="" width="375" height="350">
+    <img src="../.gitbook/assets/IMG_7716.png" alt="" width="375" height="25%">
     <figcaption></figcaption>
   </figure>
 </div>
