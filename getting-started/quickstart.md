@@ -17,22 +17,10 @@ In this article, I’ll guide you through how to get started with Venoxity Devel
 If you're already a **user of our plugins** and have them **installed**, you can skip to the [**Essential Knowledge**](../basics/essential-knowledge.md) section for **advanced tips** and **updates**.
 {% endhint %}
 
-## 1. 🛠️ ExtraManager
-
-***
-
-## 2. 🏷️ LicensePlateChanger
-
-***
-
-## 3. ⚙️ SimpleCTRL
-
-***
-
-## 4. 🗺️ SimpleHUD
-
-***
-
-## 5. 🔒 WeaponControl
-
-***
+ExtraManager
+LicensePlateChanger
+MessageBoards
+SimpleEmotes
+SimpleCTRL
+SimpleHUD
+WeaponControl
