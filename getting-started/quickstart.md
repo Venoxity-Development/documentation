@@ -18,7 +18,17 @@ If you're already a **user of our plugins** and have them **installed**, you can
 {% endhint %}
 
 ## [ExtraManager](#)
-<a href="#" style="font-size:1.5em; text-decoration:none;">`📖 README`</a>
+<style>
+  .no-underline a {
+    text-decoration: none !important;
+  }
+</style>
+
+<div class="no-underline">
+  <a href="#" style="font-size:1.5em;">📖 README</a>
+  <a href="#" style="font-size:1.5em;">📥 Releases</a>
+  <a href="#" style="font-size:1.5em;">🛠️ Changelog</a>
+</div>
 
 [<span style="font-size:1.5em;">`📖 README`</span>](#) [<span style="font-size:1.5em;">`📥 Releases`</span>](#) [<span style="font-size:1.5em;">`🛠️ Changelog`</span>](#)
 
