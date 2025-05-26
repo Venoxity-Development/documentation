@@ -2,9 +2,6 @@
 icon: scroll
 description: Track all updates to SimpleEmotes here. Features, fixes, and improvements are all listed in one place.
 layout:
-  cover:
-    visible: false
-    size: full
   title:
     visible: true
   description:
@@ -16,5 +13,7 @@ layout:
   pagination:
     visible: false
 ---
+
+# 1
 
 ## v1.0.0 – May 11, 2025
