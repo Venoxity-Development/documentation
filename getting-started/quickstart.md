@@ -22,6 +22,14 @@ If you're already a **user of our plugins** and have them **installed**, you can
 ## MessageBoards
 
 ## SimpleEmotes
+<button
+    label="Click me"
+    onPress={{
+        action: 'update-state',
+        anotherProperty: 'something'
+    }}
+/>
+
 <a href="#" style="font-size:1.5em; text-decoration:none; margin-right:15px;">`📖 README`</a>
 <a href="#" style="font-size:1.5em; text-decoration:none; margin-right:15px;">`📥 Releases`</a>
 <a href="#" style="font-size:1.5em; text-decoration:none;">`🛠️ Changelog`</a>
