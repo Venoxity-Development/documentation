@@ -19,10 +19,12 @@ layout:
     visible: false
 ---
 
+## Features
+
+* 133 Walking Styles, 39 Scenarios, 34 Facial Expressions, and 553 Regular Animations for a wide variety of expressive options
+
 ## Requirements
 
 * [Grand Theft Auto V](https://www.rockstargames.com/gta-v)
 * [RagePluginHook](https://www.lcpdfr.com/downloads/gta5mods/g17media/7792-lspd-first-response)
 * [RAGENativeUI](https://github.com/alexguirre/ragenativeui/releases)
-
-## Installation
