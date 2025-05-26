@@ -39,7 +39,7 @@ N/A
 
 ## SimpleHUD
 
-A lightweight script for Grand Theft Auto V that displays your location, compass, and time in a clean, customizable HUD keeping important info visible without distraction.
+N/A
 
 ## WeaponControl
 
