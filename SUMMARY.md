@@ -8,5 +8,5 @@
 
 ## Summary
 
-* Group 1
+* ExtraManager
   * [Page A](group1/page-a.md)
