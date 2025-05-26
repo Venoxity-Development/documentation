@@ -12,6 +12,8 @@
 * [Good to know](basics/good-to-know.md)
 * [Useful to know](basics/useful-to-know.md)
 
-## Plugins
+## Test
 
-* [ExtraManager](extramanager/README.md)
+* Group 1
+  * Subgroup
+    * [Nested Page](group1/subgroup/nested.md)
