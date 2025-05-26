@@ -18,6 +18,13 @@ If you're already a **user of our plugins** and have them **installed**, you can
 {% endhint %}
 
 ## ExtraManager
+
+[<span style="font-size:1.5em;">`📖 README`</span>](#)
+[<span style="font-size:1.5em;">`📥 Releases`</span>](#)
+[<span style="font-size:1.5em;">`🛠️ Changelog`</span>](#)
+
+blabla
+
 ## LicensePlateChanger
 ## MessageBoards
 ## SimpleEmotes
