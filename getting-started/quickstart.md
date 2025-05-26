@@ -61,7 +61,7 @@ Easy emotes, smooth moves—better expression in GTA V.
 
 <div align="left">
   <figure>
-    <img src="../.gitbook/assets/IMG_7871.png" alt="" style="width:300px; height:50px;">
+    <img src="../.gitbook/assets/IMG_7871.png" alt="" style="width:300px !important; height:auto !important;">
     <figcaption></figcaption>
   </figure>
 </div>
