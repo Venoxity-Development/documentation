@@ -39,6 +39,12 @@ Bring variety and realism to GTA V with smart license plate customization.
 
 ## [MessageBoards](../plugins/messageboards/README.md)  
 
+<div align="left">
+
+<figure><img src="../.gitbook/assets/IMG_7869.png" alt=""><figcaption></figcaption></figure>
+
+</div>
+
 Smarter roads. Real-time signs. A more immersive GTA V.
 
 ## [SimpleEmotes](../plugins/simpleemotes/README.md)  
