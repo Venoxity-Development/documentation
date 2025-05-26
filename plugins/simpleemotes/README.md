@@ -14,13 +14,11 @@ layout:
   tableOfContents:
     visible: true
   outline:
-    visible: true
+    visible: false
   pagination:
     visible: true
 ---
 
-test
-
-## Introduction
-
-Welcome 
+# Hello, World!
+## Hello, World!
+### Hello, World!
