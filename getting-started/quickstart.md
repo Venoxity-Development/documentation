@@ -22,6 +22,8 @@ If you're already a **user of our plugins** and have them **installed**, you can
 ## MessageBoards
 
 ## SimpleEmotes
+[<span style="font-size:1.5em;">`📖 README`</span>](#)
+[<span style="font-size:1.5em;">`📥 Releases`</span>](#)
 [<span style="font-size:1.5em;">`🛠️ Changelog`</span>](#)
 
 ## SimpleCTRL
