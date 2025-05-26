@@ -10,7 +10,7 @@ layout:
     visible: true
     size: full
   title:
-    visible: true
+    visible: false
   description:
     visible: true
   tableOfContents:
