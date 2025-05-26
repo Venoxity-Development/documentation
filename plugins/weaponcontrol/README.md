@@ -1,7 +1,7 @@
 ---
 icon: lock
 description: A lightweight, intuitive plugin that adds custom firing modes, safety toggles, and smarter weapon handling to Grand Theft Auto V for more realistic combat control.
-cover: ../../.gitbook/assets/IMG_7869.png
+cover: ../../.gitbook/assets/IMG_7873.png
 coverY: 0
 layout:
   cover:
