@@ -11,3 +11,5 @@
 * [Essential Knowledge](basics/essential-knowledge.md)
 * [Good to know](basics/good-to-know.md)
 * [Useful to know](basics/useful-to-know.md)
+
+<!-- * [Hidden Page](extramanager/README.md) -->
