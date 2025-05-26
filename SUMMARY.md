@@ -8,6 +8,5 @@
 
 ## Plugins
 
-* [Plugins Overview](plugins/README.md)
-  * [ExtraManager](plugins/extramanager.md)
-  * [Page A](plugins/page-a.md)
+* [ExtraManager](extramanager/README.md)
+  * [Page A](extramanager/changelogs.md)
