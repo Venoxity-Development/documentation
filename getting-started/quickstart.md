@@ -22,11 +22,7 @@ If you're already a **user of our plugins** and have them **installed**, you can
 ## MessageBoards
 
 ## SimpleEmotes
-[Button 1](https://example.com)  
-&nbsp;  
-[Button 2](https://example.com)  
-&nbsp;  
-[Button 3](https://example.com)
+{% page-ref page="#" %}
 
 ## SimpleCTRL
 ## SimpleHUD
