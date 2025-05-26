@@ -14,4 +14,4 @@
 
 ## Plugins
 
-* [Hidden Page](extramanager/README.md)
+* [ExtraManager](extramanager/README.md)
