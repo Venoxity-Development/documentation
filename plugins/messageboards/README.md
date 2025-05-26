@@ -1,3 +1,3 @@
 ---
-icon: sign
+icon: bullseye-arrow
 ---
