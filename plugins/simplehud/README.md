@@ -1,3 +1,3 @@
 ---
-icon: face
+icon: bullseye-arrow
 ---
