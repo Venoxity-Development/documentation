@@ -19,6 +19,10 @@ If you're already a **user of our plugins** and have them **installed**, you can
 
 ## [ExtraManager](#)
 
+<button>1</button>
+<button>2</button>
+<button>3</button>
+
 A simple, effective plugin for Grand Theft Auto V that lets you configure and control vehicle extras using XML so your setup looks exactly how you want, every time.
 
 ## LicensePlateChanger
