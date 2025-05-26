@@ -19,6 +19,6 @@ layout:
     visible: true
 ---
 
-# Releases
+# Wtf?
 
 ## Contents
