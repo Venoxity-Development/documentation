@@ -1,6 +1,22 @@
 ---
 icon: comment
 description: A dynamic plugin for Grand Theft Auto V that adds realistic variable message signs, showing real-time road conditions and weather alerts to enhance in-game immersion.
+cover: ../../.gitbook/assets/IMG_7868.png
+coverY: 0
+layout:
+  cover:
+    visible: true
+    size: full
+  title:
+    visible: true
+  description:
+    visible: true
+  tableOfContents:
+    visible: true
+  outline:
+    visible: true
+  pagination:
+    visible: true
 ---
 
 {% hint style="info" %}
