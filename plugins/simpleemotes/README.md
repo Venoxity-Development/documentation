@@ -1,6 +1,5 @@
 ---
 icon: person
-title: balls
 description: A user-friendly plugin that adds a built-in emote menu and smooth animation controls to Grand Theft Auto V, making player expression quick and immersive.
 cover: ../../.gitbook/assets/IMG_7716.png
 coverY: 0
@@ -20,7 +19,7 @@ layout:
     visible: true
 ---
 
-# Welcome
+test
 
 ## Introduction
 
