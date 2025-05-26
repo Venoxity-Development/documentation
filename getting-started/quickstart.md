@@ -18,8 +18,9 @@ If you're already a **user of our plugins** and have them **installed**, you can
 {% endhint %}
 
 ## [ExtraManager](#)
-
-[Button 1](https://example.com/1) [Button 2](https://example.com/2) [Button 3](https://example.com/3)
+[<span style="font-size:1.5em;">`📖 README`</span>](#)
+[<span style="font-size:1.5em;">`📥 Releases`</span>](#)
+[<span style="font-size:1.5em;">`🛠️ Changelog`</span>](#)
 
 A simple, effective plugin for Grand Theft Auto V that lets you configure and control vehicle extras using XML so your setup looks exactly how you want, every time.
 
