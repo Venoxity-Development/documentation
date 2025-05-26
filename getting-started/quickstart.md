@@ -19,7 +19,7 @@ If you're already a **user of our plugins** and have them **installed**, you can
 
 ## ExtraManager
 
-N/A
+Customize GTA V vehicle extras exactly how you want—every time, with XML.
 
 ## LicensePlateChanger
 
