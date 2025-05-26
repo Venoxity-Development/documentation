@@ -22,42 +22,34 @@ If you're already a **user of our plugins** and have them **installed**, you can
 ## MessageBoards
 
 ## SimpleEmotes
-<a href="https://example.com/1" style="
-  display: inline-block; 
-  padding: 10px 20px; 
-  background-color: #007acc; 
-  color: white; 
-  text-decoration: none; 
-  border-radius: 5px; 
-  margin-right: 12px; 
-  cursor: pointer;
-  user-select: none;
-">
-  Button 1
-</a><a href="https://example.com/2" style="
-  display: inline-block; 
-  padding: 10px 20px; 
-  background-color: #28a745; 
-  color: white; 
-  text-decoration: none; 
-  border-radius: 5px; 
-  margin-right: 12px; 
-  cursor: pointer;
-  user-select: none;
-">
-  Button 2
-</a><a href="https://example.com/3" style="
-  display: inline-block; 
-  padding: 10px 20px; 
-  background-color: #dc3545; 
-  color: white; 
-  text-decoration: none; 
-  border-radius: 5px; 
-  cursor: pointer;
-  user-select: none;
-">
-  Button 3
-</a>
+<span style="white-space: nowrap;">
+  <a href="https://example.com/1" style="
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #007acc;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-right: 15px;
+  ">Button 1</a>
+  <a href="https://example.com/2" style="
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #28a745;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-right: 15px;
+  ">Button 2</a>
+  <a href="https://example.com/3" style="
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #dc3545;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+  ">Button 3</a>
+</span>
 
 <a href="#" style="font-size:1.5em; text-decoration:none; margin-right:15px;">`📖 README`</a>
 <a href="#" style="font-size:1.5em; text-decoration:none; margin-right:15px;">`📥 Releases`</a>
