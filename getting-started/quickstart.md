@@ -23,7 +23,9 @@ If you're already a **user of our plugins** and have them **installed**, you can
 
 ## SimpleEmotes
 [Button Text](https://example.com) 
+
 [Button Text](https://example.com) 
+
 [Button Text](https://example.com) 
 
 ## SimpleCTRL
