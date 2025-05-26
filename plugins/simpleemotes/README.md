@@ -14,9 +14,9 @@ layout:
   tableOfContents:
     visible: true
   outline:
-    visible: false
-  pagination:
     visible: true
+  pagination:
+    visible: false
 ---
 
 # 1
