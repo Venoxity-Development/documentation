@@ -60,9 +60,10 @@ Easy emotes, smooth moves—better expression in GTA V.
 ## [SimpleCTRL](../plugins/simplectrl/README.md)  
 
 <div align="left">
-
-<figure><img src="../.gitbook/assets/IMG_7871.png" alt=""><figcaption></figcaption></figure>
-
+  <figure>
+    <img src="../.gitbook/assets/IMG_7871.png" alt="" style="width:300px; height:auto;">
+    <figcaption></figcaption>
+  </figure>
 </div>
 
 Realistic vehicle control and immersive driving—built right into GTA V.
