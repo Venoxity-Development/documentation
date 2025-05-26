@@ -23,4 +23,6 @@ layout:
 
 ## Requirements
 
+* [Grand Theft Auto V](https://www.rockstargames.com/gta-v)
+
 ## Installation
