@@ -7,18 +7,18 @@ cover: .gitbook/assets/image_2024-10-30_172400807.png
 coverY: 0
 layout:
   cover:
-    visible: true
+    visible: false
     size: full
   title:
     visible: false
   description:
     visible: false
   tableOfContents:
-    visible: true
+    visible: false
   outline:
-    visible: true
+    visible: false
   pagination:
-    visible: true
+    visible: false
 ---
 
 # Welcome
