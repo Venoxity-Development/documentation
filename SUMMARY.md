@@ -9,4 +9,4 @@
 ## Plugins
 
 * ExtraManager
-  * [Page A](group1/page-a.md)
+  * [Page A](extramanager/README.md)
