@@ -6,7 +6,7 @@
 
 * [Quickstart](getting-started/quickstart.md)
 
-## Summary
+## Plugins
 
 * ExtraManager
   * [Page A](group1/page-a.md)
