@@ -1,6 +1,20 @@
 ---
 icon: bullseye-arrow
 description: A Brief Overview of Getting Started with Venoxity Development Plugins
+layout:
+  cover:
+    visible: false
+    size: full
+  title:
+    visible: true
+  description:
+    visible: true
+  tableOfContents:
+    visible: true
+  outline:
+    visible: true
+  pagination:
+    visible: false
 ---
 
 # Quickstart
