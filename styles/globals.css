@@ -3,12 +3,12 @@
 @import "fumadocs-ui/css/preset.css";
 @import "fumadocs-twoslash/twoslash.css";
 @import 'fumadocs-openapi/css/preset.css';
+@import 'tw-animate-css';
 
 @source ".";
 @source "../components";
 @source "../content";
 @source "../app";
-@plugin 'tailwindcss-animate';
 
 @custom-variant dark (&:is(.dark *));
 
@@ -29,14 +29,10 @@
   --font-mono: var(--font-geist-mono);
 
   --color-gradient-radial: radial-gradient(circle, var(--tw-gradient-stops));
-  --color-repeat-gradient-to-r: repeating-linear-gradient(
-    to right,
-    var(--tw-gradient-stops)
-  );
-  --color-repeat-gradient-to-br: repeating-linear-gradient(
-    to bottom right,
-    var(--tw-gradient-stops)
-  );
+  --color-repeat-gradient-to-r: repeating-linear-gradient(to right,
+    var(--tw-gradient-stops));
+  --color-repeat-gradient-to-br: repeating-linear-gradient(to bottom right,
+    var(--tw-gradient-stops));
 }
 
 @theme {
@@ -89,6 +85,17 @@
     background-color: var(--color-fd-background);
   }
 
+  ::selection {
+    background-color: var(--color-accent);
+    color: var(--color-foreground);
+  }
+
+  .dark ::selection {
+    background-color: var(--color-accent);
+    color: var(--color-foreground);
+  }
+
+
   .ui {
     --color-fd-primary: var(--ui-color) !important;
   }
@@ -99,5 +106,27 @@
 
   .changelog {
     --color-fd-primary: var(--changelog-color) !important;
+  }
+}
+
+.dark [data-hide-on-theme="dark"],
+.light [data-hide-on-theme="light"] {
+  display: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  ::view-transition-new(theme-transition) {
+    clip-path: inset(0 0 100% 0);
+    animation: slide-in-from-top 0.65s forwards cubic-bezier(0.65, 0, 0.35, 1);
+  }
+
+  ::view-transition-old(theme-transition) {
+    animation: none;
+  }
+
+  @keyframes slide-in-from-top {
+    to {
+      clip-path: inset(0 0 0 0);
+    }
   }
 }

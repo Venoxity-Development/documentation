@@ -13,6 +13,9 @@ const config: NextConfig = {
       fullUrl: true,
     },
   },
+  experimental: {
+    viewTransition: true,
+  },
   eslint: {
     // Replaced by root workspace command
     ignoreDuringBuilds: true,

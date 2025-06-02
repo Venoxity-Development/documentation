@@ -2,6 +2,7 @@ import { LinkItemType } from 'fumadocs-ui/layouts/docs';
 import type { BaseLayoutProps } from 'fumadocs-ui/layouts/shared';
 import Logo from "@/public/logo.svg";
 import Image from 'next/image';
+import { ThemeToggle } from '@/components/theme-toggle';
 
 export const title = 'Starter Kit';
 
@@ -48,6 +49,9 @@ export const baseOptions: BaseLayoutProps = {
       </>
     ),
     transparentMode: 'top',
+  },
+  themeSwitch: {
+    component: <ThemeToggle mode="light-dark" className='' />,
   },
   links: [...linkItems],
 };
