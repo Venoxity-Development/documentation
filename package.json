@@ -60,27 +60,27 @@
     "zod": "^3.25.67"
   },
   "devDependencies": {
-    "@fumadocs/cli": "^0.0.8",
-    "@tailwindcss/postcss": "^4.0.15",
+    "@fumadocs/cli": "^0.2.1",
+    "@tailwindcss/postcss": "^4.1.10",
     "@types/hast": "^3.0.4",
     "@types/mdx": "^2.0.13",
-    "@types/node": "22.13.9",
+    "@types/node": "24.0.3",
     "@types/react": "^19.1.8",
     "@types/react-dom": "^19.1.6",
     "chokidar": "^4.0.3",
     "dotenv-cli": "^8.0.0",
-    "eslint": "^9.22.0",
-    "eslint-config-next": "15.2.3",
+    "eslint": "^9.29.0",
+    "eslint-config-next": "15.3.4",
     "fast-glob": "^3.3.3",
     "gray-matter": "^4.0.3",
     "next-validate-link": "^1.5.2",
-    "postcss": "^8.5.3",
-    "prettier": "^3.5.3",
+    "postcss": "^8.5.6",
+    "prettier": "^3.6.0",
     "source-map-support": "^0.5.21",
-    "tailwindcss": "^4.0.15",
-    "ts-morph": "^25.0.1",
-    "tsx": "^4.19.3",
-    "typescript": "^5.8.2"
+    "tailwindcss": "^4.1.10",
+    "ts-morph": "^26.0.0",
+    "tsx": "^4.20.3",
+    "typescript": "^5.8.3"
   },
   "pnpm": {
     "onlyBuiltDependencies": [
