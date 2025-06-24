@@ -1,5 +1,23 @@
 'use client';
 import {
+  type Message as MessageT,
+  type UseChatHelpers,
+  useChat,
+} from '@ai-sdk/react';
+import {
+  Dialog,
+  DialogClose,
+  DialogContent,
+  DialogOverlay,
+  DialogPortal,
+  type DialogProps,
+  DialogTitle,
+} from '@radix-ui/react-dialog';
+import Link from 'fumadocs-core/link';
+import { DynamicCodeBlock } from 'fumadocs-ui/components/dynamic-codeblock';
+import defaultMdxComponents from 'fumadocs-ui/mdx';
+import { Loader2, RefreshCw, Send, X } from 'lucide-react';
+import {
   Children,
   type ComponentProps,
   createContext,
@@ -13,30 +31,16 @@ import {
   useRef,
   useState,
 } from 'react';
-import { Loader2, RefreshCw, Send, X } from 'lucide-react';
-import defaultMdxComponents from 'fumadocs-ui/mdx';
-import { cn } from '@/lib/cn';
-import { buttonVariants } from '../../ui/button';
-import { createProcessor, type Processor } from './markdown-processor';
-import Link from 'fumadocs-core/link';
-import {
-  Dialog,
-  DialogClose,
-  DialogContent,
-  DialogOverlay,
-  DialogPortal,
-  type DialogProps,
-  DialogTitle,
-} from '@radix-ui/react-dialog';
-import { type Message, useChat, type UseChatHelpers } from '@ai-sdk/react';
-import type { ProvideLinksToolSchema } from '@/lib/ai/qa-schema';
 import type { z } from 'zod';
-import { DynamicCodeBlock } from 'fumadocs-ui/components/dynamic-codeblock';
 import {
   Tooltip,
   TooltipContent,
   TooltipTrigger,
 } from '@/components/ui/tooltip';
+import type { ProvideLinksToolSchema } from '@/lib/ai/qa-schema';
+import { cn } from '@/lib/cn';
+import { buttonVariants } from '../../ui/button';
+import { createProcessor, type Processor } from './markdown-processor';
 
 const ChatContext = createContext<UseChatHelpers | null>(null);
 function useChatContext() {
@@ -49,29 +53,29 @@ function SearchAIActions() {
 
   if (messages.length === 0) return null;
   return (
-    <div className="sticky bottom-0 bg-gradient-to-t from-fd-popover px-3 py-1.5 flex flex-row items-center justify-end gap-2 empty:hidden">
+    <div className='sticky bottom-0 flex flex-row items-center justify-end gap-2 bg-gradient-to-t from-fd-popover px-3 py-1.5 empty:hidden'>
       {!isLoading && messages.at(-1)?.role === 'assistant' && (
         <button
-          type="button"
+          type='button'
           className={cn(
             buttonVariants({
               variant: 'secondary',
             }),
-            'text-fd-muted-foreground rounded-full gap-1.5',
+            'gap-1.5 rounded-full text-fd-muted-foreground',
           )}
           onClick={() => reload()}
         >
-          <RefreshCw className="size-4" />
+          <RefreshCw className='size-4' />
           Retry
         </button>
       )}
       <button
-        type="button"
+        type='button'
         className={cn(
           buttonVariants({
             variant: 'secondary',
           }),
-          'text-fd-muted-foreground rounded-full',
+          'rounded-full text-fd-muted-foreground',
         )}
         onClick={() => setMessages([])}
       >
@@ -119,30 +123,30 @@ function SearchAIInput(props: FormHTMLAttributes<HTMLFormElement>) {
       />
       {isLoading ? (
         <button
-          type="button"
+          type='button'
           className={cn(
             buttonVariants({
               variant: 'secondary',
-              className: 'rounded-full mt-2 gap-2',
+              className: 'mt-2 gap-2 rounded-full',
             }),
           )}
           onClick={stop}
         >
-          <Loader2 className="size-4 animate-spin text-fd-muted-foreground" />
+          <Loader2 className='size-4 animate-spin text-fd-muted-foreground' />
           Abort Answer
         </button>
       ) : (
         <button
-          type="submit"
+          type='submit'
           className={cn(
             buttonVariants({
               variant: 'ghost',
-              className: 'rounded-full mt-2 p-1.5',
+              className: 'mt-2 rounded-full p-1.5',
             }),
           )}
           disabled={input.length === 0}
         >
-          <Send className="size-4" />
+          <Send className='size-4' />
         </button>
       )}
     </form>
@@ -183,7 +187,7 @@ function List(props: Omit<HTMLAttributes<HTMLDivElement>, 'dir'>) {
       ref={containerRef}
       {...props}
       className={cn(
-        'fd-scroll-container overflow-y-auto max-h-[calc(100dvh-240px)] min-w-0 flex flex-col',
+        'fd-scroll-container flex max-h-[calc(100dvh-240px)] min-w-0 flex-col overflow-y-auto',
         props.className,
       )}
     >
@@ -197,16 +201,16 @@ function Input(props: TextareaHTMLAttributes<HTMLTextAreaElement>) {
   const shared = cn('col-start-1 row-start-1 max-h-60 min-h-12 p-3');
 
   return (
-    <div className="grid flex-1">
+    <div className='grid flex-1'>
       <textarea
-        id="nd-ai-input"
+        id='nd-ai-input'
         className={cn(
           shared,
           'resize-none bg-transparent placeholder:text-fd-muted-foreground focus-visible:outline-none',
         )}
         {...props}
       />
-      <div ref={ref} className={cn(shared, 'break-all invisible')}>
+      <div ref={ref} className={cn(shared, 'invisible break-all')}>
         {`${props.value?.toString() ?? ''}\n`}
       </div>
     </div>
@@ -221,7 +225,7 @@ const roleName: Record<string, string> = {
   assistant: 'assistant',
 };
 
-function Message({ message }: { message: Message }) {
+function Message({ message }: { message: MessageT }) {
   const { parts } = message;
   let links: z.infer<typeof ProvideLinksToolSchema>['links'] = [];
 
@@ -237,25 +241,25 @@ function Message({ message }: { message: Message }) {
     <div>
       <p
         className={cn(
-          'mb-1 text-xs font-medium text-fd-muted-foreground',
+          'mb-1 font-medium text-fd-muted-foreground text-xs',
           message.role === 'assistant' && 'text-fd-primary',
         )}
       >
         {roleName[message.role] ?? 'unknown'}
       </p>
-      <div className="prose text-sm">
+      <div className='prose text-sm'>
         <Markdown text={message.content} />
       </div>
       {links && links.length > 0 ? (
-        <div className="mt-2 flex flex-row flex-wrap items-center gap-1">
+        <div className='mt-2 flex flex-row flex-wrap items-center gap-1'>
           {links.map((item, i) => (
             <Link
               key={i}
               href={item.url}
-              className="block text-xs rounded-lg border p-3 hover:bg-fd-accent hover:text-fd-accent-foreground"
+              className='block rounded-lg border p-3 text-xs hover:bg-fd-accent hover:text-fd-accent-foreground'
             >
-              <p className="font-medium">{item.title}</p>
-              <p className="text-fd-muted-foreground">Reference {item.label}</p>
+              <p className='font-medium'>{item.title}</p>
+              <p className='text-fd-muted-foreground'>Reference {item.label}</p>
             </Link>
           ))}
         </div>
@@ -318,14 +322,14 @@ export default function AISearch(props: DialogProps) {
     <Dialog {...props}>
       {props.children}
       <DialogPortal>
-        <DialogOverlay className="fixed inset-0 z-50 bg-black/30 backdrop-blur-sm data-[state=closed]:animate-fd-fade-out data-[state=open]:animate-fd-fade-in" />
+        <DialogOverlay className='fixed inset-0 z-50 bg-black/30 backdrop-blur-sm data-[state=closed]:animate-fd-fade-out data-[state=open]:animate-fd-fade-in' />
         <DialogContent
           onOpenAutoFocus={(e) => {
             document.getElementById('nd-ai-input')?.focus();
             e.preventDefault();
           }}
           aria-describedby={undefined}
-          className="fixed flex flex-col-reverse gap-3 md:flex-col max-md:top-12 md:bottom-12 left-1/2 z-50 w-[98vw] max-w-[860px] -translate-x-1/2 focus-visible:outline-none data-[state=closed]:animate-fd-fade-out"
+          className='-translate-x-1/2 fixed left-1/2 z-50 flex w-[98vw] max-w-[860px] flex-col-reverse gap-3 focus-visible:outline-none data-[state=closed]:animate-fd-fade-out max-md:top-12 md:bottom-12 md:flex-col'
         >
           <Content />
         </DialogContent>
@@ -351,8 +355,8 @@ function Content() {
   return (
     <ChatContext value={chat}>
       {messages.length > 0 && (
-        <List className="bg-fd-popover rounded-xl border shadow-lg animate-fd-dialog-in duration-600">
-          <div className="flex flex-col gap-4 p-3 pb-0">
+        <List className='animate-fd-dialog-in rounded-xl border bg-fd-popover shadow-lg duration-600'>
+          <div className='flex flex-col gap-4 p-3 pb-0'>
             {messages.map((item) => (
               <Message key={item.id} message={item} />
             ))}
@@ -360,23 +364,23 @@ function Content() {
           <SearchAIActions />
         </List>
       )}
-      <div className="p-2 bg-fd-secondary/50 rounded-xl animate-fd-dialog-in">
-        <div className="rounded-xl overflow-hidden border shadow-lg bg-fd-popover text-fd-popover-foreground">
+      <div className='animate-fd-dialog-in rounded-xl bg-fd-secondary/50 p-2'>
+        <div className='overflow-hidden rounded-xl border bg-fd-popover text-fd-popover-foreground shadow-lg'>
           <SearchAIInput />
-          <div className="flex gap-2 items-center text-fd-muted-foreground px-3 py-1.5">
-            <DialogTitle className="text-xs flex-1">
+          <div className='flex items-center gap-2 px-3 py-1.5 text-fd-muted-foreground'>
+            <DialogTitle className='flex-1 text-xs'>
               AI can be inaccurate, please verify the information.
             </DialogTitle>
             <Tooltip>
               <TooltipTrigger asChild>
                 <DialogClose
-                  aria-label="Close"
+                  aria-label='Close'
                   tabIndex={-1}
                   className={cn(
                     buttonVariants({ size: 'sm', variant: 'ghost' }),
                   )}
                 >
-                  <X className="size-4" />
+                  <X className='size-4' />
                 </DialogClose>
               </TooltipTrigger>
               <TooltipContent>

@@ -2,7 +2,7 @@
 
 import { cva } from 'class-variance-authority';
 import { FileIcon, FolderIcon, FolderOpen } from 'lucide-react';
-import { useState, type HTMLAttributes, type ReactNode } from 'react';
+import { type HTMLAttributes, type ReactNode, useState } from 'react';
 import { cn } from '../../lib/fumadocs/cn';
 import {
   Collapsible,
@@ -74,7 +74,7 @@ export function Folder({
         {name}
       </CollapsibleTrigger>
       <CollapsibleContent>
-        <div className="ms-2 flex flex-col border-l ps-2">{props.children}</div>
+        <div className='ms-2 flex flex-col border-l ps-2'>{props.children}</div>
       </CollapsibleContent>
     </Collapsible>
   );

@@ -1,5 +1,5 @@
-import { title } from '@/app/layout.config';
 import type { Metadata } from 'next/types';
+import { title } from '@/app/layout.config';
 
 export function createMetadata(override: Metadata): Metadata {
   return {

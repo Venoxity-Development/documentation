@@ -1,5 +1,5 @@
 {
-  "name": "docs",
+  "name": "fumadocs-starter",
   "version": "1.0.0",
   "private": true,
   "scripts": {
@@ -9,9 +9,14 @@
     "dev": "next dev --turbopack",
     "start": "next start",
     "postinstall": "fumadocs-mdx",
-    "lint": "fumadocs-mdx && tsx ./scripts/lint.mts && next lint",
-    "build:docs": "tsx ./scripts/generate-docs.mts",
-    "docs:watch": "./.devcontainer/build_auto.sh",
+    "check": "biome check .",
+    "check:unsafe": "biome check --write --unsafe .",
+    "check:write": "biome check --write .",
+    "lint": "fumadocs-mdx && tsx ./scripts/lint.mts && biome lint",
+    "lint:write": "biome lint --write .",
+    "lint:unsafe": "biome lint --write --unsafe .",
+    "format": "biome format --write .",
+    "typecheck": "tsc --noEmit",
     "with-env": "dotenv -e ../../.env --"
   },
   "dependencies": {
@@ -59,9 +64,13 @@
     "tailwind-merge": "^3.3.1",
     "tw-animate-css": "^1.3.4",
     "twoslash": "0.3.1",
+    "unist-util-visit": "^5.0.0",
     "zod": "^3.25.67"
   },
   "devDependencies": {
+    "@biomejs/biome": "2.0.5",
+    "@commitlint/cli": "^19.8.1",
+    "@commitlint/config-conventional": "^19.8.1",
     "@fumadocs/cli": "^0.2.1",
     "@tailwindcss/postcss": "^4.1.10",
     "@types/hast": "^3.0.4",
@@ -73,21 +82,27 @@
     "dotenv-cli": "^8.0.0",
     "eslint": "^9.29.0",
     "eslint-config-next": "15.3.4",
-    "fast-glob": "^3.3.3",
     "gray-matter": "^4.0.3",
+    "lefthook": "^1.11.14",
+    "lint-staged": "^16.1.2",
     "next-validate-link": "^1.5.2",
     "postcss": "^8.5.6",
     "prettier": "^3.6.0",
     "source-map-support": "^0.5.21",
     "tailwindcss": "^4.1.10",
+    "tinyglobby": "^0.2.14",
     "ts-morph": "^26.0.0",
     "tsx": "^4.20.3",
     "typescript": "^5.8.3"
+  },
+  "engines": {
+    "node": ">=22"
   },
   "pnpm": {
     "onlyBuiltDependencies": [
       "@tailwindcss/oxide",
       "esbuild",
+      "lefthook",
       "sharp",
       "unrs-resolver"
     ]

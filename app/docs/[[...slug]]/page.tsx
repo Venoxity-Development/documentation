@@ -1,107 +1,144 @@
-import { source, openapi } from '@/lib/source';
-import {
-  DocsPage,
-  DocsBody,
-  DocsDescription,
-  DocsTitle,
-} from 'fumadocs-ui/page';
+import * as path from 'node:path';
+import Link from 'fumadocs-core/link';
+import { getPageTreePeers } from 'fumadocs-core/server';
 import { APIPage } from 'fumadocs-openapi/ui';
-import { notFound } from 'next/navigation';
-import { createMetadata } from '@/lib/metadata';
-import { getMDXComponents } from '@/mdx-components';
+import * as Twoslash from 'fumadocs-twoslash/ui';
+import { createGenerator } from 'fumadocs-typescript';
+import { AutoTypeTable } from 'fumadocs-typescript/ui';
+import { Banner } from 'fumadocs-ui/components/banner';
 import { Callout } from 'fumadocs-ui/components/callout';
+import { Card, Cards } from 'fumadocs-ui/components/card';
+import { TypeTable } from 'fumadocs-ui/components/type-table';
+import {
+  PageArticle,
+  PageBreadcrumb,
+  PageFooter,
+  PageLastUpdate,
+  PageRoot,
+  PageTOC,
+  PageTOCItems,
+  PageTOCPopover,
+  PageTOCPopoverContent,
+  PageTOCPopoverItems,
+  PageTOCPopoverTrigger,
+  PageTOCTitle,
+} from 'fumadocs-ui/layouts/docs/page';
+import type { Metadata } from 'next';
+import { notFound } from 'next/navigation';
+import type { ComponentProps, FC, ReactElement } from 'react';
+import { Mermaid } from '@/components/mdx/mermaid';
 import {
   HoverCard,
   HoverCardContent,
   HoverCardTrigger,
 } from '@/components/ui/hover-card';
-import Link from 'next/link';
-import { AutoTypeTable } from 'fumadocs-typescript/ui';
-import { type ComponentProps, type FC } from 'react';
-import { createGenerator } from 'fumadocs-typescript';
-import type { Metadata } from 'next';
 import { owner, repo } from '@/lib/github';
+import { createMetadata } from '@/lib/metadata';
+import { openapi, source } from '@/lib/source';
+import { getMDXComponents } from '@/mdx-components';
 import { LLMCopyButton, ViewOptions } from './page.client';
-import { Card, Cards } from 'fumadocs-ui/components/card';
-import { getPageTreePeers } from 'fumadocs-core/server';
 
 const generator = createGenerator();
+
 export const revalidate = false;
 
 export default async function Page(props: {
   params: Promise<{ slug: string[] }>;
-}) {
+}): Promise<ReactElement> {
   const params = await props.params;
   const page = source.getPage(params.slug);
+
   if (!page) notFound();
 
-  const path = `content/docs/${page.file.path}`;
-
-  const { body: Mdx, toc } = await page.data.load();
+  const { body: Mdx, toc, lastModified } = await page.data.load();
 
   return (
-    <DocsPage
-      toc={toc}
-      full={page.data.full}
-      tableOfContent={{
-        style: 'clerk',
+    <PageRoot
+      toc={{
+        toc,
         single: false,
       }}
     >
-      <DocsTitle>{page.data.title}</DocsTitle>
-      <DocsDescription className="mb-2">
-        {page.data.description}
-      </DocsDescription>
-      <div className="flex flex-row gap-2 items-center border-b pb-6">
-        <LLMCopyButton slug={params.slug} />
-        <ViewOptions
-          markdownUrl={`${page.url}.mdx`}
-          githubUrl={`https://github.com/${owner}/${repo}/blob/main/${path}`}
-        />
-      </div>
-      <DocsBody>
-        <Mdx
-          components={getMDXComponents({
-            a: ({ href, ...props }) => {
-              const found = source.getPageByHref(href ?? '', {
-                dir: page.file.dirname,
-              });
+      {toc.length > 0 && (
+        <PageTOCPopover>
+          <PageTOCPopoverTrigger />
+          <PageTOCPopoverContent>
+            <PageTOCPopoverItems />
+          </PageTOCPopoverContent>
+        </PageTOCPopover>
+      )}
+      <PageArticle className='max-md:pb-16'>
+        <PageBreadcrumb />
+        <h1 className='font-semibold text-3xl'>{page.data.title}</h1>
+        <p className='text-fd-muted-foreground text-lg'>
+          {page.data.description}
+        </p>
+        <div className='flex flex-row items-center gap-2 border-b pb-6'>
+          <LLMCopyButton slug={params.slug} />
+          <ViewOptions
+            markdownUrl={`${page.url}.mdx`}
+            githubUrl={`https://github.com/${owner}/${repo}/blob/main/${page.path}`}
+          />
+        </div>
+        <div className='prose flex-1 text-fd-foreground/80'>
+          <Mdx
+            components={getMDXComponents({
+              ...Twoslash,
+              a: ({ href, ...props }) => {
+                const found = source.getPageByHref(href ?? '', {
+                  dir: path.dirname(page.path),
+                });
 
-              if (!found) return <Link href={href} {...props} />;
+                if (!found) return <Link href={href} {...props} />;
 
-              return (
-                <HoverCard>
-                  <HoverCardTrigger asChild>
-                    <Link
-                      href={
-                        found.hash
-                          ? `${found.page.url}#${found.hash}`
-                          : found.page.url
-                      }
-                      {...props}
-                    />
-                  </HoverCardTrigger>
-                  <HoverCardContent className="text-sm">
-                    <p className="font-medium">{found.page.data.title}</p>
-                    <p className="text-fd-muted-foreground">
-                      {found.page.data.description}
-                    </p>
-                  </HoverCardContent>
-                </HoverCard>
-              );
-            },
-            DocsCategory: ({ url }) => {
-              return <DocsCategory url={url ?? page.url} />;
-            },
-            AutoTypeTable: (props) => (
-              <AutoTypeTable generator={generator} {...props} />
-            ),
-            blockquote: Callout as unknown as FC<ComponentProps<'blockquote'>>,
-            APIPage: (props) => <APIPage {...openapi.getAPIPageProps(props)} />,
-          })}
-        />
-      </DocsBody>
-    </DocsPage>
+                return (
+                  <HoverCard>
+                    <HoverCardTrigger asChild>
+                      <Link
+                        href={
+                          found.hash
+                            ? `${found.page.url}#${found.hash}`
+                            : found.page.url
+                        }
+                        {...props}
+                      />
+                    </HoverCardTrigger>
+                    <HoverCardContent className='text-sm'>
+                      <p className='font-medium'>{found.page.data.title}</p>
+                      <p className='text-fd-muted-foreground'>
+                        {found.page.data.description}
+                      </p>
+                    </HoverCardContent>
+                  </HoverCard>
+                );
+              },
+              Banner,
+              Mermaid,
+              TypeTable,
+              AutoTypeTable: (props) => (
+                <AutoTypeTable generator={generator} {...props} />
+              ),
+              blockquote: Callout as unknown as FC<
+                ComponentProps<'blockquote'>
+              >,
+              APIPage: (props) => (
+                <APIPage {...openapi.getAPIPageProps(props)} />
+              ),
+              DocsCategory: ({ url }) => <DocsCategory url={url ?? page.url} />,
+            })}
+          />
+          {page.data.index ? <DocsCategory url={page.url} /> : null}
+        </div>
+        {lastModified && <PageLastUpdate date={lastModified} />}
+        <PageFooter />
+      </PageArticle>
+      {toc.length > 0 && (
+        <PageTOC>
+          <PageTOCTitle />
+          <PageTOCItems variant='clerk' />
+        </PageTOC>
+      )}
+    </PageRoot>
   );
 }
 

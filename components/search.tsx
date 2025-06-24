@@ -12,21 +12,21 @@ import {
   type SharedProps,
 } from 'fumadocs-ui/components/dialog/search';
 import { I18nLabel, useI18n } from 'fumadocs-ui/contexts/i18n';
-import { AISearchTrigger } from './fumadocs/ai';
 import { MessageCircle } from 'lucide-react';
+import { AISearchTrigger } from './fumadocs/ai';
 import { buttonVariants } from './ui/button';
 
 const Empty = () => (
-  <div className="flex flex-col py-12 text-center items-center justify-between gap-2 px-2 text-sm">
-    <I18nLabel label="searchNoResult" />
+  <div className='flex flex-col items-center justify-between gap-2 px-2 py-12 text-center text-sm'>
+    <I18nLabel label='searchNoResult' />
     <AISearchTrigger
       className={buttonVariants({
         variant: 'ghost',
         size: 'sm',
-        className: 'h-auto py-0.5 !px-1',
+        className: '!px-1 h-auto py-0.5',
       })}
     >
-      <MessageCircle className="size-4" />
+      <MessageCircle className='size-4' />
       Ask AI?
     </AISearchTrigger>
   </div>

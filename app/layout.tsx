@@ -30,7 +30,7 @@ export const viewport: Viewport = {
 export default function Layout({ children }: { children: ReactNode }) {
   return (
     <html
-      lang="en"
+      lang='en'
       className={`${inter.className} dark`}
       suppressHydrationWarning
     >

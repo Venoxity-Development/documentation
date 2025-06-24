@@ -1,15 +1,15 @@
-import { systemPrompt } from '@/lib/ai/prompts';
-import { ProvideLinksToolSchema } from '@/lib/ai/qa-schema';
 import { createOpenAI } from '@ai-sdk/openai';
 import {
   InvalidToolArgumentsError,
-  Message,
+  type Message,
   NoSuchToolError,
   smoothStream,
   streamText,
-  tool,
   ToolExecutionError,
+  tool,
 } from 'ai';
+import { systemPrompt } from '@/lib/ai/prompts';
+import { ProvideLinksToolSchema } from '@/lib/ai/qa-schema';
 
 export const runtime = 'edge';
 

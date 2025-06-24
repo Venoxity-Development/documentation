@@ -1,10 +1,10 @@
+import { remarkInstall } from 'fumadocs-docgen';
+import { remarkInclude } from 'fumadocs-mdx/config';
+import { remarkAutoTypeTable } from 'fumadocs-typescript';
 import { remark } from 'remark';
 import remarkGfm from 'remark-gfm';
-import { remarkInstall } from 'fumadocs-docgen';
 import remarkMdx from 'remark-mdx';
-import { remarkAutoTypeTable } from 'fumadocs-typescript';
-import { remarkInclude } from 'fumadocs-mdx/config';
-import { type Page } from '@/lib/source';
+import type { Page } from '@/lib/source';
 import { owner, repo } from './github';
 
 export const categoryMap: Record<string, string> = {

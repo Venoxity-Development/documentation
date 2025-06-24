@@ -1,7 +1,7 @@
 import { readFileSync } from 'node:fs';
+import { notFound } from 'next/navigation';
 import { generateOGImage } from '@/app/og/[...slug]/og';
 import { source } from '@/lib/source';
-import { notFound } from 'next/navigation';
 
 const font = readFileSync('./app/og/[...slug]/fonts/Inter-Regular.ttf');
 const fontSemiBold = readFileSync(
