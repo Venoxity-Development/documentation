@@ -1,11 +1,11 @@
-import { HomeLayout } from 'fumadocs-ui/layouts/home'
-import type { ReactNode } from 'react'
-import { baseOptions } from '@/app/layout.config'
+import { HomeLayout } from 'fumadocs-ui/layouts/home';
+import type { ReactNode } from 'react';
+import { baseOptions } from '@/app/layout.config';
 
 export default function Layout({
-  children
+  children,
 }: {
-  children: ReactNode
+  children: ReactNode;
 }): React.ReactElement {
   return (
     <HomeLayout
@@ -20,7 +20,7 @@ export default function Layout({
       {children}
       <Footer />
     </HomeLayout>
-  )
+  );
 }
 
 function Footer(): React.ReactElement {
@@ -33,5 +33,5 @@ function Footer(): React.ReactElement {
         </div>
       </div>
     </footer>
-  )
+  );
 }

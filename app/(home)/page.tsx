@@ -1,7 +1,7 @@
-import { BookIcon, RocketIcon } from 'lucide-react'
-import type { LinkProps } from 'next/link'
-import Link from 'next/link'
-import { cn } from '@/lib/cn'
+import { BookIcon, RocketIcon } from 'lucide-react';
+import type { LinkProps } from 'next/link';
+import Link from 'next/link';
+import { cn } from '@/lib/cn';
 
 export default function DocsPage(): React.ReactElement {
   return (
@@ -30,7 +30,7 @@ export default function DocsPage(): React.ReactElement {
         />
       </div>
     </main>
-  )
+  );
 }
 
 function DocumentationItem({
@@ -38,13 +38,13 @@ function DocumentationItem({
   description,
   icon: ItemIcon,
   id,
-  href
+  href,
 }: {
-  title: string
-  description: string
-  id: string
-  icon: React.ComponentType<{ className?: string }>
-  href: string
+  title: string;
+  description: string;
+  id: string;
+  icon: React.ComponentType<{ className?: string }>;
+  href: string;
 }): React.ReactElement {
   return (
     <Item href={href}>
@@ -54,43 +54,43 @@ function DocumentationItem({
       <h2 className='mb-2 font-semibold text-lg'>{title}</h2>
       <p className='text-fd-muted-foreground text-sm'>{description}</p>
     </Item>
-  )
+  );
 }
 
 function Icon({
   className,
-  children
+  children,
 }: {
-  className?: string
-  children: React.ReactNode
+  className?: string;
+  children: React.ReactNode;
 }): React.ReactElement {
   return (
     <div
       className={cn(
         'mb-2 size-9 rounded-lg border p-1.5 shadow-fd-primary/30',
-        className
+        className,
       )}
       style={{
-        boxShadow: 'inset 0px 8px 8px 0px var(--tw-shadow-color)'
+        boxShadow: 'inset 0px 8px 8px 0px var(--tw-shadow-color)',
       }}
     >
       {children}
     </div>
-  )
+  );
 }
 
 function Item(
-  props: LinkProps & { className?: string; children: React.ReactNode }
+  props: LinkProps & { className?: string; children: React.ReactNode },
 ): React.ReactElement {
   return (
     <Link
       {...props}
       className={cn(
         'rounded-lg border border-border bg-fd-accent/30 p-6 shadow-xs transition-all hover:bg-fd-accent',
-        props.className
+        props.className,
       )}
     >
       {props.children}
     </Link>
-  )
+  );
 }

@@ -1,9 +1,9 @@
-'use client'
+'use client';
 import {
   type Message as MessageT,
   type UseChatHelpers,
-  useChat
-} from '@ai-sdk/react'
+  useChat,
+} from '@ai-sdk/react';
 import {
   Dialog,
   DialogClose,
@@ -11,12 +11,12 @@ import {
   DialogOverlay,
   DialogPortal,
   type DialogProps,
-  DialogTitle
-} from '@radix-ui/react-dialog'
-import Link from 'fumadocs-core/link'
-import { DynamicCodeBlock } from 'fumadocs-ui/components/dynamic-codeblock'
-import defaultMdxComponents from 'fumadocs-ui/mdx'
-import { Loader2, RefreshCw, Send, X } from 'lucide-react'
+  DialogTitle,
+} from '@radix-ui/react-dialog';
+import Link from 'fumadocs-core/link';
+import { DynamicCodeBlock } from 'fumadocs-ui/components/dynamic-codeblock';
+import defaultMdxComponents from 'fumadocs-ui/mdx';
+import { Loader2, RefreshCw, Send, X } from 'lucide-react';
 import {
   Children,
   type ComponentProps,
@@ -29,29 +29,29 @@ import {
   use,
   useEffect,
   useRef,
-  useState
-} from 'react'
-import type { z } from 'zod'
+  useState,
+} from 'react';
+import type { z } from 'zod';
 import {
   Tooltip,
   TooltipContent,
-  TooltipTrigger
-} from '@/components/ui/tooltip'
-import type { ProvideLinksToolSchema } from '@/lib/ai/qa-schema'
-import { cn } from '@/lib/cn'
-import { buttonVariants } from '../../ui/button'
-import { createProcessor, type Processor } from './markdown-processor'
+  TooltipTrigger,
+} from '@/components/ui/tooltip';
+import type { ProvideLinksToolSchema } from '@/lib/ai/qa-schema';
+import { cn } from '@/lib/cn';
+import { buttonVariants } from '../../ui/button';
+import { createProcessor, type Processor } from './markdown-processor';
 
-const ChatContext = createContext<UseChatHelpers | null>(null)
+const ChatContext = createContext<UseChatHelpers | null>(null);
 function useChatContext() {
-  return use(ChatContext)!
+  return use(ChatContext)!;
 }
 
 function SearchAIActions() {
-  const { messages, status, setMessages, reload } = useChatContext()
-  const isLoading = status === 'streaming'
+  const { messages, status, setMessages, reload } = useChatContext();
+  const isLoading = status === 'streaming';
 
-  if (messages.length === 0) return null
+  if (messages.length === 0) return null;
   return (
     <div className='sticky bottom-0 flex flex-row items-center justify-end gap-2 bg-gradient-to-t from-fd-popover px-3 py-1.5 empty:hidden'>
       {!isLoading && messages.at(-1)?.role === 'assistant' && (
@@ -59,9 +59,9 @@ function SearchAIActions() {
           type='button'
           className={cn(
             buttonVariants({
-              variant: 'secondary'
+              variant: 'secondary',
             }),
-            'gap-1.5 rounded-full text-fd-muted-foreground'
+            'gap-1.5 rounded-full text-fd-muted-foreground',
           )}
           onClick={() => reload()}
         >
@@ -73,29 +73,29 @@ function SearchAIActions() {
         type='button'
         className={cn(
           buttonVariants({
-            variant: 'secondary'
+            variant: 'secondary',
           }),
-          'rounded-full text-fd-muted-foreground'
+          'rounded-full text-fd-muted-foreground',
         )}
         onClick={() => setMessages([])}
       >
         Clear Chat
       </button>
     </div>
-  )
+  );
 }
 
 function SearchAIInput(props: FormHTMLAttributes<HTMLFormElement>) {
-  const { status, input, setInput, handleSubmit, stop } = useChatContext()
-  const isLoading = status === 'streaming' || status === 'submitted'
+  const { status, input, setInput, handleSubmit, stop } = useChatContext();
+  const isLoading = status === 'streaming' || status === 'submitted';
   const onStart = (e?: React.FormEvent) => {
-    e?.preventDefault()
-    handleSubmit(e)
-  }
+    e?.preventDefault();
+    handleSubmit(e);
+  };
 
   useEffect(() => {
-    if (isLoading) document.getElementById('nd-ai-input')?.focus()
-  }, [isLoading])
+    if (isLoading) document.getElementById('nd-ai-input')?.focus();
+  }, [isLoading]);
 
   return (
     <form
@@ -103,7 +103,7 @@ function SearchAIInput(props: FormHTMLAttributes<HTMLFormElement>) {
       className={cn(
         'flex items-start pe-2 transition-colors',
         isLoading && 'bg-fd-muted',
-        props.className
+        props.className,
       )}
       onSubmit={onStart}
     >
@@ -112,12 +112,12 @@ function SearchAIInput(props: FormHTMLAttributes<HTMLFormElement>) {
         placeholder={isLoading ? 'AI is answering...' : 'Ask AI something'}
         disabled={status === 'streaming' || status === 'submitted'}
         onChange={(e) => {
-          setInput(e.target.value)
+          setInput(e.target.value);
         }}
         onKeyDown={(event) => {
           if (!event.shiftKey && event.key === 'Enter') {
-            onStart()
-            event.preventDefault()
+            onStart();
+            event.preventDefault();
           }
         }}
       />
@@ -127,8 +127,8 @@ function SearchAIInput(props: FormHTMLAttributes<HTMLFormElement>) {
           className={cn(
             buttonVariants({
               variant: 'secondary',
-              className: 'mt-2 gap-2 rounded-full'
-            })
+              className: 'mt-2 gap-2 rounded-full',
+            }),
           )}
           onClick={stop}
         >
@@ -141,8 +141,8 @@ function SearchAIInput(props: FormHTMLAttributes<HTMLFormElement>) {
           className={cn(
             buttonVariants({
               variant: 'ghost',
-              className: 'mt-2 rounded-full p-1.5'
-            })
+              className: 'mt-2 rounded-full p-1.5',
+            }),
           )}
           disabled={input.length === 0}
         >
@@ -150,37 +150,37 @@ function SearchAIInput(props: FormHTMLAttributes<HTMLFormElement>) {
         </button>
       )}
     </form>
-  )
+  );
 }
 
 function List(props: Omit<HTMLAttributes<HTMLDivElement>, 'dir'>) {
-  const containerRef = useRef<HTMLDivElement>(null)
+  const containerRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
-    if (!containerRef.current) return
+    if (!containerRef.current) return;
     function callback() {
-      const container = containerRef.current
-      if (!container) return
+      const container = containerRef.current;
+      if (!container) return;
 
       container.scrollTo({
         top: container.scrollHeight,
-        behavior: 'instant'
-      })
+        behavior: 'instant',
+      });
     }
 
-    const observer = new ResizeObserver(callback)
-    callback()
+    const observer = new ResizeObserver(callback);
+    callback();
 
-    const element = containerRef.current?.firstElementChild
+    const element = containerRef.current?.firstElementChild;
 
     if (element) {
-      observer.observe(element)
+      observer.observe(element);
     }
 
     return () => {
-      observer.disconnect()
-    }
-  }, [])
+      observer.disconnect();
+    };
+  }, []);
 
   return (
     <div
@@ -188,17 +188,17 @@ function List(props: Omit<HTMLAttributes<HTMLDivElement>, 'dir'>) {
       {...props}
       className={cn(
         'fd-scroll-container flex max-h-[calc(100dvh-240px)] min-w-0 flex-col overflow-y-auto',
-        props.className
+        props.className,
       )}
     >
       {props.children}
     </div>
-  )
+  );
 }
 
 function Input(props: TextareaHTMLAttributes<HTMLTextAreaElement>) {
-  const ref = useRef<HTMLDivElement>(null)
-  const shared = cn('col-start-1 row-start-1 max-h-60 min-h-12 p-3')
+  const ref = useRef<HTMLDivElement>(null);
+  const shared = cn('col-start-1 row-start-1 max-h-60 min-h-12 p-3');
 
   return (
     <div className='grid flex-1'>
@@ -206,7 +206,7 @@ function Input(props: TextareaHTMLAttributes<HTMLTextAreaElement>) {
         id='nd-ai-input'
         className={cn(
           shared,
-          'resize-none bg-transparent placeholder:text-fd-muted-foreground focus-visible:outline-none'
+          'resize-none bg-transparent placeholder:text-fd-muted-foreground focus-visible:outline-none',
         )}
         {...props}
       />
@@ -214,26 +214,26 @@ function Input(props: TextareaHTMLAttributes<HTMLTextAreaElement>) {
         {`${props.value?.toString() ?? ''}\n`}
       </div>
     </div>
-  )
+  );
 }
 
-let processor: Processor | undefined
-const map = new Map<string, ReactNode>()
+let processor: Processor | undefined;
+const map = new Map<string, ReactNode>();
 
 const roleName: Record<string, string> = {
   user: 'you',
-  assistant: 'assistant'
-}
+  assistant: 'assistant',
+};
 
 function Message({ message }: { message: MessageT }) {
-  const { parts } = message
-  let links: z.infer<typeof ProvideLinksToolSchema>['links'] = []
+  const { parts } = message;
+  let links: z.infer<typeof ProvideLinksToolSchema>['links'] = [];
 
   for (const part of parts ?? []) {
-    if (part.type !== 'tool-invocation') continue
+    if (part.type !== 'tool-invocation') continue;
 
     if (part.toolInvocation.toolName === 'provideLinks') {
-      links = part.toolInvocation.args.links
+      links = part.toolInvocation.args.links;
     }
   }
 
@@ -242,7 +242,7 @@ function Message({ message }: { message: MessageT }) {
       <p
         className={cn(
           'mb-1 font-medium text-fd-muted-foreground text-xs',
-          message.role === 'assistant' && 'text-fd-primary'
+          message.role === 'assistant' && 'text-fd-primary',
         )}
       >
         {roleName[message.role] ?? 'unknown'}
@@ -265,56 +265,56 @@ function Message({ message }: { message: MessageT }) {
         </div>
       ) : null}
     </div>
-  )
+  );
 }
 
 function Pre(props: ComponentProps<'pre'>) {
-  const code = Children.only(props.children) as ReactElement
-  const codeProps = code.props as ComponentProps<'code'>
+  const code = Children.only(props.children) as ReactElement;
+  const codeProps = code.props as ComponentProps<'code'>;
 
   let lang =
     codeProps.className
       ?.split(' ')
       .find((v) => v.startsWith('language-'))
-      ?.slice('language-'.length) ?? 'text'
+      ?.slice('language-'.length) ?? 'text';
 
-  if (lang === 'mdx') lang = 'md'
+  if (lang === 'mdx') lang = 'md';
 
   return (
     <DynamicCodeBlock lang={lang} code={(codeProps.children ?? '') as string} />
-  )
+  );
 }
 
 function Markdown({ text }: { text: string }) {
-  const [rendered, setRendered] = useState<ReactNode>(map.get(text))
+  const [rendered, setRendered] = useState<ReactNode>(map.get(text));
 
   useEffect(() => {
-    let aborted = false
+    let aborted = false;
     async function run() {
-      let result = map.get(text)
+      let result = map.get(text);
       if (!result) {
-        processor ??= createProcessor()
+        processor ??= createProcessor();
 
         result = await processor
           .process(text, {
             ...defaultMdxComponents,
             pre: Pre,
-            img: undefined // use JSX
+            img: undefined, // use JSX
           })
-          .catch(() => text)
+          .catch(() => text);
       }
 
-      map.set(text, result)
-      if (!aborted) setRendered(result)
+      map.set(text, result);
+      if (!aborted) setRendered(result);
     }
 
-    void run()
+    void run();
     return () => {
-      aborted = true
-    }
-  }, [text])
+      aborted = true;
+    };
+  }, [text]);
 
-  return rendered ?? text
+  return rendered ?? text;
 }
 
 export default function AISearch(props: DialogProps) {
@@ -325,8 +325,8 @@ export default function AISearch(props: DialogProps) {
         <DialogOverlay className='fixed inset-0 z-50 bg-black/30 backdrop-blur-sm data-[state=closed]:animate-fd-fade-out data-[state=open]:animate-fd-fade-in' />
         <DialogContent
           onOpenAutoFocus={(e) => {
-            document.getElementById('nd-ai-input')?.focus()
-            e.preventDefault()
+            document.getElementById('nd-ai-input')?.focus();
+            e.preventDefault();
           }}
           aria-describedby={undefined}
           className='-translate-x-1/2 fixed left-1/2 z-50 flex w-[98vw] max-w-[860px] flex-col-reverse gap-3 focus-visible:outline-none data-[state=closed]:animate-fd-fade-out max-md:top-12 md:bottom-12 md:flex-col'
@@ -335,7 +335,7 @@ export default function AISearch(props: DialogProps) {
         </DialogContent>
       </DialogPortal>
     </Dialog>
-  )
+  );
 }
 
 function Content() {
@@ -345,12 +345,12 @@ function Content() {
     sendExtraMessageFields: true,
     onResponse(response) {
       if (response.status === 401) {
-        console.error(response.statusText)
+        console.error(response.statusText);
       }
-    }
-  })
+    },
+  });
 
-  const messages = chat.messages.filter((msg) => msg.role !== 'system')
+  const messages = chat.messages.filter((msg) => msg.role !== 'system');
 
   return (
     <ChatContext value={chat}>
@@ -377,7 +377,7 @@ function Content() {
                   aria-label='Close'
                   tabIndex={-1}
                   className={cn(
-                    buttonVariants({ size: 'sm', variant: 'ghost' })
+                    buttonVariants({ size: 'sm', variant: 'ghost' }),
                   )}
                 >
                   <X className='size-4' />
@@ -391,5 +391,5 @@ function Content() {
         </div>
       </div>
     </ChatContext>
-  )
+  );
 }

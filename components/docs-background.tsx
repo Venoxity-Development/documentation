@@ -3,7 +3,7 @@ const DocsBackground = () => (
     className='absolute inset-0 z-[-1] h-[64rem] max-h-screen overflow-hidden'
     style={{
       backgroundImage:
-        'radial-gradient(49.63% 57.02% at 58.99% -7.2%, hsl(var(--color-fd-primary)/0.1) 39.4%, transparent 100%)'
+        'radial-gradient(49.63% 57.02% at 58.99% -7.2%, hsl(var(--color-fd-primary)/0.1) 39.4%, transparent 100%)',
     }}
   >
     <svg
@@ -17,7 +17,7 @@ const DocsBackground = () => (
       <mask
         id='mask-dark'
         style={{
-          maskType: 'alpha'
+          maskType: 'alpha',
         }}
         maskUnits='userSpaceOnUse'
         x='0'
@@ -92,6 +92,6 @@ const DocsBackground = () => (
       </defs>
     </svg>
   </span>
-)
+);
 
-export default DocsBackground
+export default DocsBackground;

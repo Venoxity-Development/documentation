@@ -1,33 +1,33 @@
-import type { ImageResponseOptions } from 'next/dist/compiled/@vercel/og/types'
-import { ImageResponse } from 'next/og'
-import type { ReactElement, ReactNode } from 'react'
-import { title } from '@/app/layout.config'
+import type { ImageResponseOptions } from 'next/dist/compiled/@vercel/og/types';
+import { ImageResponse } from 'next/og';
+import type { ReactElement, ReactNode } from 'react';
+import { title } from '@/app/layout.config';
 
 interface GenerateProps {
-  title: ReactNode
-  tag: string
-  description?: ReactNode
-  primaryTextColor?: string
+  title: ReactNode;
+  tag: string;
+  description?: ReactNode;
+  primaryTextColor?: string;
 }
 
 export function generateOGImage(
-  options: GenerateProps & ImageResponseOptions
+  options: GenerateProps & ImageResponseOptions,
 ): ImageResponse {
-  const { title, tag, description, primaryTextColor, ...rest } = options
+  const { title, tag, description, primaryTextColor, ...rest } = options;
 
   return new ImageResponse(
     generate({
       title,
       tag,
       description,
-      primaryTextColor
+      primaryTextColor,
     }),
     {
       width: 1200,
       height: 630,
-      ...rest
-    }
-  )
+      ...rest,
+    },
+  );
 }
 
 export function generate({
@@ -43,7 +43,7 @@ export function generate({
         height: '100%',
         color: 'white',
         backgroundImage:
-          'radial-gradient(145% 145% at 110% 110%, rgba(31,102,244,1) 0%, rgba(19,72,180,1) 30%, rgba(10,38,96,1) 60%, #000 100%)'
+          'radial-gradient(145% 145% at 110% 110%, rgba(31,102,244,1) 0%, rgba(19,72,180,1) 30%, rgba(10,38,96,1) 60%, #000 100%)',
       }}
     >
       <div
@@ -52,7 +52,7 @@ export function generate({
           flexDirection: 'column',
           width: '100%',
           height: '100%',
-          padding: '4rem'
+          padding: '4rem',
         }}
       >
         <div
@@ -62,13 +62,13 @@ export function generate({
             alignItems: 'center',
             gap: '24px',
             marginBottom: 'auto',
-            color: primaryTextColor
+            color: primaryTextColor,
           }}
         >
           <p
             style={{
               fontSize: '46px',
-              fontWeight: 600
+              fontWeight: 600,
             }}
           >
             {title}
@@ -78,7 +78,7 @@ export function generate({
           style={{
             fontWeight: 600,
             fontSize: '26px',
-            textTransform: 'uppercase'
+            textTransform: 'uppercase',
           }}
         >
           {props.tag.replace(/-/g, ' ')}
@@ -86,7 +86,7 @@ export function generate({
         <p
           style={{
             fontWeight: 600,
-            fontSize: '56px'
+            fontSize: '56px',
           }}
         >
           {props.title}
@@ -94,12 +94,12 @@ export function generate({
         <p
           style={{
             fontSize: '28px',
-            color: 'rgba(240,240,240,0.7)'
+            color: 'rgba(240,240,240,0.7)',
           }}
         >
           {props.description}
         </p>
       </div>
     </div>
-  )
+  );
 }

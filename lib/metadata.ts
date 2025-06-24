@@ -1,5 +1,5 @@
-import type { Metadata } from 'next/types'
-import { title } from '@/app/layout.config'
+import type { Metadata } from 'next/types';
+import { title } from '@/app/layout.config';
 
 export function createMetadata(override: Metadata): Metadata {
   return {
@@ -10,7 +10,7 @@ export function createMetadata(override: Metadata): Metadata {
       url: 'https://fumadocs-starter.vercel.app',
       images: '/banner.png',
       siteName: title,
-      ...override.openGraph
+      ...override.openGraph,
     },
     twitter: {
       card: 'summary_large_image',
@@ -18,13 +18,13 @@ export function createMetadata(override: Metadata): Metadata {
       title: override.title ?? undefined,
       description: override.description ?? undefined,
       images: '/banner.png',
-      ...override.twitter
-    }
-  }
+      ...override.twitter,
+    },
+  };
 }
 
 export const baseUrl =
   process.env.NODE_ENV === 'development' ||
   !process.env.VERCEL_PROJECT_PRODUCTION_URL
     ? new URL('http://localhost:3000')
-    : new URL(`https://${process.env.VERCEL_PROJECT_PRODUCTION_URL}`)
+    : new URL(`https://${process.env.VERCEL_PROJECT_PRODUCTION_URL}`);

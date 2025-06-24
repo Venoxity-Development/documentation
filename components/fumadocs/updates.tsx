@@ -1,36 +1,36 @@
-'use client'
+'use client';
 
-import type { ReactNode } from 'react'
-import { Badge } from '@/components/ui/badge'
-import { cn } from '@/lib/cn'
+import type { ReactNode } from 'react';
+import { Badge } from '@/components/ui/badge';
+import { cn } from '@/lib/cn';
 
 export interface UpdatesProps {
-  children: ReactNode
-  className?: string
+  children: ReactNode;
+  className?: string;
 }
 
 export interface UpdateProps {
-  children: ReactNode
-  label: string
-  id?: string
-  className?: string
+  children: ReactNode;
+  label: string;
+  id?: string;
+  className?: string;
 }
 
 export function Updates({ children, className }: UpdatesProps) {
   return (
     <div className={cn('fd-updates flex flex-col', className)}>{children}</div>
-  )
+  );
 }
 
 export function Update({ children, label, id, className }: UpdateProps) {
-  const updateId = id || label.toLowerCase().replace(/\s+/g, '-')
+  const updateId = id || label.toLowerCase().replace(/\s+/g, '-');
 
   return (
     <div
       id={updateId}
       className={cn(
         'fd-update relative flex w-full flex-col items-start gap-2 py-8 lg:flex-row lg:gap-6',
-        className
+        className,
       )}
     >
       <div className='group top-[112px] flex w-full flex-shrink-0 flex-col items-start justify-start lg:sticky lg:w-[160px]'>
@@ -45,5 +45,5 @@ export function Update({ children, label, id, className }: UpdateProps) {
         {children}
       </div>
     </div>
-  )
+  );
 }

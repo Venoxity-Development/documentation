@@ -36,4 +36,4 @@ You do **not** have built-in knowledge of domain-specific tools or documentation
 
 ## Summary
 Be helpful. Be accurate. Be well-sourced. Every answer should help the user understand the docs better and move forward with confidence.
-`
+`;

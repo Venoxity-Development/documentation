@@ -1,14 +1,14 @@
-import { LargeSearchToggle } from 'fumadocs-ui/components/layout/search-toggle'
-import { DocsLayout } from 'fumadocs-ui/layouts/docs'
-import { Sparkles } from 'lucide-react'
-import type { ReactNode } from 'react'
-import { baseOptions, linkItems, logo } from '@/app/layout.config'
-import { AISearchTrigger } from '@/components/fumadocs/ai'
-import { buttonVariants } from '@/components/ui/button'
-import { cn } from '@/lib/cn'
-import { source } from '@/lib/source'
-import 'katex/dist/katex.min.css'
-import DocsBackground from '@/components/docs-background'
+import { LargeSearchToggle } from 'fumadocs-ui/components/layout/search-toggle';
+import { DocsLayout } from 'fumadocs-ui/layouts/docs';
+import { Sparkles } from 'lucide-react';
+import type { ReactNode } from 'react';
+import { baseOptions, linkItems, logo } from '@/app/layout.config';
+import { AISearchTrigger } from '@/components/fumadocs/ai';
+import { buttonVariants } from '@/components/ui/button';
+import { cn } from '@/lib/cn';
+import { source } from '@/lib/source';
+import 'katex/dist/katex.min.css';
+import DocsBackground from '@/components/docs-background';
 
 export default function Layout({ children }: { children: ReactNode }) {
   return (
@@ -29,15 +29,15 @@ export default function Layout({ children }: { children: ReactNode }) {
                     variant: 'outline',
                     size: 'icon',
                     className:
-                      'bg-fd-secondary/50 bg-fd-secondary/50 text-fd-muted-foreground shadow-none dark:bg-fd-secondary/50'
-                  })
+                      'bg-fd-secondary/50 bg-fd-secondary/50 text-fd-muted-foreground shadow-none dark:bg-fd-secondary/50',
+                  }),
                 )}
               >
                 <Sparkles className='size-4' />
               </AISearchTrigger>
             </div>
-          )
-        }
+          ),
+        },
       }}
       nav={{
         ...baseOptions.nav,
@@ -56,22 +56,22 @@ export default function Layout({ children }: { children: ReactNode }) {
                 variant: 'secondary',
                 size: 'sm',
                 className:
-                  '-translate-1/2 absolute top-1/2 left-1/2 gap-2 rounded-full bg-fd-secondary/50 text-fd-muted-foreground md:hidden dark:bg-fd-secondary/50'
-              })
+                  '-translate-1/2 absolute top-1/2 left-1/2 gap-2 rounded-full bg-fd-secondary/50 text-fd-muted-foreground md:hidden dark:bg-fd-secondary/50',
+              }),
             )}
           >
             <Sparkles className='size-4.5 fill-current' />
             Ask AI
           </AISearchTrigger>
-        )
+        ),
       }}
       sidebar={{
         tabs: {
           transform(option, node) {
-            const meta = source.getNodeMeta(node)
-            if (!meta || !node.icon) return option
+            const meta = source.getNodeMeta(node);
+            if (!meta || !node.icon) return option;
 
-            const color = `var(--${meta.path.split('/')[0]}-color, var(--color-fd-foreground))`
+            const color = `var(--${meta.path.split('/')[0]}-color, var(--color-fd-foreground))`;
 
             return {
               ...option,
@@ -81,20 +81,20 @@ export default function Layout({ children }: { children: ReactNode }) {
                   style={
                     {
                       color,
-                      '--tab-color': color
+                      '--tab-color': color,
                     } as object
                   }
                 >
                   {node.icon}
                 </div>
-              )
-            }
-          }
-        }
+              ),
+            };
+          },
+        },
       }}
     >
       {children}
       <DocsBackground />
     </DocsLayout>
-  )
+  );
 }
