@@ -38,6 +38,8 @@ export default async function Page(props: {
   const page = source.getPage(params.slug);
   if (!page) notFound();
 
+  const path = `content/docs/${page.file.path}`;
+
   const { body: Mdx, toc } = await page.data.load();
 
   return (
@@ -57,7 +59,7 @@ export default async function Page(props: {
         <LLMCopyButton slug={params.slug} />
         <ViewOptions
           markdownUrl={`${page.url}.mdx`}
-          githubUrl={`https://github.com/${owner}/${repo}/blob/dev/apps/docs/content/docs/${page.path}`}
+          githubUrl={`https://github.com/${owner}/${repo}/blob/main/${path}`}
         />
       </div>
       <DocsBody>
