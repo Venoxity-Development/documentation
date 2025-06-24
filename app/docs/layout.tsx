@@ -28,7 +28,8 @@ export default function Layout({ children }: { children: ReactNode }) {
                   buttonVariants({
                     variant: 'outline',
                     size: 'icon',
-                    className: 'text-fd-muted-foreground bg-fd-secondary/50 shadow-none',
+                    className:
+                      'text-fd-muted-foreground bg-fd-secondary/50 shadow-none',
                   }),
                 )}
               >

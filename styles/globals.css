@@ -1,7 +1,7 @@
-@import "tailwindcss" source(none);
-@import "fumadocs-ui/css/neutral.css";
-@import "fumadocs-ui/css/preset.css";
-@import "fumadocs-twoslash/twoslash.css";
+@import 'tailwindcss' source(none);
+@import 'fumadocs-ui/css/neutral.css';
+@import 'fumadocs-ui/css/preset.css';
+@import 'fumadocs-twoslash/twoslash.css';
 @import 'fumadocs-openapi/css/preset.css';
 @import 'tw-animate-css';
 
@@ -29,10 +29,14 @@
   --font-mono: var(--font-geist-mono);
 
   --color-gradient-radial: radial-gradient(circle, var(--tw-gradient-stops));
-  --color-repeat-gradient-to-r: repeating-linear-gradient(to right,
-    var(--tw-gradient-stops));
-  --color-repeat-gradient-to-br: repeating-linear-gradient(to bottom right,
-    var(--tw-gradient-stops));
+  --color-repeat-gradient-to-r: repeating-linear-gradient(
+    to right,
+    var(--tw-gradient-stops)
+  );
+  --color-repeat-gradient-to-br: repeating-linear-gradient(
+    to bottom right,
+    var(--tw-gradient-stops)
+  );
 }
 
 @theme {
@@ -95,7 +99,6 @@
     color: var(--color-foreground);
   }
 
-
   .ui {
     --color-fd-primary: var(--ui-color) !important;
   }
@@ -109,7 +112,7 @@
   }
 }
 
-.dark [data-hide-on-theme="dark"],
-.light [data-hide-on-theme="light"] {
+.dark [data-hide-on-theme='dark'],
+.light [data-hide-on-theme='light'] {
   display: none;
 }

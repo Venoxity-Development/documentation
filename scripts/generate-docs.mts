@@ -4,19 +4,17 @@ import { rimraf } from 'rimraf';
 export async function generateDocs() {
   await rimraf('./content/docs/api-reference/(generated)', {
     filter(v) {
-      return (
-        !v.endsWith("meta.json")
-      );
+      return !v.endsWith('meta.json');
     },
   });
 
   await Promise.all([
     OpenAPI.generateFiles({
-      input: ["./content/docs/api-reference/openapi.yml"],
+      input: ['./content/docs/api-reference/openapi.yml'],
       output: './content/docs/api-reference/(generated)',
-      per: "operation",
+      per: 'operation',
       includeDescription: true,
-      groupBy: "tag",
+      groupBy: 'tag',
     }),
   ]);
 }

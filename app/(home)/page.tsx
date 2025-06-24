@@ -1,5 +1,5 @@
 import { cn } from '@/lib/cn';
-import { BookIcon, RocketIcon } from "lucide-react";
+import { BookIcon, RocketIcon } from 'lucide-react';
 import type { LinkProps } from 'next/link';
 import Link from 'next/link';
 
@@ -23,7 +23,7 @@ export default function DocsPage(): React.ReactElement {
 
         <DocumentationItem
           title="API Reference"
-          description="Get started with Fumadocs&apos;s API reference feature."
+          description="Get started with Fumadocs's API reference feature."
           icon={RocketIcon}
           id="api-reference"
           href="/docs/api-reference"
@@ -38,7 +38,7 @@ function DocumentationItem({
   description,
   icon: ItemIcon,
   id,
-  href
+  href,
 }: {
   title: string;
   description: string;
@@ -52,9 +52,7 @@ function DocumentationItem({
         <ItemIcon className="size-full" />
       </Icon>
       <h2 className="mb-2 text-lg font-semibold">{title}</h2>
-      <p className="text-sm text-fd-muted-foreground">
-        {description}
-      </p>
+      <p className="text-sm text-fd-muted-foreground">{description}</p>
     </Item>
   );
 }

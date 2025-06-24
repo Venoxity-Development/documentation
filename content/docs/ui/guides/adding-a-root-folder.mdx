@@ -1,6 +1,6 @@
 ---
 title: Adding a Root Folder
-description: "Learn how to add a new root folder to your documentation"
+description: 'Learn how to add a new root folder to your documentation'
 icon: FolderCheck
 ---
 
@@ -110,13 +110,15 @@ Update the base styles to apply the new color:
     --color-fd-primary: var(--changelog-color) !important;
   }
 
-  .cli { /* [!code ++] */
+  .cli {
+    /* [!code ++] */
     --color-fd-primary: var(--cli-color) !important; /* [!code ++] */
   } /* [!code ++] */
 }
 ```
 
 ### Step 5: Create `meta.json` in the New Folder
+
 Create a `meta.json` file in your new `cli` folder:
 
 ```bash
@@ -126,13 +128,14 @@ touch content/docs/cli/meta.json
 Add the following content to `meta.json`:
 
 ```json
-{ // [!code ++] 
-  "title": "CLI", // [!code ++] 
-  "description": "Learn how to use the Fumadocs CLI", // [!code ++] 
-  "root": true, // [!code ++] 
-  "icon": "ChevronRight", // [!code ++] 
-  "pages": ["---Getting Started---", "index", "..."] // [!code ++] 
-} // [!code ++] 
+{
+  // [!code ++]
+  "title": "CLI", // [!code ++]
+  "description": "Learn how to use the Fumadocs CLI", // [!code ++]
+  "root": true, // [!code ++]
+  "icon": "ChevronRight", // [!code ++]
+  "pages": ["---Getting Started---", "index", "..."] // [!code ++]
+} // [!code ++]
 ```
 
 This file defines the metadata for your new folder, including its title, description, and icon.
@@ -150,14 +153,16 @@ Add initial content to `index.mdx`:
 ```mdx
 ---
 title: CLI
-description: "Learn how to use the Fumadocs CLI"
+description: 'Learn how to use the Fumadocs CLI'
 icon: ChevronRightIcon
 ---
 
 ## Introduction
+
 The Fumadocs CLI is a command-line tool for managing your documentation. It helps you create, build, and deploy your docs.
 
 ## Installation
+
 ...
 ```
 

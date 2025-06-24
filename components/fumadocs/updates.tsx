@@ -1,8 +1,8 @@
-"use client";
+'use client';
 
-import { ReactNode } from "react";
-import { cn } from "@/lib/cn";
-import { Badge } from "@/components/ui/badge";
+import { ReactNode } from 'react';
+import { cn } from '@/lib/cn';
+import { Badge } from '@/components/ui/badge';
 
 export interface UpdatesProps {
   children: ReactNode;
@@ -18,23 +18,26 @@ export interface UpdateProps {
 
 export function Updates({ children, className }: UpdatesProps) {
   return (
-    <div className={cn("flex flex-col fd-updates", className)}>{children}</div>
+    <div className={cn('flex flex-col fd-updates', className)}>{children}</div>
   );
 }
 
 export function Update({ children, label, id, className }: UpdateProps) {
-  const updateId = id || label.toLowerCase().replace(/\s+/g, "-");
+  const updateId = id || label.toLowerCase().replace(/\s+/g, '-');
 
   return (
     <div
       id={updateId}
       className={cn(
-        "flex flex-col relative items-start w-full lg:flex-row gap-2 lg:gap-6 py-8 fd-update",
-        className
+        'flex flex-col relative items-start w-full lg:flex-row gap-2 lg:gap-6 py-8 fd-update',
+        className,
       )}
     >
       <div className="lg:sticky top-[112px] group flex flex-col w-full lg:w-[160px] items-start flex-shrink-0 justify-start">
-        <Badge variant='secondary' className="px-2 py-1 h-fit rounded-lg flex-grow-0 text-sm">
+        <Badge
+          variant="secondary"
+          className="px-2 py-1 h-fit rounded-lg flex-grow-0 text-sm"
+        >
           {label}
         </Badge>
       </div>

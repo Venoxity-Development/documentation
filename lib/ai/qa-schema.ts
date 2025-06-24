@@ -17,14 +17,13 @@ const LinkType = z.union([
   z.string(), // catch all
 ]);
 
-const LinkSchema = z
-  .object({
-    label: z.string(), // the value of the footnote, e.g. `1`
-    url: z.string(),
-    title: z.string(),
-    type: LinkType,
-    breadcrumbs: z.array(z.string()),
-  });
+const LinkSchema = z.object({
+  label: z.string(), // the value of the footnote, e.g. `1`
+  url: z.string(),
+  title: z.string(),
+  type: LinkType,
+  breadcrumbs: z.array(z.string()),
+});
 
 const LinksSchema = z.array(LinkSchema);
 
@@ -42,10 +41,9 @@ const KnownAnswerConfidence = z.enum([
 
 const AnswerConfidence = z.union([KnownAnswerConfidence, z.string()]); // evolvable
 
-const AIAnnotationsToolSchema = z
-  .object({
-    answerConfidence: AnswerConfidence,
-  });
+const AIAnnotationsToolSchema = z.object({
+  answerConfidence: AnswerConfidence,
+});
 
 export const ProvideAIAnnotationsToolSchema = z.object({
   aiAnnotations: AIAnnotationsToolSchema,

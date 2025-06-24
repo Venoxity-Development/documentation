@@ -21,20 +21,20 @@ const config: NextConfig = {
     ignoreDuringBuilds: true,
   },
   serverExternalPackages: [
-    "ts-morph",
-    "typescript",
-    "oxc-transform",
-    "twoslash",
-    "shiki",
-    "prettier"
+    'ts-morph',
+    'typescript',
+    'oxc-transform',
+    'twoslash',
+    'shiki',
+    'prettier',
   ],
   images: {
     unoptimized: true,
     remotePatterns: [
       {
-        protocol: "https",
-        hostname: "avatars.githubusercontent.com",
-        port: "",
+        protocol: 'https',
+        hostname: 'avatars.githubusercontent.com',
+        port: '',
       },
     ],
   },

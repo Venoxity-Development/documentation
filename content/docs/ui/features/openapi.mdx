@@ -5,23 +5,22 @@ icon: Webhook
 ---
 
 ## Introduction
-Fumadocs provides an official OpenAPI integration to generate and document your OpenAPI schema. 
+
+Fumadocs provides an official OpenAPI integration to generate and document your OpenAPI schema.
 
 ## Features
 
 The official OpenAPI integration supports:
 
-* Basic API endpoint information
-* Interactive API playground
-* Example code to send request (in different programming languages)
-* Response samples and TypeScript definitions
-* Request parameters and body generated from schemas
-
+- Basic API endpoint information
+- Interactive API playground
+- Example code to send request (in different programming languages)
+- Response samples and TypeScript definitions
+- Request parameters and body generated from schemas
 
 ## Changing the OpenAPI schema
 
 The `generate-docs` script uses the OpenAPI schema to generate the documentation. You can change the OpenAPI schema by modifying the `openapi.json` file in `content/docs/api-reference` of your project.
-
 
 ```js title="scripts/generate-docs.mts"
 import * as OpenAPI from 'fumadocs-openapi';
@@ -31,21 +30,21 @@ export async function generateDocs() {
   await rimraf('./content/docs/api-reference', {
     filter(v) {
       return (
-        !v.endsWith("index.mdx") &&
-        !v.endsWith("openapi.json") &&
-        !v.endsWith("openapi.yml") &&
-        !v.endsWith("meta.json")
+        !v.endsWith('index.mdx') &&
+        !v.endsWith('openapi.json') &&
+        !v.endsWith('openapi.yml') &&
+        !v.endsWith('meta.json')
       );
     },
   });
 
   await Promise.all([
     OpenAPI.generateFiles({
-      input: ["./content/docs/api-reference/openapi.yml"], // [!code highlight]
-      output: "./content/docs/api-reference",
-      per: "operation",
+      input: ['./content/docs/api-reference/openapi.yml'], // [!code highlight]
+      output: './content/docs/api-reference',
+      per: 'operation',
       includeDescription: true,
-      groupBy: "tag",
+      groupBy: 'tag',
     }),
   ]);
 }

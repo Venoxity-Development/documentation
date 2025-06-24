@@ -29,9 +29,14 @@ import {
   DialogTitle,
 } from '@radix-ui/react-dialog';
 import { type Message, useChat, type UseChatHelpers } from '@ai-sdk/react';
-import type { ProvideLinksToolSchema } from '@/lib/chat/qa-schema';
+import type { ProvideLinksToolSchema } from '@/lib/ai/qa-schema';
 import type { z } from 'zod';
 import { DynamicCodeBlock } from 'fumadocs-ui/components/dynamic-codeblock';
+import {
+  Tooltip,
+  TooltipContent,
+  TooltipTrigger,
+} from '@/components/ui/tooltip';
 
 const ChatContext = createContext<UseChatHelpers | null>(null);
 function useChatContext() {
@@ -362,14 +367,22 @@ function Content() {
             <DialogTitle className="text-xs flex-1">
               AI can be inaccurate, please verify the information.
             </DialogTitle>
-            <DialogClose
-              aria-label="Close"
-              tabIndex={-1}
-              className={cn(buttonVariants({ size: 'sm', variant: 'ghost' }))}
-            >
-              <X className="size-4" />
-              Close Dialog
-            </DialogClose>
+            <Tooltip>
+              <TooltipTrigger asChild>
+                <DialogClose
+                  aria-label="Close"
+                  tabIndex={-1}
+                  className={cn(
+                    buttonVariants({ size: 'sm', variant: 'ghost' }),
+                  )}
+                >
+                  <X className="size-4" />
+                </DialogClose>
+              </TooltipTrigger>
+              <TooltipContent>
+                <p>Close Dialog</p>
+              </TooltipContent>
+            </Tooltip>
           </div>
         </div>
       </div>

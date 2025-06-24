@@ -19,14 +19,12 @@ import { buttonVariants } from './ui/button';
 const Empty = () => (
   <div className="flex flex-col py-12 text-center items-center justify-between gap-2 px-2 text-sm">
     <I18nLabel label="searchNoResult" />
-    <AISearchTrigger 
-      className={buttonVariants(
-        {
-          variant: "ghost",
-          size: 'sm',
-          className: 'h-auto py-0.5 !px-1'
-        }
-      )}
+    <AISearchTrigger
+      className={buttonVariants({
+        variant: 'ghost',
+        size: 'sm',
+        className: 'h-auto py-0.5 !px-1',
+      })}
     >
       <MessageCircle className="size-4" />
       Ask AI?
@@ -55,7 +53,10 @@ export default function DefaultSearchDialog(props: SharedProps) {
           <SearchDialogInput />
           <SearchDialogClose />
         </SearchDialogHeader>
-        <SearchDialogList items={query.data !== 'empty' ? query.data : null} Empty={Empty} />
+        <SearchDialogList
+          items={query.data !== 'empty' ? query.data : null}
+          Empty={Empty}
+        />
       </SearchDialogContent>
     </SearchDialog>
   );
