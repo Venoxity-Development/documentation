@@ -10,11 +10,11 @@ export default function Layout({
   return (
     <HomeLayout
       {...baseOptions}
-      style={
-        {
-          '--spacing-fd-container': '1120px'
-        } as object
-      }
+      // style={
+      //   {
+      //     '--spacing-fd-container': '1120px'
+      //   } as object
+      // }
       className='dark:bg-neutral-950 dark:[--color-fd-background:var(--color-neutral-950)]'
     >
       {children}

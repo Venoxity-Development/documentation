@@ -29,7 +29,7 @@ export default function Layout({ children }: { children: ReactNode }) {
                     variant: 'outline',
                     size: 'icon',
                     className:
-                      'bg-fd-secondary/50 text-fd-muted-foreground shadow-none bg-fd-secondary/50 dark:bg-fd-secondary/50'
+                      'bg-fd-secondary/50 bg-fd-secondary/50 text-fd-muted-foreground shadow-none dark:bg-fd-secondary/50'
                   })
                 )}
               >
@@ -56,7 +56,7 @@ export default function Layout({ children }: { children: ReactNode }) {
                 variant: 'secondary',
                 size: 'sm',
                 className:
-                  '-translate-1/2 absolute top-1/2 left-1/2 gap-2 rounded-full text-fd-muted-foreground md:hidden bg-fd-secondary/50 dark:bg-fd-secondary/50'
+                  '-translate-1/2 absolute top-1/2 left-1/2 gap-2 rounded-full bg-fd-secondary/50 text-fd-muted-foreground md:hidden dark:bg-fd-secondary/50'
               })
             )}
           >

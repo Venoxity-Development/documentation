@@ -124,7 +124,7 @@ export default async function Page(props: {
               APIPage: (props) => (
                 <APIPage {...openapi.getAPIPageProps(props)} />
               ),
-              DocsCategory: ({ url }) => <DocsCategory url={url ?? page.url} />,
+              DocsCategory: ({ url }) => <DocsCategory url={url ?? page.url} />
             })}
           />
           {page.data.index ? <DocsCategory url={page.url} /> : null}
