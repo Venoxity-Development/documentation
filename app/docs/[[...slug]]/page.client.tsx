@@ -16,6 +16,7 @@ import {
   PopoverTrigger,
 } from 'fumadocs-ui/components/ui/popover';
 import { cva } from 'class-variance-authority';
+import { baseUrl } from '@/lib/metadata';
 
 const cache = new Map<string, string>();
 
@@ -70,7 +71,7 @@ const optionVariants = cva(
 );
 
 export function ViewOptions(props: { markdownUrl: string; githubUrl: string }) {
-  const markdownUrl = new URL(props.markdownUrl, 'https://fumadocs.dev');
+  const markdownUrl = new URL(props.markdownUrl, baseUrl);
   const q = `Read ${markdownUrl}, I want to ask questions about it.`;
 
   const claude = `https://claude.ai/new?${new URLSearchParams({
