@@ -1,33 +1,33 @@
-import fg from 'fast-glob';
-import { printErrors, scanURLs, validateFiles } from 'next-validate-link';
-import { createGetUrl, getSlugs, parseFilePath } from 'fumadocs-core/source';
-import { getTableOfContents } from 'fumadocs-core/server';
-import fs from 'node:fs/promises';
-import path from 'node:path';
-import matter from 'gray-matter';
-import { remarkInclude } from 'fumadocs-mdx/config';
-import remarkMdx from 'remark-mdx';
+import fs from 'node:fs/promises'
+import path from 'node:path'
+import fg from 'fast-glob'
+import { getTableOfContents } from 'fumadocs-core/server'
+import { createGetUrl, getSlugs, parseFilePath } from 'fumadocs-core/source'
+import { remarkInclude } from 'fumadocs-mdx/config'
+import matter from 'gray-matter'
+import { printErrors, scanURLs, validateFiles } from 'next-validate-link'
+import remarkMdx from 'remark-mdx'
 
 async function readFromPath(file: string) {
   const content = await fs
     .readFile(path.resolve(file))
-    .then((res) => res.toString());
-  const parsed = matter(content);
+    .then((res) => res.toString())
+  const parsed = matter(content)
 
   return {
     path: file,
     data: parsed.data,
-    content: parsed.content,
-  };
+    content: parsed.content
+  }
 }
 
 async function checkLinks() {
   const docsFiles = await Promise.all(
-    await fg('content/docs/**/*.mdx').then((files) => files.map(readFromPath)),
-  );
+    await fg('content/docs/**/*.mdx').then((files) => files.map(readFromPath))
+  )
 
   const docs = docsFiles.map(async (file) => {
-    const info = parseFilePath(path.relative('content/docs', file.path));
+    const info = parseFilePath(path.relative('content/docs', file.path))
 
     return {
       value: getSlugs(info),
@@ -35,36 +35,36 @@ async function checkLinks() {
         await getTableOfContents(
           {
             path: file.path,
-            value: file.content,
+            value: file.content
           },
-          [remarkMdx, remarkInclude],
+          [remarkMdx, remarkInclude]
         )
-      ).map((item) => item.url.slice(1)),
-    };
-  });
+      ).map((item) => item.url.slice(1))
+    }
+  })
 
   const scanned = await scanURLs({
     populate: {
-      'docs/[[...slug]]': await Promise.all(docs),
-    },
-  });
+      'docs/[[...slug]]': await Promise.all(docs)
+    }
+  })
 
   console.log(
-    `collected ${scanned.urls.size} URLs, ${scanned.fallbackUrls.length} fallbacks`,
-  );
+    `collected ${scanned.urls.size} URLs, ${scanned.fallbackUrls.length} fallbacks`
+  )
 
-  const getUrl = createGetUrl('/docs');
+  const getUrl = createGetUrl('/docs')
   printErrors(
     await validateFiles([...docsFiles], {
       scanned,
 
       pathToUrl(value) {
-        const info = parseFilePath(path.relative('content/docs', value));
-        return getUrl(getSlugs(info));
-      },
+        const info = parseFilePath(path.relative('content/docs', value))
+        return getUrl(getSlugs(info))
+      }
     }),
-    true,
-  );
+    true
+  )
 }
 
-void checkLinks();
+void checkLinks()

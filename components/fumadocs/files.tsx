@@ -1,18 +1,18 @@
-'use client';
+'use client'
 
-import { cva } from 'class-variance-authority';
-import { FileIcon, FolderIcon, FolderOpen } from 'lucide-react';
-import { useState, type HTMLAttributes, type ReactNode } from 'react';
-import { cn } from '../../lib/fumadocs/cn';
+import { cva } from 'class-variance-authority'
+import { FileIcon, FolderIcon, FolderOpen } from 'lucide-react'
+import { type HTMLAttributes, type ReactNode, useState } from 'react'
+import { cn } from '../../lib/fumadocs/cn'
 import {
   Collapsible,
   CollapsibleContent,
-  CollapsibleTrigger,
-} from './ui/collapsible';
+  CollapsibleTrigger
+} from './ui/collapsible'
 
 const itemVariants = cva(
-  'flex flex-row items-center gap-2 rounded-md px-2 py-1.5 text-sm hover:bg-fd-accent hover:text-fd-accent-foreground [&_svg]:size-4',
-);
+  'flex flex-row items-center gap-2 rounded-md px-2 py-1.5 text-sm hover:bg-fd-accent hover:text-fd-accent-foreground [&_svg]:size-4'
+)
 
 export function Files({
   className,
@@ -25,25 +25,25 @@ export function Files({
     >
       {props.children}
     </div>
-  );
+  )
 }
 
 export interface FileProps extends HTMLAttributes<HTMLDivElement> {
-  name: string;
-  icon?: ReactNode;
+  name: string
+  icon?: ReactNode
 }
 
 export interface FolderProps extends HTMLAttributes<HTMLDivElement> {
-  name: string;
+  name: string
 
-  disabled?: boolean;
+  disabled?: boolean
 
   /**
    * Open folder by default
    *
    * @defaultValue false
    */
-  defaultOpen?: boolean;
+  defaultOpen?: boolean
 }
 
 export function File({
@@ -57,7 +57,7 @@ export function File({
       {icon}
       {name}
     </div>
-  );
+  )
 }
 
 export function Folder({
@@ -65,7 +65,7 @@ export function Folder({
   defaultOpen = false,
   ...props
 }: FolderProps): React.ReactElement {
-  const [open, setOpen] = useState(defaultOpen);
+  const [open, setOpen] = useState(defaultOpen)
 
   return (
     <Collapsible open={open} onOpenChange={setOpen} {...props}>
@@ -74,8 +74,8 @@ export function Folder({
         {name}
       </CollapsibleTrigger>
       <CollapsibleContent>
-        <div className="ms-2 flex flex-col border-l ps-2">{props.children}</div>
+        <div className='ms-2 flex flex-col border-l ps-2'>{props.children}</div>
       </CollapsibleContent>
     </Collapsible>
-  );
+  )
 }

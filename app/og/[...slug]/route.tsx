@@ -1,21 +1,19 @@
-import { readFileSync } from 'node:fs';
-import { generateOGImage } from '@/app/og/[...slug]/og';
-import { source } from '@/lib/source';
-import { notFound } from 'next/navigation';
+import { readFileSync } from 'node:fs'
+import { notFound } from 'next/navigation'
+import { generateOGImage } from '@/app/og/[...slug]/og'
+import { source } from '@/lib/source'
 
-const font = readFileSync('./app/og/[...slug]/fonts/Inter-Regular.ttf');
-const fontSemiBold = readFileSync(
-  './app/og/[...slug]/fonts/Inter-SemiBold.ttf',
-);
-const fontBold = readFileSync('./app/og/[...slug]/fonts/Inter-Bold.ttf');
+const font = readFileSync('./app/og/[...slug]/fonts/Inter-Regular.ttf')
+const fontSemiBold = readFileSync('./app/og/[...slug]/fonts/Inter-SemiBold.ttf')
+const fontBold = readFileSync('./app/og/[...slug]/fonts/Inter-Bold.ttf')
 
 export async function GET(
   _req: Request,
-  { params }: { params: Promise<{ slug: string[] }> },
+  { params }: { params: Promise<{ slug: string[] }> }
 ) {
-  const { slug } = await params;
-  const page = source.getPage(slug.slice(0, -1));
-  if (!page) notFound();
+  const { slug } = await params
+  const page = source.getPage(slug.slice(0, -1))
+  if (!page) notFound()
 
   return generateOGImage({
     primaryTextColor: 'rgb(240,240,240)',
@@ -26,27 +24,27 @@ export async function GET(
       {
         name: 'Inter',
         data: font,
-        weight: 400,
+        weight: 400
       },
       {
         name: 'Inter',
         data: fontSemiBold,
-        weight: 600,
+        weight: 600
       },
       {
         name: 'Inter',
         data: fontBold,
-        weight: 700,
-      },
-    ],
-  });
+        weight: 700
+      }
+    ]
+  })
 }
 
 export function generateStaticParams(): {
-  slug: string[];
+  slug: string[]
 }[] {
   return source.generateParams().map((page) => ({
     ...page,
-    slug: [...page.slug, 'image.png'],
-  }));
+    slug: [...page.slug, 'image.png']
+  }))
 }

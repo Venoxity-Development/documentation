@@ -1,33 +1,33 @@
-import { remark } from 'remark';
-import remarkGfm from 'remark-gfm';
-import { remarkInstall } from 'fumadocs-docgen';
-import remarkMdx from 'remark-mdx';
-import { remarkAutoTypeTable } from 'fumadocs-typescript';
-import { remarkInclude } from 'fumadocs-mdx/config';
-import { type Page } from '@/lib/source';
-import { owner, repo } from './github';
+import { remarkInstall } from 'fumadocs-docgen'
+import { remarkInclude } from 'fumadocs-mdx/config'
+import { remarkAutoTypeTable } from 'fumadocs-typescript'
+import { remark } from 'remark'
+import remarkGfm from 'remark-gfm'
+import remarkMdx from 'remark-mdx'
+import type { Page } from '@/lib/source'
+import { owner, repo } from './github'
 
 export const categoryMap: Record<string, string> = {
   ui: 'UI Framework',
   'api-reference': 'API Reference',
-  changelog: 'Changelog',
-};
+  changelog: 'Changelog'
+}
 
 const processor = remark()
   .use(remarkMdx)
   .use(remarkInclude)
   .use(remarkGfm)
   .use(remarkAutoTypeTable)
-  .use(remarkInstall);
+  .use(remarkInstall)
 
 export async function getLLMText(page: Page) {
-  const category = categoryMap[page.slugs[0]] ?? page.slugs[0];
+  const category = categoryMap[page.slugs[0]] ?? page.slugs[0]
 
   const processed = await processor.process({
     path: page.data._file.absolutePath,
-    value: page.data.content,
-  });
-  const path = `content/docs/${page.file.path}`;
+    value: page.data.content
+  })
+  const path = `content/docs/${page.file.path}`
 
   return `# ${category}: ${page.data.title}
 URL: ${page.url}
@@ -35,5 +35,5 @@ Source: https://raw.githubusercontent.com/${owner}/${repo}/refs/heads/main/${pat
 
 ${page.data.description}
         
-${processed.value}`;
+${processed.value}`
 }

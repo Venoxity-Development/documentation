@@ -1,24 +1,24 @@
-import createBundleAnalyzer from '@next/bundle-analyzer';
-import { createMDX } from 'fumadocs-mdx/next';
-import type { NextConfig } from 'next';
+import createBundleAnalyzer from '@next/bundle-analyzer'
+import { createMDX } from 'fumadocs-mdx/next'
+import type { NextConfig } from 'next'
 
 const withAnalyzer = createBundleAnalyzer({
-  enabled: process.env.ANALYZE === 'true',
-});
+  enabled: process.env.ANALYZE === 'true'
+})
 
 const config: NextConfig = {
   reactStrictMode: true,
   logging: {
     fetches: {
-      fullUrl: true,
-    },
+      fullUrl: true
+    }
   },
   experimental: {
-    viewTransition: true,
+    viewTransition: true
   },
   eslint: {
     // Replaced by root workspace command
-    ignoreDuringBuilds: true,
+    ignoreDuringBuilds: true
   },
   serverExternalPackages: [
     'ts-morph',
@@ -26,7 +26,7 @@ const config: NextConfig = {
     'oxc-transform',
     'twoslash',
     'shiki',
-    'prettier',
+    'prettier'
   ],
   images: {
     unoptimized: true,
@@ -34,24 +34,24 @@ const config: NextConfig = {
       {
         protocol: 'https',
         hostname: 'avatars.githubusercontent.com',
-        port: '',
-      },
-    ],
+        port: ''
+      }
+    ]
   },
   async rewrites() {
     return [
       {
         source: '/docs/:path*.mdx',
-        destination: '/llms.mdx/:path*',
+        destination: '/llms.mdx/:path*'
       },
       {
         source: '/docs/ui/changelog',
-        destination: '/docs/changelog',
-      },
-    ];
-  },
-};
+        destination: '/docs/changelog'
+      }
+    ]
+  }
+}
 
-const withMDX = createMDX();
+const withMDX = createMDX()
 
-export default withAnalyzer(withMDX(config));
+export default withAnalyzer(withMDX(config))

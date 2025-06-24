@@ -1,4 +1,4 @@
-import { z } from 'zod';
+import { z } from 'zod'
 
 const InkeepRecordTypes = z.enum([
   'documentation',
@@ -9,42 +9,42 @@ const InkeepRecordTypes = z.enum([
   'stackoverflow_question',
   'discord_forum_post',
   'discord_message',
-  'custom_question_answer',
-]);
+  'custom_question_answer'
+])
 
 const LinkType = z.union([
   InkeepRecordTypes,
-  z.string(), // catch all
-]);
+  z.string() // catch all
+])
 
 const LinkSchema = z.object({
   label: z.string(), // the value of the footnote, e.g. `1`
   url: z.string(),
   title: z.string(),
   type: LinkType,
-  breadcrumbs: z.array(z.string()),
-});
+  breadcrumbs: z.array(z.string())
+})
 
-const LinksSchema = z.array(LinkSchema);
+const LinksSchema = z.array(LinkSchema)
 
 export const ProvideLinksToolSchema = z.object({
-  links: LinksSchema,
-});
+  links: LinksSchema
+})
 
 const KnownAnswerConfidence = z.enum([
   'very_confident',
   'somewhat_confident',
   'not_confident',
   'no_sources',
-  'other',
-]);
+  'other'
+])
 
-const AnswerConfidence = z.union([KnownAnswerConfidence, z.string()]); // evolvable
+const AnswerConfidence = z.union([KnownAnswerConfidence, z.string()]) // evolvable
 
 const AIAnnotationsToolSchema = z.object({
-  answerConfidence: AnswerConfidence,
-});
+  answerConfidence: AnswerConfidence
+})
 
 export const ProvideAIAnnotationsToolSchema = z.object({
-  aiAnnotations: AIAnnotationsToolSchema,
-});
+  aiAnnotations: AIAnnotationsToolSchema
+})

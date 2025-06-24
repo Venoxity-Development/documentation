@@ -1,14 +1,14 @@
-import { DocsLayout } from 'fumadocs-ui/layouts/docs';
-import type { ReactNode } from 'react';
-import { baseOptions, linkItems, logo } from '@/app/layout.config';
-import { source } from '@/lib/source';
-import { LargeSearchToggle } from 'fumadocs-ui/components/layout/search-toggle';
-import { Sparkles } from 'lucide-react';
-import { AISearchTrigger } from '@/components/fumadocs/ai';
-import { cn } from '@/lib/cn';
-import { buttonVariants } from '@/components/ui/button';
-import 'katex/dist/katex.min.css';
-import DocsBackground from '@/components/docs-background';
+import { LargeSearchToggle } from 'fumadocs-ui/components/layout/search-toggle'
+import { DocsLayout } from 'fumadocs-ui/layouts/docs'
+import { Sparkles } from 'lucide-react'
+import type { ReactNode } from 'react'
+import { baseOptions, linkItems, logo } from '@/app/layout.config'
+import { AISearchTrigger } from '@/components/fumadocs/ai'
+import { buttonVariants } from '@/components/ui/button'
+import { cn } from '@/lib/cn'
+import { source } from '@/lib/source'
+import 'katex/dist/katex.min.css'
+import DocsBackground from '@/components/docs-background'
 
 export default function Layout({ children }: { children: ReactNode }) {
   return (
@@ -20,31 +20,31 @@ export default function Layout({ children }: { children: ReactNode }) {
       searchToggle={{
         components: {
           lg: (
-            <div className="flex gap-1.5 max-md:hidden">
-              <LargeSearchToggle className="flex-1" />
+            <div className='flex gap-1.5 max-md:hidden'>
+              <LargeSearchToggle className='flex-1' />
               <AISearchTrigger
-                aria-label="Ask AI"
+                aria-label='Ask AI'
                 className={cn(
                   buttonVariants({
                     variant: 'outline',
                     size: 'icon',
                     className:
-                      'text-fd-muted-foreground bg-fd-secondary/50 shadow-none',
-                  }),
+                      'bg-fd-secondary/50 text-fd-muted-foreground shadow-none'
+                  })
                 )}
               >
-                <Sparkles className="size-4" />
+                <Sparkles className='size-4' />
               </AISearchTrigger>
             </div>
-          ),
-        },
+          )
+        }
       }}
       nav={{
         ...baseOptions.nav,
         title: (
           <>
             {logo}
-            <span className="font-medium [.uwu_&]:hidden max-md:hidden">
+            <span className='font-medium max-md:hidden [.uwu_&]:hidden'>
               Fumadocs
             </span>
           </>
@@ -56,45 +56,45 @@ export default function Layout({ children }: { children: ReactNode }) {
                 variant: 'secondary',
                 size: 'sm',
                 className:
-                  'absolute left-1/2 top-1/2 -translate-1/2 text-fd-muted-foreground rounded-full gap-2 md:hidden',
-              }),
+                  '-translate-1/2 absolute top-1/2 left-1/2 gap-2 rounded-full text-fd-muted-foreground md:hidden'
+              })
             )}
           >
-            <Sparkles className="size-4.5 fill-current" />
+            <Sparkles className='size-4.5 fill-current' />
             Ask AI
           </AISearchTrigger>
-        ),
+        )
       }}
       sidebar={{
         tabs: {
           transform(option, node) {
-            const meta = source.getNodeMeta(node);
-            if (!meta || !node.icon) return option;
+            const meta = source.getNodeMeta(node)
+            if (!meta || !node.icon) return option
 
-            const color = `var(--${meta.path.split('/')[0]}-color, var(--color-fd-foreground))`;
+            const color = `var(--${meta.path.split('/')[0]}-color, var(--color-fd-foreground))`
 
             return {
               ...option,
               icon: (
                 <div
-                  className="[&_svg]:size-full rounded-lg size-full max-md:bg-(--tab-color)/10 max-md:border max-md:p-1.5"
+                  className='size-full rounded-lg max-md:border max-md:bg-(--tab-color)/10 max-md:p-1.5 [&_svg]:size-full'
                   style={
                     {
                       color,
-                      '--tab-color': color,
+                      '--tab-color': color
                     } as object
                   }
                 >
                   {node.icon}
                 </div>
-              ),
-            };
-          },
-        },
+              )
+            }
+          }
+        }
       }}
     >
       {children}
       <DocsBackground />
     </DocsLayout>
-  );
+  )
 }
