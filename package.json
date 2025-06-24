@@ -1,5 +1,5 @@
 {
-  "name": "docs",
+  "name": "fumadocs-starter",
   "version": "1.0.0",
   "private": true,
   "scripts": {
@@ -9,9 +9,14 @@
     "dev": "next dev --turbopack",
     "start": "next start",
     "postinstall": "fumadocs-mdx",
-    "lint": "fumadocs-mdx && tsx ./scripts/lint.mts && next lint",
-    "build:docs": "tsx ./scripts/generate-docs.mts",
-    "docs:watch": "./.devcontainer/build_auto.sh",
+    "check": "biome check .",
+    "check:unsafe": "biome check --write --unsafe .",
+    "check:write": "biome check --write .",
+    "lint": "fumadocs-mdx && tsx ./scripts/lint.mts && biome lint",
+    "lint:write": "biome lint --write .",
+    "lint:unsafe": "biome lint --write --unsafe .",
+    "format": "biome format --write .",
+    "typecheck": "tsc --noEmit",
     "with-env": "dotenv -e ../../.env --"
   },
   "dependencies": {
@@ -62,6 +67,7 @@
     "zod": "^3.25.67"
   },
   "devDependencies": {
+    "@biomejs/biome": "2.0.5",
     "@fumadocs/cli": "^0.2.1",
     "@tailwindcss/postcss": "^4.1.10",
     "@types/hast": "^3.0.4",
