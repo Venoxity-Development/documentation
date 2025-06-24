@@ -17,8 +17,8 @@ It allows you to import components, and use them right in the document, or even 
 
 See:
 
-* [MDX Syntax](https://mdxjs.com/docs/what-is-mdx/#mdx-syntax).
-* GFM (GitHub Flavored Markdown) is also supported, see [GFM Specification](https://github.github.com/gfm).
+- [MDX Syntax](https://mdxjs.com/docs/what-is-mdx/#mdx-syntax).
+- GFM (GitHub Flavored Markdown) is also supported, see [GFM Specification](https://github.github.com/gfm).
 
 ```mdx
 ---
@@ -101,7 +101,7 @@ import { HomeIcon } from 'lucide-react';
     Learn more about caching in Next.js
   </Card>
 
-  <Card title="href is optional">Learn more about `fetch` in Next.js.</Card>
+<Card title="href is optional">Learn more about `fetch` in Next.js.</Card>
 
   <Card icon={<HomeIcon />} href="/" title="Home">
     You can include icons too.
@@ -112,9 +112,9 @@ import { HomeIcon } from 'lucide-react';
 
 Useful for adding tips/warnings, it is included by default. You can specify the type of callout:
 
-* `info` (default)
-* `warn`
-* `error`
+- `info` (default)
+- `warn`
+- `error`
 
 ```mdx
 <Callout>Hello World</Callout>
@@ -212,7 +212,6 @@ Specify the target file path in `<include>` tag (relative to the MDX file itself
 
 See [other usages](https://fumadocs.dev/docs/mdx/include).
 
-
 ### Mermaid
 
 Rendering diagrams in your docs
@@ -267,7 +266,6 @@ Z --> G;"
 
 Fumadocs supports [LaTeX](https://www.latex-project.org) through the Latex component.
 
-
 ````mdx
 Inline: $$c = \pm\sqrt{a^2 + b^2}$$
 
@@ -291,7 +289,8 @@ Taylor Expansion (expressing holomorphic function $$f(x)$$ in power series):
 <Callout title="Tip">
   You can actually copy equations on Wikipedia, they will be converted into a KaTeX string when you paste it.
 
-  ```math
-  \displaystyle S[{\boldsymbol {q}}]=\int _{a}^{b}L(t,{\boldsymbol {q}}(t),{\dot {\boldsymbol {q}}}(t))\,dt.
-  ```
+```math
+\displaystyle S[{\boldsymbol {q}}]=\int _{a}^{b}L(t,{\boldsymbol {q}}(t),{\dot {\boldsymbol {q}}}(t))\,dt.
+```
+
 </Callout>

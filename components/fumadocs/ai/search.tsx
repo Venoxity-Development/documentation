@@ -36,7 +36,7 @@ import {
   Tooltip,
   TooltipContent,
   TooltipTrigger,
-} from "@/components/ui/tooltip"
+} from '@/components/ui/tooltip';
 
 const ChatContext = createContext<UseChatHelpers | null>(null);
 function useChatContext() {
@@ -372,7 +372,9 @@ function Content() {
                 <DialogClose
                   aria-label="Close"
                   tabIndex={-1}
-                  className={cn(buttonVariants({ size: 'sm', variant: 'ghost' }))}
+                  className={cn(
+                    buttonVariants({ size: 'sm', variant: 'ghost' }),
+                  )}
                 >
                   <X className="size-4" />
                 </DialogClose>

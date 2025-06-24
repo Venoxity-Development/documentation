@@ -75,7 +75,7 @@ export function ThemeToggle({
         if (mode !== 'light-dark') return;
         handleChangeTheme(resolvedTheme === 'dark' ? 'light' : 'dark');
       }}
-      data-theme-toggle=''
+      data-theme-toggle=""
       aria-label={mode === 'light-dark' ? 'Toggle Theme' : undefined}
       {...props}
     >
@@ -85,7 +85,7 @@ export function ThemeToggle({
 
         return (
           <button
-            type='button'
+            type="button"
             key={key}
             className={itemVariants({ active: isActive })}
             onClick={() => {
@@ -96,8 +96,8 @@ export function ThemeToggle({
           >
             {isActive && (
               <motion.div
-                layoutId='activeTheme'
-                className='absolute inset-0 rounded-full bg-accent'
+                layoutId="activeTheme"
+                className="absolute inset-0 rounded-full bg-accent"
                 transition={{
                   type: 'spring',
                   duration: 0.4,

@@ -35,9 +35,7 @@ export default function Layout({ children }: { children: ReactNode }) {
       suppressHydrationWarning
     >
       <Body>
-        <Providers>
-          {children}
-        </Providers>
+        <Providers>{children}</Providers>
       </Body>
     </html>
   );

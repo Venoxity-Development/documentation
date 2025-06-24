@@ -1,19 +1,17 @@
-"use client";
-import { RootProvider } from "fumadocs-ui/provider";
-import type { ReactNode } from "react";
+'use client';
+import { RootProvider } from 'fumadocs-ui/provider';
+import type { ReactNode } from 'react';
 import SearchDialog from '@/components/search';
-import { TooltipProvider } from "@/components/ui/tooltip";
+import { TooltipProvider } from '@/components/ui/tooltip';
 
 export function Providers({ children }: { children: ReactNode }) {
   return (
     <RootProvider
       search={{
-        SearchDialog
+        SearchDialog,
       }}
     >
-      <TooltipProvider>
-        {children}
-      </TooltipProvider>
+      <TooltipProvider>{children}</TooltipProvider>
     </RootProvider>
   );
 }

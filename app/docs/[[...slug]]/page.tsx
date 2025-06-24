@@ -8,19 +8,16 @@ import {
 import { APIPage } from 'fumadocs-openapi/ui';
 import { notFound } from 'next/navigation';
 import { createMetadata } from '@/lib/metadata';
-import { getMDXComponents } from "@/mdx-components";
-import { Callout } from "fumadocs-ui/components/callout";
+import { getMDXComponents } from '@/mdx-components';
+import { Callout } from 'fumadocs-ui/components/callout';
 import {
   HoverCard,
   HoverCardContent,
   HoverCardTrigger,
-} from "@/components/ui/hover-card";
+} from '@/components/ui/hover-card';
 import Link from 'next/link';
-import { AutoTypeTable } from "fumadocs-typescript/ui";
-import {
-  type ComponentProps,
-  type FC
-} from "react";
+import { AutoTypeTable } from 'fumadocs-typescript/ui';
+import { type ComponentProps, type FC } from 'react';
 import { createGenerator } from 'fumadocs-typescript';
 import type { Metadata } from 'next';
 import { owner, repo } from '@/lib/github';
@@ -47,7 +44,7 @@ export default async function Page(props: {
       toc={toc}
       full={page.data.full}
       tableOfContent={{
-        style: "clerk",
+        style: 'clerk',
         single: false,
       }}
     >
@@ -66,7 +63,7 @@ export default async function Page(props: {
         <Mdx
           components={getMDXComponents({
             a: ({ href, ...props }) => {
-              const found = source.getPageByHref(href ?? "", {
+              const found = source.getPageByHref(href ?? '', {
                 dir: page.file.dirname,
               });
 
@@ -99,8 +96,8 @@ export default async function Page(props: {
             AutoTypeTable: (props) => (
               <AutoTypeTable generator={generator} {...props} />
             ),
-            blockquote: Callout as unknown as FC<ComponentProps<"blockquote">>,
-            APIPage: (props) => <APIPage {...openapi.getAPIPageProps(props)} />
+            blockquote: Callout as unknown as FC<ComponentProps<'blockquote'>>,
+            APIPage: (props) => <APIPage {...openapi.getAPIPageProps(props)} />,
           })}
         />
       </DocsBody>

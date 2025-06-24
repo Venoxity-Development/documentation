@@ -61,7 +61,7 @@ export function LLMCopyButton({ slug }: { slug: string[] }) {
       onClick={onClick}
     >
       {checked ? <Check /> : <Copy />}
-      {checked ? "Copied" : "Copy"} Markdown
+      {checked ? 'Copied' : 'Copy'} Markdown
     </button>
   );
 }

@@ -42,7 +42,8 @@ export function generate({
         width: '100%',
         height: '100%',
         color: 'white',
-        backgroundImage: 'radial-gradient(145% 145% at 110% 110%, rgba(31,102,244,1) 0%, rgba(19,72,180,1) 30%, rgba(10,38,96,1) 60%, #000 100%)',
+        backgroundImage:
+          'radial-gradient(145% 145% at 110% 110%, rgba(31,102,244,1) 0%, rgba(19,72,180,1) 30%, rgba(10,38,96,1) 60%, #000 100%)',
       }}
     >
       <div
@@ -54,7 +55,6 @@ export function generate({
           padding: '4rem',
         }}
       >
-
         <div
           style={{
             display: 'flex',

@@ -29,10 +29,11 @@ export async function POST(request: Request) {
     system: systemPrompt,
     tools: {
       provideLinks: tool({
-        description: "Provide links to articles found using the Web Search tool. This is compulsory and MUST be called after a web search, as it gives the user context on which URLs were used to generate the response.",
+        description:
+          'Provide links to articles found using the Web Search tool. This is compulsory and MUST be called after a web search, as it gives the user context on which URLs were used to generate the response.',
         parameters: ProvideLinksToolSchema,
         execute: async ({ links }) => ({
-          links
+          links,
         }),
       }),
       webSearch: openai.tools.webSearchPreview(),
@@ -47,9 +48,9 @@ export async function POST(request: Request) {
     ],
     onStepFinish: async ({ toolResults }) => {
       console.log(`Step Results: ${JSON.stringify(toolResults, null, 2)}`);
-    }
+    },
   });
-  
+
   return result.toDataStreamResponse({
     getErrorMessage: (error) => {
       console.log('An error occurred: ', JSON.stringify(error));

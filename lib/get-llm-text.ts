@@ -1,4 +1,3 @@
-
 import { remark } from 'remark';
 import remarkGfm from 'remark-gfm';
 import { remarkInstall } from 'fumadocs-docgen';
@@ -11,7 +10,7 @@ import { owner, repo } from './github';
 export const categoryMap: Record<string, string> = {
   ui: 'UI Framework',
   'api-reference': 'API Reference',
-  'changelog': 'Changelog',
+  changelog: 'Changelog',
 };
 
 const processor = remark()
@@ -22,8 +21,7 @@ const processor = remark()
   .use(remarkInstall);
 
 export async function getLLMText(page: Page) {
-  const category =
-  categoryMap[page.slugs[0]] ?? page.slugs[0];
+  const category = categoryMap[page.slugs[0]] ?? page.slugs[0];
 
   const processed = await processor.process({
     path: page.data._file.absolutePath,

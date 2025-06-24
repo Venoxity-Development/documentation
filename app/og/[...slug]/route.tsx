@@ -37,7 +37,7 @@ export async function GET(
         name: 'Inter',
         data: fontBold,
         weight: 700,
-      }
+      },
     ],
   });
 }
