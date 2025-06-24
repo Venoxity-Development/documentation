@@ -1,7 +1,7 @@
+import { cva } from 'class-variance-authority';
 import { CircleCheck, CircleX, Info, TriangleAlert } from 'lucide-react';
 import { forwardRef, type HTMLAttributes, type ReactNode } from 'react';
 import { cn } from '@/lib/fumadocs/cn';
-import { cva } from 'class-variance-authority';
 
 type CalloutProps = Omit<
   HTMLAttributes<HTMLDivElement>,
@@ -59,9 +59,9 @@ export const Callout = forwardRef<HTMLDivElement, CalloutProps>(
               <CircleCheck className='size-5 fill-green-500 text-fd-card' />
             ),
           }[type]}
-        <div className='min-w-0 flex flex-col gap-2 flex-1'>
-          {title ? <p className='font-medium !my-0'>{title}</p> : null}
-          <div className='text-fd-muted-foreground prose-no-margin empty:hidden'>
+        <div className='flex min-w-0 flex-1 flex-col gap-2'>
+          {title ? <p className='!my-0 font-medium'>{title}</p> : null}
+          <div className='prose-no-margin text-fd-muted-foreground empty:hidden'>
             {children}
           </div>
         </div>

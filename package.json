@@ -70,6 +70,8 @@
   },
   "devDependencies": {
     "@biomejs/biome": "2.0.5",
+    "@commitlint/cli": "^19.8.1",
+    "@commitlint/config-conventional": "^19.8.1",
     "@fumadocs/cli": "^0.2.1",
     "@tailwindcss/postcss": "^4.1.10",
     "@types/hast": "^3.0.4",
@@ -82,7 +84,7 @@
     "eslint": "^9.29.0",
     "eslint-config-next": "15.3.4",
     "gray-matter": "^4.0.3",
-    "husky": "^9.1.7",
+    "lefthook": "^1.11.14",
     "lint-staged": "^16.1.2",
     "next-validate-link": "^1.5.2",
     "postcss": "^8.5.6",
@@ -97,17 +99,11 @@
   "engines": {
     "node": ">=22"
   },
-  "lint-staged": {
-    "*.{cjs,mjs,js,jsx,cts,mts,ts,tsx,json}": "biome lint --write .",
-    "**/*": [
-      "biome format --write .",
-      "tsx ./scripts/lint.mts"
-    ]
-  },
   "pnpm": {
     "onlyBuiltDependencies": [
       "@tailwindcss/oxide",
       "esbuild",
+      "lefthook",
       "sharp",
       "unrs-resolver"
     ]
