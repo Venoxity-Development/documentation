@@ -17,8 +17,7 @@
     "lint:unsafe": "biome lint --write --unsafe .",
     "format": "biome format --write .",
     "typecheck": "tsc --noEmit",
-    "with-env": "dotenv -e ../../.env --",
-    "prepare": "husky"
+    "with-env": "dotenv -e ../../.env --"
   },
   "dependencies": {
     "@ai-sdk/openai": "^1.3.22",
