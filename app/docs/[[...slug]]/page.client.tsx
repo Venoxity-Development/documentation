@@ -50,6 +50,7 @@ export function LLMCopyButton({ slug }: { slug: string[] }) {
 
   return (
     <button
+      type='button'
       disabled={isLoading}
       className={cn(
         buttonVariants({

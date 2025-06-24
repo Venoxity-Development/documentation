@@ -1,5 +1,9 @@
 'use client'
-import { type Message, type UseChatHelpers, useChat } from '@ai-sdk/react'
+import {
+  type Message as MessageT,
+  type UseChatHelpers,
+  useChat
+} from '@ai-sdk/react'
 import {
   Dialog,
   DialogClose,
@@ -221,7 +225,7 @@ const roleName: Record<string, string> = {
   assistant: 'assistant'
 }
 
-function Message({ message }: { message: Message }) {
+function Message({ message }: { message: MessageT }) {
   const { parts } = message
   let links: z.infer<typeof ProvideLinksToolSchema>['links'] = []
 

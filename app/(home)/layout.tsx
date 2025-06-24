@@ -8,7 +8,15 @@ export default function Layout({
   children: ReactNode
 }): React.ReactElement {
   return (
-    <HomeLayout {...baseOptions}>
+    <HomeLayout
+      {...baseOptions}
+      style={
+        {
+          '--spacing-fd-container': '1120px'
+        } as object
+      }
+      className='dark:bg-neutral-950 dark:[--color-fd-background:var(--color-neutral-950)]'
+    >
       {children}
       <Footer />
     </HomeLayout>
