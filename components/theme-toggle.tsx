@@ -59,17 +59,7 @@ export function ThemeToggle({
   }, []);
 
   const handleChangeTheme = async (theme: Theme) => {
-    function update() {
-      setTheme(theme);
-    }
-
-    if (document.startViewTransition && theme !== resolvedTheme) {
-      document.documentElement.style.viewTransitionName = 'theme-transition';
-      await document.startViewTransition(update).finished;
-      document.documentElement.style.viewTransitionName = '';
-    } else {
-      update();
-    }
+    setTheme(theme);
   };
 
   const value = mounted
@@ -110,7 +100,7 @@ export function ThemeToggle({
                 className='absolute inset-0 rounded-full bg-accent'
                 transition={{
                   type: 'spring',
-                  duration: mode === 'light-dark' ? 1.5 : 1,
+                  duration: 0.4,
                 }}
               />
             )}

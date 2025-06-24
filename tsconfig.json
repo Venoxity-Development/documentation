@@ -16,7 +16,8 @@
     "jsx": "preserve",
     "incremental": true,
     "paths": {
-      "@/*": ["./*"]
+      "@/*": ["./*"],
+      "@/.source": ["./.source/index.ts"],
     },
     "plugins": [
       {
@@ -33,6 +34,6 @@
     ".next/types/**/*.ts",
     "next.config.js",
     "tailwind.config.js"
-, "content/docs/ui/essentials/markdown.mdx", "content/docs/ui/essentials/code.mdx"  ],
+  ],
   "exclude": ["node_modules"]
 }

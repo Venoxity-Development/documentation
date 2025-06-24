@@ -1,6 +1,6 @@
 import defaultMdxComponents from "fumadocs-ui/mdx";
 import { File, Files, Folder } from "fumadocs-ui/components/files";
-import { Tab, Tabs } from "fumadocs-ui/components/tabs";
+import { Tab, Tabs, TabsContent, TabsList, TabsTrigger } from "fumadocs-ui/components/tabs";
 import type { MDXComponents } from "mdx/types";
 import { Accordion, Accordions } from "fumadocs-ui/components/accordion";
 import * as icons from "lucide-react";
@@ -10,7 +10,6 @@ import { TypeTable } from "fumadocs-ui/components/type-table";
 import * as Twoslash from "fumadocs-twoslash/ui";
 import { Mermaid } from "@/components/mdx/mermaid";
 import { Callout } from "fumadocs-ui/components/callout";
-import { CodeBlock, Pre } from 'fumadocs-ui/components/codeblock';
 
 export function getMDXComponents(components?: MDXComponents): MDXComponents {
   return {
@@ -21,6 +20,9 @@ export function getMDXComponents(components?: MDXComponents): MDXComponents {
     Files,
     Folder,
     Tabs,
+    TabsContent,
+    TabsList,
+    TabsTrigger,
     Tab,
     Accordion,
     Accordions,
@@ -29,11 +31,6 @@ export function getMDXComponents(components?: MDXComponents): MDXComponents {
     Mermaid,
     TypeTable,
     Callout,
-    // pre: ({ ref: _ref, ...props }) => (
-    //   <CodeBlock {...props}>
-    //     <Pre>{props.children}</Pre>
-    //   </CodeBlock>
-    // ),
     ...components,
   };
 }

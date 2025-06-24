@@ -1,21 +1,22 @@
 import {
+  defineCollections,
   defineConfig,
   defineDocs,
   frontmatterSchema,
   metaSchema,
-} from "fumadocs-mdx/config";
-import { transformerTwoslash } from "fumadocs-twoslash";
-import { createFileSystemTypesCache } from "fumadocs-twoslash/cache-fs";
-import remarkMath from "remark-math";
-import { fileGenerator, remarkDocGen, remarkInstall } from "fumadocs-docgen";
-import rehypeKatex from "rehype-katex";
-import { z } from "zod";
+} from 'fumadocs-mdx/config';
+import { transformerTwoslash } from 'fumadocs-twoslash';
+import { createFileSystemTypesCache } from 'fumadocs-twoslash/cache-fs';
+import remarkMath from 'remark-math';
+import { remarkInstall } from 'fumadocs-docgen';
+import rehypeKatex from 'rehype-katex';
+import { z } from 'zod';
 import {
   rehypeCodeDefaultOptions,
   remarkSteps,
-} from "fumadocs-core/mdx-plugins";
-import { remarkAutoTypeTable } from "fumadocs-typescript";
-import fs from "fs";
+} from 'fumadocs-core/mdx-plugins';
+import { remarkAutoTypeTable } from 'fumadocs-typescript';
+import { ElementContent } from 'hast';
 
 export const docs = defineDocs({
   docs: {
@@ -37,51 +38,49 @@ export const docs = defineDocs({
 });
 
 export default defineConfig({
-  lastModifiedTime: "git",
+  lastModifiedTime: 'git',
   mdxOptions: {
     rehypeCodeOptions: {
       lazy: true,
       experimentalJSEngine: true,
-      langs: ["ts", "js", "html", "tsx", "mdx"],
-      inline: "tailing-curly-colon",
+      langs: ['ts', 'js', 'html', 'tsx', 'mdx'],
+      inline: 'tailing-curly-colon',
       themes: {
-        light: "catppuccin-latte",
-        dark: "catppuccin-mocha",
+        light: 'catppuccin-latte',
+        dark: 'catppuccin-mocha',
       },
       transformers: [
         ...(rehypeCodeDefaultOptions.transformers ?? []),
         transformerTwoslash({
-          typesCache: createFileSystemTypesCache({
-            dir: fs.existsSync("_next")
-              ? "_next/static/twoslash"
-              : ".next/static/twoslash",
-          }),
+          typesCache: createFileSystemTypesCache(),
         }),
         {
-          name: "transformers:remove-notation-escape",
+          name: '@shikijs/transformers:remove-notation-escape',
           code(hast) {
-            for (const line of hast.children) {
-              if (line.type !== "element") continue;
-
-              const lastSpan = line.children.findLast(
-                (v) => v.type === "element"
-              );
-
-              const head = lastSpan?.children[0];
-              if (head?.type !== "text") continue;
-
-              head.value = head.value.replace(/\[\\!code/g, "[!code");
+            function replace(node: ElementContent): void {
+              if (node.type === 'text') {
+                node.value = node.value.replace('[\\!code', '[!code');
+              } else if ('children' in node) {
+                for (const child of node.children) {
+                  replace(child);
+                }
+              }
             }
+
+            replace(hast);
+            return hast;
           },
         },
       ],
+    },
+    remarkCodeTabOptions: {
+      parseMdx: true,
     },
     remarkPlugins: [
       remarkSteps,
       remarkMath,
       remarkAutoTypeTable,
-      [remarkInstall, { persist: { id: "package-manager" } }],
-      [remarkDocGen, { generators: [fileGenerator()] }],
+      [remarkInstall, { persist: { id: 'package-manager' } }],
     ],
     rehypePlugins: (v) => [rehypeKatex, ...v],
   },

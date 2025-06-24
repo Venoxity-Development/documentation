@@ -24,7 +24,7 @@ import {
 import { createGenerator } from 'fumadocs-typescript';
 import type { Metadata } from 'next';
 import { owner, repo } from '@/lib/github';
-import { EditOnGitHub, LLMCopyButton } from './page.client';
+import { LLMCopyButton, ViewOptions } from './page.client';
 import { Card, Cards } from 'fumadocs-ui/components/card';
 import { getPageTreePeers } from 'fumadocs-core/server';
 
@@ -32,13 +32,11 @@ const generator = createGenerator();
 export const revalidate = false;
 
 export default async function Page(props: {
-  params: Promise<{ slug?: string[] }>;
+  params: Promise<{ slug: string[] }>;
 }) {
   const params = await props.params;
   const page = source.getPage(params.slug);
   if (!page) notFound();
-
-  const path = `content/docs/${page.file.path}`;
 
   const { body: Mdx, toc } = await page.data.load();
 
@@ -55,10 +53,11 @@ export default async function Page(props: {
       <DocsDescription className="mb-2">
         {page.data.description}
       </DocsDescription>
-      <div className="flex flex-row gap-2 items-center">
-        <LLMCopyButton />
-        <EditOnGitHub
-          url={`https://github.com/${owner}/${repo}/blob/main/${path}`}
+      <div className="flex flex-row gap-2 items-center border-b pb-6">
+        <LLMCopyButton slug={params.slug} />
+        <ViewOptions
+          markdownUrl={`${page.url}.mdx`}
+          githubUrl={`https://github.com/${owner}/${repo}/blob/dev/apps/docs/content/docs/${page.path}`}
         />
       </div>
       <DocsBody>
