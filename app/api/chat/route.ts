@@ -1,5 +1,5 @@
-import { systemPrompt } from '@/lib/chat/prompts';
-import { ProvideLinksToolSchema } from '@/lib/chat/qa-schema';
+import { systemPrompt } from '@/lib/ai/prompts';
+import { ProvideLinksToolSchema } from '@/lib/ai/qa-schema';
 import { createOpenAI } from '@ai-sdk/openai';
 import {
   InvalidToolArgumentsError,

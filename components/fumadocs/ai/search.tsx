@@ -29,7 +29,7 @@ import {
   DialogTitle,
 } from '@radix-ui/react-dialog';
 import { type Message, useChat, type UseChatHelpers } from '@ai-sdk/react';
-import type { ProvideLinksToolSchema } from '@/lib/chat/qa-schema';
+import type { ProvideLinksToolSchema } from '@/lib/ai/qa-schema';
 import type { z } from 'zod';
 import { DynamicCodeBlock } from 'fumadocs-ui/components/dynamic-codeblock';
 import {
