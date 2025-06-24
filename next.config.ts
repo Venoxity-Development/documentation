@@ -26,7 +26,6 @@ const config: NextConfig = {
     'oxc-transform',
     'twoslash',
     'shiki',
-    'prettier'
   ],
   images: {
     unoptimized: true,
@@ -43,13 +42,18 @@ const config: NextConfig = {
       {
         source: '/docs/:path*.mdx',
         destination: '/llms.mdx/:path*'
-      },
-      {
-        source: '/docs/ui/changelog',
-        destination: '/docs/changelog'
       }
     ]
-  }
+  },
+  async redirects() {
+    return [
+      {
+        source: '/docs/ui/changelog',
+        destination: '/docs/changelog',
+        permanent: true
+      }
+    ];
+  },
 }
 
 const withMDX = createMDX()
