@@ -17,7 +17,7 @@ export default function DocsPage(): React.ReactElement {
           title='Documentation'
           description='Get started with the Fumadocs framework.'
           icon={BookIcon}
-          className='ui'
+          id='ui'
           href='/docs/ui'
         />
 
@@ -25,7 +25,7 @@ export default function DocsPage(): React.ReactElement {
           title='API Reference'
           description="Get started with Fumadocs's API reference feature."
           icon={RocketIcon}
-          className='api-reference'
+          id='api-reference'
           href='/docs/api-reference'
         />
       </div>
@@ -37,18 +37,18 @@ function DocumentationItem({
   title,
   description,
   icon: ItemIcon,
-  className,
+  id,
   href,
 }: {
   title: string;
   description: string;
-  className: string;
+  id: string;
   icon: React.ComponentType<{ className?: string }>;
   href: string;
 }): React.ReactElement {
   return (
     <Item href={href}>
-      <Icon className={className}>
+      <Icon className={id}>
         <ItemIcon className='size-full' />
       </Icon>
       <h2 className='mb-2 font-semibold text-lg'>{title}</h2>

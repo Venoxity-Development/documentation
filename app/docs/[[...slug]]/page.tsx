@@ -34,7 +34,7 @@ import {
 } from '@/components/ui/hover-card';
 import { owner, repo } from '@/lib/github';
 import { createMetadata } from '@/lib/metadata';
-import { source } from '@/lib/source';
+import { openapi, source } from '@/lib/source';
 import { getMDXComponents } from '@/mdx-components';
 import { LLMCopyButton, ViewOptions } from './page.client';
 
@@ -115,18 +115,15 @@ export default async function Page(props: {
               Banner,
               Mermaid,
               TypeTable,
-              // biome-ignore lint/nursery/noNestedComponentDefinitions: MDX component mapping requires inline component
               AutoTypeTable: (props) => (
                 <AutoTypeTable generator={generator} {...props} />
               ),
               blockquote: Callout as unknown as FC<
                 ComponentProps<'blockquote'>
               >,
-              // biome-ignore lint/nursery/noNestedComponentDefinitions: MDX component mapping requires inline component
               APIPage: (props) => (
                 <APIPage {...openapi.getAPIPageProps(props)} />
               ),
-              // biome-ignore lint/nursery/noNestedComponentDefinitions: MDX component mapping requires inline component
               DocsCategory: ({ url }) => <DocsCategory url={url ?? page.url} />,
             })}
           />

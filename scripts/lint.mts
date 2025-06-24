@@ -27,7 +27,6 @@ async function readFromPath(file: string) {
 }
 
 function remarkIncludeId() {
-  // biome-ignore lint/suspicious/noExplicitAny: remark plugin requires any types
   return (tree: any, file: any) => {
     file.data.ids ??= [];
     visit(tree, 'mdxJsxFlowElement', (element) => {
