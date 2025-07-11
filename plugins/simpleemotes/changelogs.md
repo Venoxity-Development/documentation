@@ -13,16 +13,3 @@ layout:
   pagination:
     visible: false
 ---
-
----
-
-## v1.0.5
-
-* b
-
----
-
-## v1.0.4
-
-bello
-
