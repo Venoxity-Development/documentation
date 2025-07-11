@@ -26,3 +26,11 @@ This article is work in progress, please come back at some later time to enjoy i
 * 2
 * 3
 * 4
+
+---
+
+## v1.0.1
+
+* 123
+* 456
+* 789
