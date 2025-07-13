@@ -3,7 +3,7 @@ icon: scroll
 description: Track all updates to SimpleEmotes here. Features, fixes, and improvements are all listed in one place.
 layout:
   title:
-    visible: true
+    visible: false
   description:
     visible: true
   tableOfContents:
@@ -14,7 +14,7 @@ layout:
     visible: false
 ---
 
-## General Information
+# General Information
 
 ### vX.X.X — Month Day, Year
 
