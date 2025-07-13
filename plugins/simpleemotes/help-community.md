@@ -14,14 +14,35 @@ layout:
     visible: false
 ---
 
-Welcome to the Venoxity Network community page.
+# 🌎 Help & Community
 
-Here you’ll find everything you need to get help, share feedback, and stay connected. Use the sections below to ask questions, report issues, or join the conversation.
+Welcome to the Venoxity Network community hub—your central resource for support, feedback, and updates. Whether you need assistance, want to report an issue, or simply connect with others, you’ll find the right place here.
+
+Use the sections below to quickly find answers, share your thoughts, or join the conversation.  
+For real-time help and to connect with the team and other users, consider joining our [Discord community](https://discord.gg/yourinvite).
+
+---
 
 ## Get Support
 
+Find help troubleshooting issues, setup guidance, and answers to your questions.
+
+---
+
 ## Provide Feedback
+
+Share your ideas, report bugs, and request new features.
+
+---
 
 ## Frequently Asked Questions (FAQ)
 
+Browse common questions and quick solutions.
+
+---
+
 ## Stay Connected
+
+Stay up to date with announcements, events, and community discussions.
+
+---
