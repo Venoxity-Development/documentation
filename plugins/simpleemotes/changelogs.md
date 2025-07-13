@@ -14,9 +14,9 @@ layout:
     visible: false
 ---
 
-# General Information
+## General Information
 
-## vX.X.X — Month Day, Year
+### vX.X.X — Month Day, Year
 
 Short summary line about the update.
 
