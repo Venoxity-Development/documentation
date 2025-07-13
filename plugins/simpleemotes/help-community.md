@@ -1,6 +1,5 @@
 ---
 icon: globe
-title: hi
 description: Looking for support or updates? Join the Venoxity Network Discord to report issues, ask questions, or connect with the community.
 layout:
   title:
