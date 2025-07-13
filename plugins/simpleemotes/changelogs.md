@@ -14,6 +14,11 @@ layout:
     visible: false
 ---
 
+## v1.0.1
+
+* Initial release
+
+
 ## v1.0.2
 
 * Merge branch 'master' of https://github.com/Venoxity-Development/SimpleEmotes: [#285eb1d](https://github.com/Venoxity-Development/SimpleEmotes/commit/285eb1ddc2df4c8d3e2b87d848a33fa7c42c8ea4)
