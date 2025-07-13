@@ -6,6 +6,10 @@ description: Track all updates to SimpleEmotes here. Features, fixes, and improv
 
 ## General Information
 
+⚙️ We’re committed to keeping SimpleEmotes compatible with the latest game versions.
+
+Thanks for being part of the community
+
 ## vX.X.X — Month Day, Year
 
 Short summary line about the update.
