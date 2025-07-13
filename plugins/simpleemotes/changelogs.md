@@ -10,22 +10,23 @@ description: Track all updates to SimpleEmotes here. Features, fixes, and improv
 
 Thanks for being part of the community
 
-## vX.X.X — Month Day, Year
+## v{{version}} — {{Month}} {{Day}}, {{Year}}
 
-Short summary line about the update.
+{{Short summary line about the update}}
 
 <details>
 <summary>What's new</summary>
 
 ### ✨ Features
-- Description of new features
-- Additions to commands, UI, etc.
+- {{Feature 1}}
+- {{Feature 2}}
 
 ### 🐛 Fixes
-- Bugfix 1
-- Bugfix 2
+- {{Fix 1}}
+- {{Fix 2}}
 
 ### 🛠 Internal
-- Refactors, workflow changes, dependency updates
+- {{Internal change 1}}
+- {{Internal change 2}}
 
 </details>
