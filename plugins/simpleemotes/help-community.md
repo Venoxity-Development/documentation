@@ -1,6 +1,6 @@
 ---
 icon: globe
-description: Find support, share feedback, and connect with the Venoxity Network community. Join our Discord for assistance, report bugs, or get the latest updates!
+description: Looking for support or updates? Join the Venoxity Network Discord to report issues, ask questions, or connect with the community.
 layout:
   title:
     visible: true
