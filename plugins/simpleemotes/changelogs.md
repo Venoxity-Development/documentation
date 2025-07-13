@@ -14,36 +14,13 @@ layout:
     visible: false
 ---
 
-## v1.0.7
-
-* Initial release
-
-
-## v1.0.6
-
-* Initial release
-
-
-## v1.0.5
-
-* Initial release
-
-
-## v1.0.4
-
-* Initial release
-
-
-## v1.0.1
-
-* Initial release
-
-
 ## v1.0.2
 
-* Merge branch 'master' of https://github.com/Venoxity-Development/SimpleEmotes: [#285eb1d](https://github.com/Venoxity-Development/SimpleEmotes/commit/285eb1ddc2df4c8d3e2b87d848a33fa7c42c8ea4)
-* Update main.yml: [#f74ef7d](https://github.com/Venoxity-Development/SimpleEmotes/commit/f74ef7d9dfcfb647314a6b7ac0e7e2424fb385c8)
+- 🔀 Merged branch `master`  
+  [`285eb1d`](https://github.com/Venoxity-Development/SimpleEmotes/commit/285eb1ddc2df4c8d3e2b87d848a33fa7c42c8ea4)
 
+- 🛠 Updated GitHub Actions workflow (`main.yml`)  
+  [`f74ef7d`](https://github.com/Venoxity-Development/SimpleEmotes/commit/f74ef7d9dfcfb647314a6b7ac0e7e2424fb385c8)
 
 ## v1.0.1
 
