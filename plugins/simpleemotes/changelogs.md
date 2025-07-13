@@ -13,7 +13,3 @@ layout:
   pagination:
     visible: false
 ---
-
-## v1.0.0
-
-* Initial release
