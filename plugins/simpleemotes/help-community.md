@@ -30,3 +30,6 @@ Your suggestions make a difference!
 ## Frequently Asked Questions (FAQ)
 
 ## Stay Connected
+
+Join the Venoxity Network community to stay in the loop and engage with others:  
+- [Venoxity Network Discord](https://discord.com/invite/jCEdAF8AQz)
