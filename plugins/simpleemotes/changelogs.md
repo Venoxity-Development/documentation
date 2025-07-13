@@ -14,7 +14,7 @@ layout:
     visible: false
 ---
 
-## &nbsp;
+## <!-- -->
 
 ## General Information
 
