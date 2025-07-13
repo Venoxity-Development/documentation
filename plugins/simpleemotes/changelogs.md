@@ -21,7 +21,7 @@ layout:
 
 Short summary line about the update.
 
-<details>
+<details markdown="1">
 <summary>What's new</summary>
 
 ### ✨ Features
