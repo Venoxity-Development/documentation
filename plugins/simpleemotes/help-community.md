@@ -14,4 +14,10 @@ layout:
     visible: false
 ---
 
-👉 **[Join the Discord](https://discord.com/invite/jCEdAF8AQz)**
+## Get Support
+
+## Provide Feedback
+
+## Frequently Asked Questions (FAQ)
+
+## Stay Connected
