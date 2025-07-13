@@ -40,3 +40,5 @@ Short summary line about the update.
 - Refactors, workflow changes, dependency updates
 
 </details>
+
+## Placeholder
