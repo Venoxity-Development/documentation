@@ -16,7 +16,7 @@ layout:
 
 # General Information
 
-## vX.X.X — Month Day, Yea
+## vX.X.X — Month Day, Year
 
 Short summary line about the update.
 
