@@ -14,6 +14,27 @@ layout:
     visible: false
 ---
 
+## v1.1.0 — July 20, 2025
+
+Big update with several new features and fixes.
+
+<details>
+<summary>What's new</summary>
+
+### ✨ Features
+- Added `/emote random` command for quick fun
+- Emotes now support custom camera angles
+
+### 🐛 Fixes
+- Fixed bug where idle emote wouldn't reset
+- Improved compatibility with newer RPH versions
+
+### 🛠 Internal
+- Refactored animation handling logic
+- Updated GitHub Actions to support multi-tag releases
+
+</details>
+
 ## v1.0.2 — July 13, 2025
 
 This update includes minor improvements to the CI/CD pipeline and a merge from `master` to keep everything in sync. No changes to emote functionality or animations in this version.
