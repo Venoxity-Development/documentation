@@ -15,21 +15,39 @@ layout:
 
 ## Introduction
 
+Welcome to the Venoxity Network community hub. This page will help you find support, share feedback, get answers, and stay connected with the team and other users.
+
+---
+
 ## Get Support
 
-Need help with SimpleEmotes or other projects? We’re here for you!  
+Need help with **SimpleEmotes** or another Venoxity project?  
+We’re here to help.
+
 - **Join our Discord:** [Venoxity Network](https://discord.com/invite/jCEdAF8AQz)  
-  Create a support ticket, and a team member will assist you promptly.
+  Open a support ticket and a team member will assist you shortly.
+
+---
 
 ## Provide Feedback
 
-Your suggestions make a difference!  
-- Found a bug? Report it in our Discord server.  
-- Have an idea? Share it with us—we’re always listening!
+We value your input—it helps shape future updates.
+
+- Found a bug? Report it in the Discord.  
+- Have an idea or feature request? Let us know—we’re always listening.
+
+---
 
 ## Frequently Asked Questions (FAQ)
 
+*This section is under construction. Check back soon for common questions and answers.*
+
+---
+
 ## Stay Connected
 
-Join the Venoxity Network community to stay in the loop and engage with others:  
-- [Venoxity Network Discord](https://discord.com/invite/jCEdAF8AQz)
+Be part of the community and keep up with the latest news, releases, and discussions.
+
+- **Discord:** [Venoxity Network](https://discord.com/invite/jCEdAF8AQz)
+
+---
