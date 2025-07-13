@@ -14,6 +14,11 @@ layout:
     visible: false
 ---
 
+## v1.0.7
+
+* Initial release
+
+
 ## v1.0.6
 
 * Initial release
