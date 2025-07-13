@@ -4,7 +4,7 @@ layout:
   title:
     visible: false
   description:
-    visible: falsw
+    visible: false
   tableOfContents:
     visible: true
   outline:
