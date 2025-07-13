@@ -14,8 +14,6 @@ layout:
     visible: false
 ---
 
-## <!-- -->
-
 ## General Information
 
 Welcome to the SimpleEmotes changelog.  
