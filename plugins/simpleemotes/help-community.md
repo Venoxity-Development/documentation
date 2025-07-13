@@ -17,6 +17,8 @@ layout:
 
 ## Get Support
 
+---
+
 Need help with SimpleEmotes or other projects? We’re here for you!  
 - **Join our Discord:** [Venoxity Network](https://discord.com/invite/jCEdAF8AQz)  
   Create a support ticket, and a team member will assist you promptly.
