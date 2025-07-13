@@ -14,6 +14,10 @@ layout:
     visible: false
 ---
 
+Welcome to the Venoxity Network community page — your spot for help, feedback, and updates. Whether you're building with our tools or just exploring, we’re here to support you.
+
+Let’s get you what you need 👇
+
 ## Get Support
 
 ## Provide Feedback
