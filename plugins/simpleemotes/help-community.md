@@ -14,8 +14,6 @@ layout:
     visible: false
 ---
 
-# 🌎 Help & Community
-
 Welcome to the Venoxity Network community hub—your central resource for support, feedback, and updates. Whether you need assistance, want to report an issue, or simply connect with others, you’ll find the right place here.
 
 Use the sections below to quickly find answers, share your thoughts, or join the conversation.  
