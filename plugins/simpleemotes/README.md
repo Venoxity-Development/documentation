@@ -72,4 +72,4 @@ We’re truly grateful to all the contributors, testers, and supporters who help
 
 ## Help & Community
 
-For support, feedback, or to connect with the community, visit our [Help & Community](plugins/simpleemotes/help-community.md) page.
+For support, feedback, or to connect with the community, visit our [Help & Community](help-community.md) page.
