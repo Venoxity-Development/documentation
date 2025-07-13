@@ -14,10 +14,9 @@ layout:
     visible: false
 ---
 
-## v1.0.0 - May 11, 2025
-* Initial Release
+# General Information
 
-## vX.X.X — Month Day, Year
+## vX.X.X — Month Day, Yea
 
 Short summary line about the update.
 
