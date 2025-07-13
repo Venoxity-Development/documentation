@@ -14,6 +14,12 @@ layout:
     visible: false
 ---
 
+---
+description: hi
+---
+
+# Changelogs
+
 ## General Information
 
 Welcome to the SimpleEmotes changelog.  
