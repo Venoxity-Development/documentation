@@ -14,6 +14,11 @@ layout:
     visible: false
 ---
 
+## v1.0.2
+
+Automated release upload
+
+
 ## v1.0.1
 
 Automated release upload
