@@ -14,6 +14,11 @@ layout:
     visible: false
 ---
 
+## v1.0.1
+
+- comment out some stuff inside intatilze (2451937)
+
+
 ## v1.0.0
 
 * Initial release
