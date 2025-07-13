@@ -14,6 +14,9 @@ layout:
     visible: false
 ---
 
+## v1.0.0 - May 11, 2025
+* Initial Release
+
 ## vX.X.X — Month Day, Year
 
 Short summary line about the update.
@@ -33,6 +36,3 @@ Short summary line about the update.
 - Refactors, workflow changes, dependency updates
 
 </details>
-
-## v1.0.0 - May 11, 2025
-* Initial Release
