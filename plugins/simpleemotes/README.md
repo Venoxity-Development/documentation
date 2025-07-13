@@ -70,12 +70,6 @@ SimpleEmotes wouldn’t exist without the amazing people behind it and the stron
 
 We’re truly grateful to all the contributors, testers, and supporters who helped make SimpleEmotes a success.
 
-## Support & Feedback
-
-Need help or want to share your thoughts? We’d love to hear from you!
-- **Join our Discord:** [Venoxity Network](https://discord.com/invite/jCEdAF8AQz) - Create a support ticket and someone from the team will be there to help.
-- **Found a bug or have suggestions?** Let us know in Discord—your feedback helps make SimpleEmotes better for everyone!
-
 ## Help & Community
 
 For support, feedback, or to connect with the community, visit our [Help & Community](plugins/simpleemotes/help-community.md) page.
