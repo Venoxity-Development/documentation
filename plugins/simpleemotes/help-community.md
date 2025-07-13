@@ -1,5 +1,5 @@
 ---
-icon: 🤝
+icon: handshake
 description: Track all updates to SimpleEmotes here. Features, fixes, and improvements are all listed in one place.
 layout:
   title:
