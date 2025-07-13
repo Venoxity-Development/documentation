@@ -1,11 +1,10 @@
 ---
 icon: globe
-description: Looking for support or updates? Join the Venoxity Network Discord to report issues, ask questions, or connect with the community.
 layout:
   title:
-    visible: true
+    visible: false
   description:
-    visible: true
+    visible: falsw
   tableOfContents:
     visible: true
   outline:
