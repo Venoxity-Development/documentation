@@ -14,6 +14,8 @@ layout:
     visible: false
 ---
 
+## &nbsp;
+
 ## General Information
 
 Welcome to the SimpleEmotes changelog.  
@@ -40,5 +42,3 @@ Short summary line about the update.
 - Refactors, workflow changes, dependency updates
 
 </details>
-
-## <!-- -->
