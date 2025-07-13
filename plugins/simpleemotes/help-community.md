@@ -14,9 +14,9 @@ layout:
     visible: false
 ---
 
-This is the Venoxity Network community page — your place for support, feedback, and updates.
+Welcome to the Venoxity Network community page.
 
-Use the sections below to get answers, report issues, or connect with others in the community.
+Here you’ll find everything you need to get help, share feedback, and stay connected. Use the sections below to ask questions, report issues, or join the conversation.
 
 ## Get Support
 
