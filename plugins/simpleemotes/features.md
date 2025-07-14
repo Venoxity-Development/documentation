@@ -27,8 +27,6 @@ SimpleEmotes offers a diverse range of animations to enhance your gameplay:
 
 - **Regular Animations**
 
-scenarios.
-
 ## Key Features
 - **Pointing Gesture**  
   Mimic GTA V Online’s pointing by pressing (`B`) or double-pressing the (`left joystick`). Ideal for directing friends or role-playing—practice in a safe area to master the timing.
