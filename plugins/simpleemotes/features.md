@@ -1,5 +1,5 @@
 ---
-icon: sparklee
+icon: sparkles
 layout:
   title:
     visible: true
