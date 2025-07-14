@@ -11,6 +11,7 @@
 * [ExtraManager](plugins/extramanager/README.md)  
 * [LicensePlateChanger](plugins/licenseplatechanger/README.md)   
 * [SimpleEmotes](plugins/simpleemotes/README.md)  
+  * [Features](plugins/simpleemotes/features.md)
   * [Changelogs](plugins/simpleemotes/changelogs.md)
   * [Help & Community](plugins/simpleemotes/help-community.md)
 * [SimpleCTRL](plugins/simplectrl/README.md)  
