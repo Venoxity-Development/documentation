@@ -1,5 +1,5 @@
 ---
-icon: hands
+icon: clap
 layout:
   title:
     visible: true
