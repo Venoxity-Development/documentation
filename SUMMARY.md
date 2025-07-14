@@ -14,6 +14,7 @@
   * [Features](plugins/simpleemotes/features.md)
   * [Installation Guide](plugins/simpleemotes/installation-guide.md)
   * [Changelogs](plugins/simpleemotes/changelogs.md)
+  * [Credits & Contributors](plugins/simpleemotes/credits-contributors.md)
   * [Help & Community](plugins/simpleemotes/help-community.md)
 * [SimpleCTRL](plugins/simplectrl/README.md)  
 * [SimpleHUD](plugins/simplehud/README.md)  
