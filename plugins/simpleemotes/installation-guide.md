@@ -16,6 +16,42 @@ layout:
 
 # Installation Guide
 
-{% hint style="info" %}
-This article is work in progress, please come back at some later time to enjoy it in its full beauty 🫡
-{% endhint %}
+## Standard Installation Steps
+Follow these steps to install **SimpleEmotes** into your GTA V game.
+
+### 1. Download the Release
+- Download the latest release from the [Releases](../../releases) page.
+- Unzip the archive and place the `SimpleEmotes` folder somewhere easy to find (like your Desktop).
+
+### 2. Install the DLC Package
+1. Go to:  
+   ```
+   SimpleEmotes/Required Content/DLC Package
+   ```
+2. Open **OpenIV** and enable **Edit Mode**.
+3. Navigate to:  
+   ```
+   mods/update/x64/dlcpacks
+   ```
+4. Drag and drop the `animpack` folder into the `dlcpacks` folder.
+5. Then go to:  
+   ```
+   mods/update/update.rpf/common/data
+   ```
+6. Open `dlclist.xml` and add the following line **inside** the `<Paths>` section:
+   ```xml
+   <Item>dlcpacks:/animpack/</Item>
+   ```
+7. Save and close the file.
+
+### 3. Install Game Files
+1. Go back to the `SimpleEmotes` folder.
+2. Open:
+   ```
+   SimpleEmotes/Grand Theft Auto V
+   ```
+3. Select **everything** inside that folder and drag it into your main GTA V game folder.  
+   This includes files like:
+   ```
+   Venoxity.Common.dll
+   ```
