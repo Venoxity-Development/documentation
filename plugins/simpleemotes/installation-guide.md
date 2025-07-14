@@ -1,5 +1,5 @@
 ---
-icon: globe
+icon: inbox_tray
 layout:
   title:
     visible: true
