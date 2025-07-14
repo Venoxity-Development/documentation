@@ -19,13 +19,17 @@ layout:
 ## Animation Categories
 SimpleEmotes offers a diverse range of animations to enhance your gameplay:
 
-- **Walking Styles**
+- **Walking Styles (133 Options)**  
+  Customize your character’s movement with a variety of walking styles, from casual strolls to dramatic struts. Use the emote menu to cycle through options and assign your favorite to a keybind for quick access.
 
-- **Scenarios**
+- **Scenarios (39 Options)**  
+  Immerse yourself in role-playing with scenario-based animations, such as leaning against walls or sitting on benches. Activate these via the Rage console (`F4`) with specific commands listed in the emote menu.
 
-- **Facial Expressions**
+- **Facial Expressions (34 Options)**  
+  Bring your character’s face to life with expressions like smiles, frowns, or surprised looks. Combine these with other animations for a more dynamic performance—access them through the emote menu under "Expressions."
 
-- **Regular Animations**
+- **Regular Animations (553 Options)**  
+  Enjoy a vast library of general animations, including dances, gestures, and interactions. Use the smooth animation controls to transition seamlessly between movements, perfect for social or combat scenarios.
 
 ## Key Features
 - **Pointing Gesture**  
