@@ -1,5 +1,5 @@
 ---
-icon: inbox
+icon: tools
 layout:
   title:
     visible: true
