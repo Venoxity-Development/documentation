@@ -25,6 +25,8 @@ SimpleEmotes enhances your Grand Theft Auto V experience with a wide range of ex
 
 ## Overview
 
+This plugin brings a variety of animations, gestures, and tools to make your gameplay more immersive. Explore the details below or get started with the installation.
+
 ## Quick Links
 
 ## Requirements
