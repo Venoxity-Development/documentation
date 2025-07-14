@@ -16,6 +16,18 @@ layout:
 
 # Credits & Contributors
 
-{% hint style="info" %}
-This article is work in progress, please come back at some later time to enjoy it in its full beauty 🫡
-{% endhint %}
+## Core Contributors
+- **[Rockstar Games](https://store.steampowered.com/app/271590/Grand_Theft_Auto_V_Legacy/)**
+-	[BoringNeptune](https://www.gta5-mods.com/users/BoringNeptune)
+-	[BzzziProps](https://www.gta5-mods.com/users/BzZz)
+-	[CrunchyCat](https://www.gta5-mods.com/users/crunchycat)
+- [Darks Animations](https://www.gta5-mods.com/users/Darks%20Animations)
+-	[EnchantedBrownie](https://www.gta5-mods.com/users/EnchantedBrownie)
+-	[KaykayMods](https://www.gta5-mods.com/users/kaykaymods)
+-	[MissySnowie](https://www.gta5-mods.com/users/MissySnowie)
+-	[MrWitt](https://www.gta5-mods.com/users/MrWitt)
+- [Queen’s Sister](https://www.gta5-mods.com/users/Queens%20Sister)
+- [SapphireMods](https://www.gta5-mods.com/users/SapphireMods)
+- [Soomay](https://www.gta5-mods.com/users/Soomay)
+- [Struggleville](https://www.gta5-mods.com/users/struggleville)
+- [SUSHi1221](https://www.gta5-mods.com/users/SUSHi1221)
