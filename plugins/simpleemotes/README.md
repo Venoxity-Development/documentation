@@ -22,7 +22,7 @@ layout:
 # SimpleEmotes
 
 {% hint style="warning" %}
-SimpleEmotes is designed for GTA V with the latest updates. Ensure compatibility with other mods by reviewing the [Installation Guide](plugins/simpleemotes/installation-guide.md).
+SimpleEmotes is designed for GTA V with the latest updates. Ensure compatibility with other mods by reviewing the [Installation Guide](installation-guide.md).
 {% endhint %}
 
 ## Overview
