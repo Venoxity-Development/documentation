@@ -1,5 +1,5 @@
 ---
-icon: globe
+icon: raising_hands
 layout:
   title:
     visible: true
