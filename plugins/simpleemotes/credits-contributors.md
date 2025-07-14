@@ -1,5 +1,5 @@
 ---
-icon: clap
+icon: star
 layout:
   title:
     visible: true
