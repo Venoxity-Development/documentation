@@ -21,6 +21,8 @@ layout:
 
 # SimpleEmotes
 
+SimpleEmotes enhances your Grand Theft Auto V experience with a wide range of expressive animations and controls.
+
 ## Overview
 
 ## Quick Links
