@@ -12,6 +12,7 @@
 * [LicensePlateChanger](plugins/licenseplatechanger/README.md)   
 * [SimpleEmotes](plugins/simpleemotes/README.md)  
   * [Features](plugins/simpleemotes/features.md)
+  * [Installation Guide](plugins/simpleemotes/installation-guide.md)
   * [Changelogs](plugins/simpleemotes/changelogs.md)
   * [Help & Community](plugins/simpleemotes/help-community.md)
 * [SimpleCTRL](plugins/simplectrl/README.md)  
