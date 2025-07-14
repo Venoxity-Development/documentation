@@ -1,5 +1,5 @@
 ---
-icon: package
+icon: computer
 layout:
   title:
     visible: true
