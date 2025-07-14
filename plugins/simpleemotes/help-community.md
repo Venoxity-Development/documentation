@@ -1,6 +1,5 @@
 ---
 icon: globe
-description: Find support, share feedback, and stay connected with the Venoxity Network community.
 layout:
   title:
     visible: true
