@@ -57,9 +57,6 @@ Follow these steps to install **SimpleEmotes** into your GTA V game.
    ```
 
 ## Known Conflicts
-download.
-
-## Known Conflicts
 SimpleEmotes may conflict with certain mods or game settings. Here’s what to watch for:
 - **SimpleCTRL:** This mod uses an older version of `Venoxity.Common.dll` and is outdated, leading to compatibility issues with SimpleEmotes. Use only one of these mods at a time until SimpleCTRL is updated.
 - **Simple Foot Controls:** The crouching feature in SimpleEmotes may conflict with similar functionality in Simple Foot Controls, causing overlapping controls or unexpected behavior. Disable one of these mods to resolve the issue.
