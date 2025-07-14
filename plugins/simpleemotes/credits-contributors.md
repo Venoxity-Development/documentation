@@ -1,5 +1,6 @@
 ---
 icon: star
+description: Recognize the talented individuals and community behind SimpleEmotes, with details on their contributions to this GTA V plugin.
 layout:
   title:
     visible: true
