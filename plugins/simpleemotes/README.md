@@ -21,13 +21,15 @@ layout:
 # SimpleEmotes
 
 ## Overview
-
 This plugin brings a variety of animations, gestures, and tools to make your gameplay more immersive. Explore the details below or get started with the installation.
 
 ## Quick Links
-
 - [Features](features.md) - Discover the full range of animations and capabilities.
 
 ## Requirements
+- [Grand Theft Auto V](https://www.rockstargames.com/gta-v)
+- [OpenIV](https://openiv.com)
+- [RagePluginHook](https://www.lcpdfr.com/downloads/gta5mods/g17media/7792-lspd-first-response)
+- [RAGENativeUI](https://github.com/alexguirre/ragenativeui/releases)
 
 ---
