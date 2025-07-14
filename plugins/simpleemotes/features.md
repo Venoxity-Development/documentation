@@ -43,3 +43,6 @@ SimpleEmotes offers a diverse range of animations to enhance your gameplay:
 
 - **News Cam**  
   Activate a first-person news camera with `NewsCam` in the Rage console (`F4`). Perfect for in-game reporting or cinematic captures—experiment with angles for best results.
+
+## Usage Tips
+[Placeholder: Detailed usage tips will be added soon. Check back later or share your own tips on the [Help & Community](help-community.md) page!]
