@@ -56,6 +56,11 @@ Follow these steps to install **SimpleEmotes** into your GTA V game.
    Venoxity.Common.dll
    ```
 
+## Troubleshooting
+Encountering issues? Try these solutions:
+- **Animations Not Playing:** This may indicate your game isn’t updated to the latest version or the `animpack` was not installed correctly. Update GTA V and verify the `animpack` folder is in `mods > update > x64 > dlcpacks` with the correct `dlclist.xml` entry.
+- **Crashes on Launch:** Most likely caused by an outdated `Venoxity.Common.dll`. Replace it with the latest version from the SimpleEmotes download package.
+
 ## Known Conflicts
 SimpleEmotes may conflict with certain mods or game settings. Here’s what to watch for:
 - **SimpleCTRL:** This mod uses an older version of `Venoxity.Common.dll` and is outdated, leading to compatibility issues with SimpleEmotes. Use only one of these mods at a time until SimpleCTRL is updated.
