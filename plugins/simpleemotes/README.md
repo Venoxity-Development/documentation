@@ -1,6 +1,5 @@
 ---
 icon: person
-description: A user-friendly plugin that adds a built-in emote menu and smooth animation controls to Grand Theft Auto V, making player expression quick and immersive.
 cover: ../../.gitbook/assets/IMG_7716.png
 coverY: 0
 layout:
@@ -21,13 +20,13 @@ layout:
 
 # SimpleEmotes
 
-SimpleEmotes enhances your Grand Theft Auto V experience with a wide range of expressive animations and controls.
-
 ## Overview
 
 This plugin brings a variety of animations, gestures, and tools to make your gameplay more immersive. Explore the details below or get started with the installation.
 
 ## Quick Links
+
+- [Features](features.md) - Discover the full range of animations and capabilities.
 
 ## Requirements
 
