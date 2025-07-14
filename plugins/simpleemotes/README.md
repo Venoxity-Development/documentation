@@ -25,7 +25,11 @@ layout:
 This plugin brings a variety of animations, gestures, and tools to make your gameplay more immersive. Explore the details below or get started with the installation.
 
 ## Quick Links
-- [Features](features.md) - Discover the full range of animations and capabilities.
+- [Features](plugins/features.md) - Discover the full range of animations and capabilities.
+- [Installation Guide](installation-guide.md) - Step-by-step setup instructions.
+- [Changelogs](changelogs.md) - Stay updated with the latest changes.
+- [Credits & Contributors](credits-contributors.md) - Meet the team behind SimpleEmotes.
+- [Help & Community](help-community.md) - Get support and connect with the Venoxity Network
 
 ## Requirements
 - [Grand Theft Auto V](https://www.rockstargames.com/gta-v)
