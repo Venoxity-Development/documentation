@@ -1,5 +1,6 @@
 ---
 icon: computer
+description: Step-by-step instructions to install SimpleEmotes for GTA V, including troubleshooting tips and alternative methods for a smooth setup.
 layout:
   title:
     visible: true
