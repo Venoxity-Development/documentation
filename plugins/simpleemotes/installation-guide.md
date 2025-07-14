@@ -1,5 +1,5 @@
 ---
-icon: inbox_tray
+icon: inbox
 layout:
   title:
     visible: true
