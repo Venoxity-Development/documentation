@@ -21,6 +21,10 @@ layout:
 
 # SimpleEmotes
 
+{% hint style="warning" %}
+This article is work in progress, please come back at some later time to enjoy it in its full beauty 🫡
+{% endhint %}
+
 ## Overview
 This plugin introduces a variety of expressive options, including walking styles, facial expressions, and custom controls, to bring your character to life. Dive into the details below or start your setup journey.
 
