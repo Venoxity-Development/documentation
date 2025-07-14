@@ -1,5 +1,5 @@
 ---
-icon: raising_hands
+icon: hands
 layout:
   title:
     visible: true
