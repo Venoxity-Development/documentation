@@ -1,5 +1,5 @@
 ---
-icon: tools
+icon: package
 layout:
   title:
     visible: true
