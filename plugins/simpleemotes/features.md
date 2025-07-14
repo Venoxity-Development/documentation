@@ -16,6 +16,13 @@ layout:
 
 # Features
 
-{% hint style="info" %}
-This article is work in progress, please come back at some later time to enjoy it in its full beauty 🫡
-{% endhint %}
+## Animation Categories
+SimpleEmotes offers a diverse range of animations to enhance your gameplay:
+
+- **Walking Styles**
+
+- **Scenarios**
+
+- **Facial Expressions**
+
+- **Regular Animations**
