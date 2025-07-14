@@ -37,3 +37,7 @@ We’re grateful to everyone who has supported SimpleEmotes:
 - **Testers:** Special thanks to our dedicated testers who helped refine SimpleEmotes. Notable contributors include [cherryaerie](https://www.lcpdfr.com/profile/556048-cherryaerie) for their valuable bug reports and feedback.
 - **Feedback Providers:** Your ideas on Discord have shaped the plugin’s evolution.
 - **Content Creators:** Special thanks to those who showcase SimpleEmotes in videos and streams, spreading the word.
+
+## Additional Notes
+- Want to contribute? Join the [Help & Community](help-community.md) page to get involved!
+- Check the [Changelogs](changelogs.md) for updates on contributor efforts.
