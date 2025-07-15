@@ -40,16 +40,6 @@ If you're already a **user of our plugins** and have them **installed**, you can
   </figure>
 </div>
 
-<a href="https://example.com">
-  <img src="https://img.shields.io/badge/Button%201-blue?style=for-the-badge" alt="Button 1" />
-</a>
-<a href="https://example.com">
-  <img src="https://img.shields.io/badge/Button%202-green?style=for-the-badge" alt="Button 2" />
-</a>
-<a href="https://example.com">
-  <img src="https://img.shields.io/badge/Button%203-red?style=for-the-badge" alt="Button 3" />
-</a>
-
 Customize GTA V vehicle extras exactly how you want—every time, with XML.
 
 ## [LicensePlateChanger](../plugins/licenseplatechanger/README.md)  
