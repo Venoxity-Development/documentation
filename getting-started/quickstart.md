@@ -42,6 +42,8 @@ If you're already a **user of our plugins** and have them **installed**, you can
 
 Customize GTA V vehicle extras exactly how you want—every time, with XML.
 
+[Button Label](https://example.com){.button}
+
 ## [LicensePlateChanger](../plugins/licenseplatechanger/README.md)  
 
 <div align="left">
