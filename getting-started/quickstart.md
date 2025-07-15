@@ -40,7 +40,9 @@ If you're already a **user of our plugins** and have them **installed**, you can
   </figure>
 </div>
 
-[![Go to Guide](https://img.shields.io/badge/Go%20to%20Guide-blue?style=for-the-badge)](/guide/getting-started)
+<a href="https://example.com" style="text-decoration: none;">
+  <img src="https://img.shields.io/badge/Click%20Me-blue?style=for-the-badge" alt="Click Me" />
+</a>
 
 Customize GTA V vehicle extras exactly how you want—every time, with XML.
 
