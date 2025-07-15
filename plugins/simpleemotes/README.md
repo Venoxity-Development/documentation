@@ -21,7 +21,7 @@ layout:
 
 # SimpleEmotes
 
-- [Test](features.md): Hello World!
+- [Features](featuees.md): Explore the full range of animations and capabilities.
 
 {% hint style="warning" %}
 SimpleEmotes is designed for GTA V with the latest updates. Ensure compatibility with other mods by reviewing the [Installation Guide](installation-guide.md).
