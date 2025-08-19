@@ -19,7 +19,7 @@ const LinkType = z.union([
 
 const LinkSchema = z.object({
   label: z.string(), // the value of the footnote, e.g. `1`
-  url: z.string(),
+  url: z.url(),
   title: z.string(),
   type: LinkType,
   breadcrumbs: z.array(z.string()),

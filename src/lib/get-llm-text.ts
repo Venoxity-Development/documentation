@@ -4,8 +4,8 @@ import { remarkAutoTypeTable } from 'fumadocs-typescript'
 import { remark } from 'remark'
 import remarkGfm from 'remark-gfm'
 import remarkMdx from 'remark-mdx'
+import { owner, repo } from '@/lib/github'
 import type { Page } from '@/lib/source'
-import { owner, repo } from './github'
 
 export const categoryMap: Record<string, string> = {
   ui: 'UI Framework',

@@ -7,9 +7,11 @@ export default function Layout({
 }: {
   children: ReactNode
 }): React.ReactElement {
+  const base = baseOptions()
+
   return (
     <HomeLayout
-      {...baseOptions()}
+      {...base}
       links={linkItems}
       // style={
       //   {

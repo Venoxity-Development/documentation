@@ -23,8 +23,6 @@
   "dependencies": {
     "@ai-sdk/openai": "^2.0.16",
     "@ai-sdk/react": "^2.0.16",
-    "@cspell/dict-bash": "^4.2.0",
-    "@cspell/dict-redis": "^1.0.5",
     "@fumadocs/mdx-remote": "^1.4.0",
     "@inkeep/ai-api": "^0.8.0",
     "@next/bundle-analyzer": "^15.3.4",
@@ -39,7 +37,6 @@
     "ai": "^5.0.16",
     "class-variance-authority": "^0.7.1",
     "clsx": "^2.1.1",
-    "cspell": "^9.1.1",
     "fumadocs-core": "15.6.12",
     "fumadocs-docgen": "^2.1.0",
     "fumadocs-mdx": "11.7.5",
@@ -74,6 +71,8 @@
     "zod": "^4.0.17"
   },
   "devDependencies": {
+    "cspell": "^9.1.1",
+    "@cspell/dict-bash": "^4.2.0",
     "@biomejs/biome": "2.2.0",
     "@commitlint/cli": "^19.8.1",
     "@commitlint/config-conventional": "^19.8.1",
