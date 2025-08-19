@@ -1,11 +1,11 @@
-'use client';
+'use client'
 
-import { cva } from 'class-variance-authority';
-import { Airplay, Moon, Sun } from 'lucide-react';
-import { motion } from 'motion/react';
-import { useTheme } from 'next-themes';
-import { type HTMLAttributes, useLayoutEffect, useState } from 'react';
-import { cn } from '@/lib/cn';
+import { cva } from 'class-variance-authority'
+import { Airplay, Moon, Sun } from 'lucide-react'
+import { motion } from 'motion/react'
+import { useTheme } from 'next-themes'
+import { type HTMLAttributes, useLayoutEffect, useState } from 'react'
+import { cn } from '@/lib/cn'
 
 const themes = [
   {
@@ -23,7 +23,7 @@ const themes = [
     icon: Airplay,
     label: 'System theme',
   },
-];
+]
 
 const itemVariants = cva(
   'relative size-6.5 rounded-full p-1.5 text-fd-muted-foreground',
@@ -34,54 +34,54 @@ const itemVariants = cva(
         false: 'text-fd-muted-foreground',
       },
     },
-  },
-);
+  }
+)
 
-type Theme = 'light' | 'dark' | 'system';
+type Theme = 'light' | 'dark' | 'system'
 
 export function ThemeToggle({
   className,
   mode = 'light-dark',
   ...props
 }: HTMLAttributes<HTMLDivElement> & {
-  mode?: 'light-dark' | 'light-dark-system';
+  mode?: 'light-dark' | 'light-dark-system'
 }) {
-  const { setTheme, theme: currentTheme, resolvedTheme } = useTheme();
-  const [mounted, setMounted] = useState(false);
+  const { setTheme, theme: currentTheme, resolvedTheme } = useTheme()
+  const [mounted, setMounted] = useState(false)
 
   const container = cn(
     'relative flex items-center rounded-full p-1 ring-1 ring-border',
-    className,
-  );
+    className
+  )
 
   useLayoutEffect(() => {
-    setMounted(true);
-  }, []);
+    setMounted(true)
+  }, [])
 
   const handleChangeTheme = async (theme: Theme) => {
-    setTheme(theme);
-  };
+    setTheme(theme)
+  }
 
   const value = mounted
     ? mode === 'light-dark'
       ? resolvedTheme
       : currentTheme
-    : null;
+    : null
 
   return (
     <div
       className={container}
       onClick={() => {
-        if (mode !== 'light-dark') return;
-        handleChangeTheme(resolvedTheme === 'dark' ? 'light' : 'dark');
+        if (mode !== 'light-dark') return
+        handleChangeTheme(resolvedTheme === 'dark' ? 'light' : 'dark')
       }}
       data-theme-toggle=''
       aria-label={mode === 'light-dark' ? 'Toggle Theme' : undefined}
       {...props}
     >
       {themes.map(({ key, icon: Icon, label }) => {
-        const isActive = value === key;
-        if (mode === 'light-dark' && key === 'system') return;
+        const isActive = value === key
+        if (mode === 'light-dark' && key === 'system') return
 
         return (
           <button
@@ -89,8 +89,8 @@ export function ThemeToggle({
             key={key}
             className={itemVariants({ active: isActive })}
             onClick={() => {
-              if (mode === 'light-dark') return;
-              handleChangeTheme(key as Theme);
+              if (mode === 'light-dark') return
+              handleChangeTheme(key as Theme)
             }}
             aria-label={label}
           >
@@ -109,8 +109,8 @@ export function ThemeToggle({
               fill={'currentColor'}
             />
           </button>
-        );
+        )
       })}
     </div>
-  );
+  )
 }

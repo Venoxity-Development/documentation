@@ -1,10 +1,10 @@
-import type { LinkItemType } from 'fumadocs-ui/layouts/docs';
-import type { BaseLayoutProps } from 'fumadocs-ui/layouts/shared';
-import Image from 'next/image';
-import { ThemeToggle } from '@/components/theme-toggle';
-import Logo from '@/public/logo.svg';
+import type { LinkItemType } from 'fumadocs-ui/layouts/docs'
+import type { BaseLayoutProps } from 'fumadocs-ui/layouts/shared'
+import Image from 'next/image'
+import { ThemeToggle } from '@/components/theme-toggle'
+import Logo from '@/public/logo.svg'
 
-export const title = 'Starter Kit';
+export const title = 'Starter Kit'
 
 export const logo = (
   <>
@@ -16,7 +16,7 @@ export const logo = (
       aria-label={title}
     />
   </>
-);
+)
 
 export const linkItems: LinkItemType[] = [
   {
@@ -30,7 +30,7 @@ export const linkItems: LinkItemType[] = [
     ),
     external: true,
   },
-];
+]
 
 /**
  * Shared layout configurations
@@ -53,4 +53,4 @@ export const baseOptions: BaseLayoutProps = {
     component: <ThemeToggle mode='light-dark' className='' />,
   },
   links: [...linkItems],
-};
+}

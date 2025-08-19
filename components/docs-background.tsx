@@ -92,6 +92,6 @@ const DocsBackground = () => (
       </defs>
     </svg>
   </span>
-);
+)
 
-export default DocsBackground;
+export default DocsBackground

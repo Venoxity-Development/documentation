@@ -1,5 +1,5 @@
-import type { Metadata } from 'next/types';
-import { title } from '@/app/layout.config';
+import type { Metadata } from 'next/types'
+import { title } from '@/app/layout.config'
 
 export function createMetadata(override: Metadata): Metadata {
   return {
@@ -20,11 +20,11 @@ export function createMetadata(override: Metadata): Metadata {
       images: '/banner.png',
       ...override.twitter,
     },
-  };
+  }
 }
 
 export const baseUrl =
   process.env.NODE_ENV === 'development' ||
   !process.env.VERCEL_PROJECT_PRODUCTION_URL
     ? new URL('http://localhost:3000')
-    : new URL(`https://${process.env.VERCEL_PROJECT_PRODUCTION_URL}`);
+    : new URL(`https://${process.env.VERCEL_PROJECT_PRODUCTION_URL}`)

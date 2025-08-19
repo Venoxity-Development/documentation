@@ -1,5 +1,5 @@
-'use client';
-import { useDocsSearch } from 'fumadocs-core/search/client';
+'use client'
+import { useDocsSearch } from 'fumadocs-core/search/client'
 import {
   SearchDialog,
   SearchDialogClose,
@@ -10,11 +10,11 @@ import {
   SearchDialogList,
   SearchDialogOverlay,
   type SharedProps,
-} from 'fumadocs-ui/components/dialog/search';
-import { I18nLabel, useI18n } from 'fumadocs-ui/contexts/i18n';
-import { MessageCircle } from 'lucide-react';
-import { AISearchTrigger } from './fumadocs/ai';
-import { buttonVariants } from './ui/button';
+} from 'fumadocs-ui/components/dialog/search'
+import { I18nLabel, useI18n } from 'fumadocs-ui/contexts/i18n'
+import { MessageCircle } from 'lucide-react'
+import { AISearchTrigger } from './fumadocs/ai'
+import { buttonVariants } from './ui/button'
 
 const Empty = () => (
   <div className='flex flex-col items-center justify-between gap-2 px-2 py-12 text-center text-sm'>
@@ -30,14 +30,14 @@ const Empty = () => (
       Ask AI?
     </AISearchTrigger>
   </div>
-);
+)
 
 export default function DefaultSearchDialog(props: SharedProps) {
-  const { locale } = useI18n(); // (optional) for i18n
+  const { locale } = useI18n() // (optional) for i18n
   const { search, setSearch, query } = useDocsSearch({
     type: 'fetch',
     locale,
-  });
+  })
 
   return (
     <SearchDialog
@@ -59,5 +59,5 @@ export default function DefaultSearchDialog(props: SharedProps) {
         />
       </SearchDialogContent>
     </SearchDialog>
-  );
+  )
 }

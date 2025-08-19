@@ -1,23 +1,23 @@
-import { cva } from 'class-variance-authority';
-import { CircleCheck, CircleX, Info, TriangleAlert } from 'lucide-react';
-import { forwardRef, type HTMLAttributes, type ReactNode } from 'react';
-import { cn } from '@/lib/cn';
+import { cva } from 'class-variance-authority'
+import { CircleCheck, CircleX, Info, TriangleAlert } from 'lucide-react'
+import { forwardRef, type HTMLAttributes, type ReactNode } from 'react'
+import { cn } from '@/lib/cn'
 
 type CalloutProps = Omit<
   HTMLAttributes<HTMLDivElement>,
   'title' | 'type' | 'icon'
 > & {
-  title?: ReactNode;
+  title?: ReactNode
   /**
    * @defaultValue info
    */
-  type?: 'info' | 'warn' | 'error' | 'success' | 'warning';
+  type?: 'info' | 'warn' | 'error' | 'success' | 'warning'
 
   /**
    * Force an icon
    */
-  icon?: ReactNode;
-};
+  icon?: ReactNode
+}
 
 const calloutVariants = cva(
   'my-4 flex gap-2 rounded-lg border border-s-2 bg-fd-card p-3 text-sm text-fd-card-foreground shadow-md',
@@ -30,12 +30,12 @@ const calloutVariants = cva(
         success: 'border-s-green-500/50',
       },
     },
-  },
-);
+  }
+)
 
 export const Callout = forwardRef<HTMLDivElement, CalloutProps>(
   ({ className, children, title, type = 'info', icon, ...props }, ref) => {
-    if (type === 'warning') type = 'warn';
+    if (type === 'warning') type = 'warn'
 
     return (
       <div
@@ -44,7 +44,7 @@ export const Callout = forwardRef<HTMLDivElement, CalloutProps>(
           calloutVariants({
             type: type,
           }),
-          className,
+          className
         )}
         {...props}
       >
@@ -66,8 +66,8 @@ export const Callout = forwardRef<HTMLDivElement, CalloutProps>(
           </div>
         </div>
       </div>
-    );
-  },
-);
+    )
+  }
+)
 
-Callout.displayName = 'Callout';
+Callout.displayName = 'Callout'

@@ -1,4 +1,4 @@
-import { createOpenAI } from '@ai-sdk/openai';
+import { createOpenAI } from '@ai-sdk/openai'
 import {
   convertToModelMessages,
   InvalidToolInputError,
@@ -7,22 +7,22 @@ import {
   streamText,
   tool,
   type UIMessage,
-} from 'ai';
-import { systemPrompt } from '@/lib/ai/prompts';
-import { ProvideLinksToolSchema } from '@/lib/ai/qa-schema';
+} from 'ai'
+import { systemPrompt } from '@/lib/ai/prompts'
+import { ProvideLinksToolSchema } from '@/lib/ai/qa-schema'
 
-export const runtime = 'edge';
+export const runtime = 'edge'
 
 const openai = createOpenAI({
   apiKey: process.env.OPENAI_API_KEY,
-});
+})
 
 export async function POST(request: Request) {
   const {
     messages,
   }: {
-    messages: Array<UIMessage>;
-  } = await request.json();
+    messages: Array<UIMessage>
+  } = await request.json()
 
   const result = streamText({
     model: openai.responses('gpt-4.1-mini'),
@@ -49,21 +49,21 @@ export async function POST(request: Request) {
       chunking: 'line',
     }),
     onStepFinish: async ({ toolResults }) => {
-      console.log(`Step Results: ${JSON.stringify(toolResults, null, 2)}`);
+      console.log(`Step Results: ${JSON.stringify(toolResults, null, 2)}`)
     },
-  });
+  })
 
   return result.toUIMessageStreamResponse({
     onError: (error) => {
-      console.log('An error occurred: ', JSON.stringify(error));
+      console.log('An error occurred: ', JSON.stringify(error))
 
       if (NoSuchToolError.isInstance(error)) {
-        return 'The model tried to call a unknown tool.';
+        return 'The model tried to call a unknown tool.'
       } else if (InvalidToolInputError.isInstance(error)) {
-        return 'The model called a tool with invalid arguments.';
+        return 'The model called a tool with invalid arguments.'
       } else {
-        return 'An unknown error occurred.';
+        return 'An unknown error occurred.'
       }
     },
-  });
+  })
 }

@@ -1,15 +1,15 @@
 /** biome-ignore-all lint/nursery/noNestedComponentDefinitions: new Components aren't defined, we're just passing props */
-import * as path from 'node:path';
-import Link from 'fumadocs-core/link';
-import { getPageTreePeers } from 'fumadocs-core/server';
-import { APIPage } from 'fumadocs-openapi/ui';
-import * as Twoslash from 'fumadocs-twoslash/ui';
-import { createGenerator } from 'fumadocs-typescript';
-import { AutoTypeTable } from 'fumadocs-typescript/ui';
-import { Banner } from 'fumadocs-ui/components/banner';
-import { Callout } from 'fumadocs-ui/components/callout';
-import { Card, Cards } from 'fumadocs-ui/components/card';
-import { TypeTable } from 'fumadocs-ui/components/type-table';
+import * as path from 'node:path'
+import Link from 'fumadocs-core/link'
+import { getPageTreePeers } from 'fumadocs-core/server'
+import { APIPage } from 'fumadocs-openapi/ui'
+import * as Twoslash from 'fumadocs-twoslash/ui'
+import { createGenerator } from 'fumadocs-typescript'
+import { AutoTypeTable } from 'fumadocs-typescript/ui'
+import { Banner } from 'fumadocs-ui/components/banner'
+import { Callout } from 'fumadocs-ui/components/callout'
+import { Card, Cards } from 'fumadocs-ui/components/card'
+import { TypeTable } from 'fumadocs-ui/components/type-table'
 import {
   PageArticle,
   PageBreadcrumb,
@@ -23,38 +23,38 @@ import {
   PageTOCPopoverItems,
   PageTOCPopoverTrigger,
   PageTOCTitle,
-} from 'fumadocs-ui/layouts/docs/page';
-import type { Metadata } from 'next';
-import { notFound } from 'next/navigation';
-import type { ComponentProps, FC, ReactElement } from 'react';
+} from 'fumadocs-ui/layouts/docs/page'
+import type { Metadata } from 'next'
+import { notFound } from 'next/navigation'
+import type { ComponentProps, FC, ReactElement } from 'react'
 import {
   LLMCopyButton,
   ViewOptions,
-} from '@/components/fumadocs/ai/page-actions';
-import { Mermaid } from '@/components/mdx/mermaid';
+} from '@/components/fumadocs/ai/page-actions'
+import { Mermaid } from '@/components/mdx/mermaid'
 import {
   HoverCard,
   HoverCardContent,
   HoverCardTrigger,
-} from '@/components/ui/hover-card';
-import { owner, repo } from '@/lib/github';
-import { createMetadata } from '@/lib/metadata';
-import { openapi, source } from '@/lib/source';
-import { getMDXComponents } from '@/mdx-components';
+} from '@/components/ui/hover-card'
+import { owner, repo } from '@/lib/github'
+import { createMetadata } from '@/lib/metadata'
+import { openapi, source } from '@/lib/source'
+import { getMDXComponents } from '@/mdx-components'
 
-const generator = createGenerator();
+const generator = createGenerator()
 
-export const revalidate = false;
+export const revalidate = false
 
 export default async function Page(props: {
-  params: Promise<{ slug: string[] }>;
+  params: Promise<{ slug: string[] }>
 }): Promise<ReactElement> {
-  const params = await props.params;
-  const page = source.getPage(params.slug);
+  const params = await props.params
+  const page = source.getPage(params.slug)
 
-  if (!page) notFound();
+  if (!page) notFound()
 
-  const { body: Mdx, toc, lastModified } = await page.data.load();
+  const { body: Mdx, toc, lastModified } = await page.data.load()
 
   return (
     <PageRoot
@@ -91,9 +91,9 @@ export default async function Page(props: {
               a: ({ href, ...props }) => {
                 const found = source.getPageByHref(href ?? '', {
                   dir: path.dirname(page.path),
-                });
+                })
 
-                if (!found) return <Link href={href} {...props} />;
+                if (!found) return <Link href={href} {...props} />
 
                 return (
                   <HoverCard>
@@ -114,7 +114,7 @@ export default async function Page(props: {
                       </p>
                     </HoverCardContent>
                   </HoverCard>
-                );
+                )
               },
               Banner,
               Mermaid,
@@ -143,7 +143,7 @@ export default async function Page(props: {
         </PageTOC>
       )}
     </PageRoot>
-  );
+  )
 }
 
 function DocsCategory({ url }: { url: string }) {
@@ -155,24 +155,24 @@ function DocsCategory({ url }: { url: string }) {
         </Card>
       ))}
     </Cards>
-  );
+  )
 }
 
 export async function generateMetadata(props: {
-  params: Promise<{ slug: string[] }>;
+  params: Promise<{ slug: string[] }>
 }): Promise<Metadata> {
-  const { slug = [] } = await props.params;
-  const page = source.getPage(slug);
-  if (!page) notFound();
+  const { slug = [] } = await props.params
+  const page = source.getPage(slug)
+  if (!page) notFound()
 
   const description =
-    page.data.description ?? 'The library for building documentation sites';
+    page.data.description ?? 'The library for building documentation sites'
 
   const image = {
     url: ['/og', ...slug, 'image.png'].join('/'),
     width: 1200,
     height: 630,
-  };
+  }
 
   return createMetadata({
     title: page.data.title,
@@ -184,9 +184,9 @@ export async function generateMetadata(props: {
     twitter: {
       images: [image],
     },
-  });
+  })
 }
 
 export function generateStaticParams() {
-  return source.generateParams();
+  return source.generateParams()
 }

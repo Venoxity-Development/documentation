@@ -1,10 +1,10 @@
-import { generateDocs } from './generate-docs.mjs';
+import { generateDocs } from './generate-docs.mjs'
 
 async function main() {
   // comment the below to disable openapi generation
-  await Promise.all([generateDocs()]);
+  await Promise.all([generateDocs()])
 }
 
 await main().catch((e) => {
-  console.error('Failed to run pre build script', e);
-});
+  console.error('Failed to run pre build script', e)
+})

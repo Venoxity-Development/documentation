@@ -1,12 +1,12 @@
-import * as OpenAPI from 'fumadocs-openapi';
-import { rimraf } from 'rimraf';
+import * as OpenAPI from 'fumadocs-openapi'
+import { rimraf } from 'rimraf'
 
 export async function generateDocs() {
   await rimraf('./content/docs/api-reference/(generated)', {
     filter(v) {
-      return !v.endsWith('meta.json');
+      return !v.endsWith('meta.json')
     },
-  });
+  })
 
   await Promise.all([
     OpenAPI.generateFiles({
@@ -16,5 +16,5 @@ export async function generateDocs() {
       includeDescription: true,
       groupBy: 'tag',
     }),
-  ]);
+  ])
 }

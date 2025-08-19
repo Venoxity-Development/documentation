@@ -71,8 +71,7 @@
           "options": {
             "functions": ["cn"]
           }
-        },
-        "useUniqueElementIds": "warn"
+        }
       }
     }
   },

@@ -1,21 +1,21 @@
 import {
   rehypeCodeDefaultOptions,
   remarkSteps,
-} from 'fumadocs-core/mdx-plugins';
-import { remarkInstall } from 'fumadocs-docgen';
+} from 'fumadocs-core/mdx-plugins'
+import { remarkInstall } from 'fumadocs-docgen'
 import {
   defineConfig,
   defineDocs,
   frontmatterSchema,
   metaSchema,
-} from 'fumadocs-mdx/config';
-import { transformerTwoslash } from 'fumadocs-twoslash';
-import { createFileSystemTypesCache } from 'fumadocs-twoslash/cache-fs';
-import { remarkAutoTypeTable } from 'fumadocs-typescript';
-import type { ElementContent } from 'hast';
-import rehypeKatex from 'rehype-katex';
-import remarkMath from 'remark-math';
-import { z } from 'zod';
+} from 'fumadocs-mdx/config'
+import { transformerTwoslash } from 'fumadocs-twoslash'
+import { createFileSystemTypesCache } from 'fumadocs-twoslash/cache-fs'
+import { remarkAutoTypeTable } from 'fumadocs-typescript'
+import type { ElementContent } from 'hast'
+import rehypeKatex from 'rehype-katex'
+import remarkMath from 'remark-math'
+import { z } from 'zod'
 
 export const docs = defineDocs({
   docs: {
@@ -34,7 +34,7 @@ export const docs = defineDocs({
       description: z.string().optional(),
     }),
   },
-});
+})
 
 export default defineConfig({
   lastModifiedTime: 'git',
@@ -58,16 +58,16 @@ export default defineConfig({
           code(hast) {
             function replace(node: ElementContent): void {
               if (node.type === 'text') {
-                node.value = node.value.replace('[\\!code', '[!code');
+                node.value = node.value.replace('[\\!code', '[!code')
               } else if ('children' in node) {
                 for (const child of node.children) {
-                  replace(child);
+                  replace(child)
                 }
               }
             }
 
-            replace(hast);
-            return hast;
+            replace(hast)
+            return hast
           },
         },
       ],
@@ -83,4 +83,4 @@ export default defineConfig({
     ],
     rehypePlugins: (v) => [rehypeKatex, ...v],
   },
-});
+})

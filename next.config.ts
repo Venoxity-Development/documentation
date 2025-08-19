@@ -1,10 +1,10 @@
-import createBundleAnalyzer from '@next/bundle-analyzer';
-import { createMDX } from 'fumadocs-mdx/next';
-import type { NextConfig } from 'next';
+import createBundleAnalyzer from '@next/bundle-analyzer'
+import { createMDX } from 'fumadocs-mdx/next'
+import type { NextConfig } from 'next'
 
 const withAnalyzer = createBundleAnalyzer({
   enabled: process.env.ANALYZE === 'true',
-});
+})
 
 const config: NextConfig = {
   reactStrictMode: true,
@@ -43,7 +43,7 @@ const config: NextConfig = {
         source: '/docs/:path*.mdx',
         destination: '/llms.mdx/:path*',
       },
-    ];
+    ]
   },
   async redirects() {
     return [
@@ -52,10 +52,10 @@ const config: NextConfig = {
         destination: '/docs/changelog',
         permanent: true,
       },
-    ];
+    ]
   },
-};
+}
 
-const withMDX = createMDX();
+const withMDX = createMDX()
 
-export default withAnalyzer(withMDX(config));
+export default withAnalyzer(withMDX(config))
