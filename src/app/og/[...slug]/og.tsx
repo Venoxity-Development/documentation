@@ -1,7 +1,7 @@
 import type { ImageResponseOptions } from 'next/dist/compiled/@vercel/og/types'
 import { ImageResponse } from 'next/og'
 import type { ReactElement, ReactNode } from 'react'
-import { title } from '@/app/layout.config'
+import { title } from '@/lib/layout.shared'
 
 interface GenerateProps {
   title: ReactNode

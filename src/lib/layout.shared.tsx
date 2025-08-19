@@ -39,18 +39,19 @@ export const linkItems: LinkItemType[] = [
  * Home Layout: app/(home)/layout.tsx
  * Docs Layout: app/docs/layout.tsx
  */
-export const baseOptions: BaseLayoutProps = {
-  nav: {
-    title: (
-      <>
-        {logo}
-        <span className='font-medium in-[header]:text-[15px]'>{title}</span>
-      </>
-    ),
-    transparentMode: 'top',
-  },
-  themeSwitch: {
-    component: <ThemeToggle mode='light-dark' className='' />,
-  },
-  links: [...linkItems],
+export function baseOptions(): BaseLayoutProps {
+  return {
+    nav: {
+      title: (
+        <>
+          {logo}
+          <span className='font-medium in-[header]:text-[15px]'>{title}</span>
+        </>
+      ),
+      transparentMode: 'top',
+    },
+    themeSwitch: {
+      component: <ThemeToggle mode='light-dark' className='' />,
+    },
+  };
 }

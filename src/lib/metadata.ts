@@ -1,5 +1,5 @@
 import type { Metadata } from 'next/types'
-import { title } from '@/app/layout.config'
+import { title } from '@/lib/layout.shared'
 
 export function createMetadata(override: Metadata): Metadata {
   return {
