@@ -2,7 +2,7 @@ import type { LinkItemType } from 'fumadocs-ui/layouts/docs'
 import type { BaseLayoutProps } from 'fumadocs-ui/layouts/shared'
 import Image from 'next/image'
 import { ThemeToggle } from '@/components/theme-toggle'
-import Logo from '@/public/logo.svg'
+import Logo from '../../public/logo.svg'
 
 export const title = 'Starter Kit'
 

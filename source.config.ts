@@ -2,7 +2,6 @@ import {
   rehypeCodeDefaultOptions,
   remarkSteps,
 } from 'fumadocs-core/mdx-plugins'
-import { remarkInstall } from 'fumadocs-docgen'
 import {
   defineConfig,
   defineDocs,
@@ -18,6 +17,7 @@ import remarkMath from 'remark-math'
 import { z } from 'zod'
 
 export const docs = defineDocs({
+  dir: 'src/content/docs',
   docs: {
     async: true,
     schema: frontmatterSchema.extend({
@@ -75,12 +75,13 @@ export default defineConfig({
     remarkCodeTabOptions: {
       parseMdx: true,
     },
-    remarkPlugins: [
-      remarkSteps,
-      remarkMath,
-      remarkAutoTypeTable,
-      [remarkInstall, { persist: { id: 'package-manager' } }],
-    ],
+
+    remarkNpmOptions: {
+      persist: {
+        id: 'package-manager',
+      },
+    },
+    remarkPlugins: [remarkSteps, remarkMath, remarkAutoTypeTable],
     rehypePlugins: (v) => [rehypeKatex, ...v],
   },
 })
