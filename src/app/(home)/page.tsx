@@ -1,9 +1,10 @@
 import { BookIcon, RocketIcon } from 'lucide-react'
 import type { LinkProps } from 'next/link'
 import Link from 'next/link'
+import type { ComponentType, ReactElement, ReactNode } from 'react'
 import { cn } from '@/lib/cn'
 
-export default function DocsPage(): React.ReactElement {
+export default function DocsPage(): ReactElement {
   return (
     <main className='container flex flex-col py-16'>
       <h1 className='font-semibold text-2xl md:text-3xl'>
@@ -12,20 +13,19 @@ export default function DocsPage(): React.ReactElement {
       <p className='mt-1 text-fd-muted-foreground text-lg'>
         Get started with Fumadocs.
       </p>
+
       <div className='mt-8 grid grid-cols-1 gap-4 text-left md:grid-cols-2'>
         <DocumentationItem
           title='Documentation'
           description='Get started with the Fumadocs framework.'
-          icon={BookIcon}
-          id='ui'
+          icon={{ icon: BookIcon, id: 'ui' }}
           href='/docs'
         />
 
         <DocumentationItem
           title='API Reference'
           description="Get started with Fumadocs's API reference feature."
-          icon={RocketIcon}
-          id='api-reference'
+          icon={{ icon: RocketIcon, id: 'api-reference' }}
           href='/docs/api-reference'
         />
       </div>
@@ -36,16 +36,17 @@ export default function DocsPage(): React.ReactElement {
 function DocumentationItem({
   title,
   description,
-  icon: ItemIcon,
-  id,
+  icon: { icon: ItemIcon, id },
   href,
 }: {
   title: string
   description: string
-  id: string
-  icon: React.ComponentType<{ className?: string }>
+  icon: {
+    icon: ComponentType<{ className?: string }>
+    id: string
+  }
   href: string
-}): React.ReactElement {
+}): ReactElement {
   return (
     <Item href={href}>
       <Icon className={id}>
@@ -62,8 +63,8 @@ function Icon({
   children,
 }: {
   className?: string
-  children: React.ReactNode
-}): React.ReactElement {
+  children: ReactNode
+}): ReactElement {
   return (
     <div
       className={cn(
@@ -80,17 +81,18 @@ function Icon({
 }
 
 function Item(
-  props: LinkProps & { className?: string; children: React.ReactNode }
-): React.ReactElement {
+  props: LinkProps & { className?: string; children: ReactNode }
+): ReactElement {
+  const { className, children, ...rest } = props
   return (
     <Link
-      {...props}
+      {...rest}
       className={cn(
         'rounded-lg border border-border bg-fd-accent/30 p-6 shadow-xs transition-all hover:bg-fd-accent',
-        props.className
+        className
       )}
     >
-      {props.children}
+      {children}
     </Link>
   )
 }

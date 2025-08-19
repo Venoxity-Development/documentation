@@ -32,6 +32,7 @@ const nextConfig: NextConfig = {
     'typescript',
     'oxc-transform',
     'twoslash',
+    'twoslash-protocol',
     'shiki',
   ],
   images: {

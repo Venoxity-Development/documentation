@@ -1,17 +1,17 @@
 import { LargeSearchToggle } from 'fumadocs-ui/components/layout/search-toggle'
-import { DocsLayout } from 'fumadocs-ui/layouts/docs'
+import { DocsLayout } from 'fumadocs-ui/layouts/notebook'
 import { Sparkles } from 'lucide-react'
 import type { ReactNode } from 'react'
-import { baseOptions, linkItems } from '@/lib/layout.shared'
 import { AISearchTrigger } from '@/components/fumadocs/ai'
 import { buttonVariants } from '@/components/ui/button'
 import { cn } from '@/lib/cn'
+import { baseOptions, linkItems } from '@/lib/layout.shared'
 import { source } from '@/lib/source'
 import 'katex/dist/katex.min.css'
 import DocsBackground from '@/components/docs-background'
 
 export default function Layout({ children }: { children: ReactNode }) {
-  const base = baseOptions();
+  const base = baseOptions()
 
   return (
     <DocsLayout

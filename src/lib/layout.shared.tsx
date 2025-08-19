@@ -53,5 +53,5 @@ export function baseOptions(): BaseLayoutProps {
     themeSwitch: {
       component: <ThemeToggle mode='light-dark' className='' />,
     },
-  };
+  }
 }
