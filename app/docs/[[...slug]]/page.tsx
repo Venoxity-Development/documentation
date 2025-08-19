@@ -27,6 +27,10 @@ import {
 import type { Metadata } from 'next';
 import { notFound } from 'next/navigation';
 import type { ComponentProps, FC, ReactElement } from 'react';
+import {
+  LLMCopyButton,
+  ViewOptions,
+} from '@/components/fumadocs/ai/page-actions';
 import { Mermaid } from '@/components/mdx/mermaid';
 import {
   HoverCard,
@@ -37,7 +41,6 @@ import { owner, repo } from '@/lib/github';
 import { createMetadata } from '@/lib/metadata';
 import { openapi, source } from '@/lib/source';
 import { getMDXComponents } from '@/mdx-components';
-import { LLMCopyButton, ViewOptions } from './page.client';
 
 const generator = createGenerator();
 
@@ -68,14 +71,14 @@ export default async function Page(props: {
           </PageTOCPopoverContent>
         </PageTOCPopover>
       )}
-      <PageArticle className='max-md:pb-16'>
+      <PageArticle>
         <PageBreadcrumb />
         <h1 className='font-semibold text-3xl'>{page.data.title}</h1>
         <p className='text-fd-muted-foreground text-lg'>
           {page.data.description}
         </p>
         <div className='flex flex-row items-center gap-2 border-b pb-6'>
-          <LLMCopyButton slug={params.slug} />
+          <LLMCopyButton markdownUrl={`${page.url}.mdx`} />
           <ViewOptions
             markdownUrl={`${page.url}.mdx`}
             githubUrl={`https://github.com/${owner}/${repo}/blob/main/${page.path}`}

@@ -48,7 +48,7 @@ const config: NextConfig = {
   async redirects() {
     return [
       {
-        source: '/docs/ui/changelog',
+        source: '/docs/changelog',
         destination: '/docs/changelog',
         permanent: true,
       },

@@ -1,25 +1,38 @@
 {
-  "$schema": "https://biomejs.dev/schemas/2.0.0/schema.json",
+  "$schema": "node_modules/@biomejs/biome/configuration_schema.json",
   "vcs": {
     "enabled": true,
     "clientKind": "git",
     "useIgnoreFile": true
   },
   "files": {
-    "includes": ["**", "!components/ui/**", "!migrations/**", "!**/*.css"]
+    "ignoreUnknown": true,
+    "includes": [
+      "**",
+      "!node_modules",
+      "!**/.next",
+      "!**/dist",
+      "!**/public",
+      "!.github",
+      "!.vercel",
+      "!pnpm-lock.yaml",
+      "!bun.lock",
+      "!**/*.md",
+      "!**/*.mdx",
+      "!components/ui",
+      "!**/*.css",
+      "!**/*.grit"
+    ]
   },
   "formatter": {
+    "enabled": true,
     "indentStyle": "space",
-    "indentWidth": 2
-  },
-  "assist": {
-    "actions": {
-      "source": {
-        "organizeImports": "on"
-      }
-    }
+    "lineEnding": "lf",
+    "indentWidth": 2,
+    "lineWidth": 80
   },
   "linter": {
+    "enabled": true,
     "rules": {
       "a11y": {
         "noSvgWithoutTitle": "off",
@@ -54,23 +67,40 @@
       "nursery": {
         "useSortedClasses": {
           "fix": "safe",
-          "level": "warn",
+          "level": "info",
           "options": {
             "functions": ["cn"]
           }
         },
-        "useUniqueElementIds": {
-          "level": "warn"
-        }
+        "useUniqueElementIds": "warn"
       }
+    }
+  },
+  "css": {
+    "linter": {
+      "enabled": true
+    },
+    "formatter": {
+      "enabled": true,
+      "indentStyle": "space",
+      "indentWidth": 2,
+      "lineWidth": 80
+    },
+    "parser": {
+      "cssModules": true
     }
   },
   "javascript": {
     "formatter": {
-      "semicolons": "always",
-      "trailingCommas": "all",
       "quoteStyle": "single",
+      "semicolons": "asNeeded",
+      "trailingCommas": "es5",
       "jsxQuoteStyle": "single"
+    }
+  },
+  "json": {
+    "parser": {
+      "allowComments": true
     }
   }
 }

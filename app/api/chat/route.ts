@@ -1,12 +1,12 @@
 import { createOpenAI } from '@ai-sdk/openai';
 import {
-  InvalidToolArgumentsError,
-  type Message,
+  convertToModelMessages,
+  InvalidToolInputError,
   NoSuchToolError,
   smoothStream,
   streamText,
-  ToolExecutionError,
   tool,
+  type UIMessage,
 } from 'ai';
 import { systemPrompt } from '@/lib/ai/prompts';
 import { ProvideLinksToolSchema } from '@/lib/ai/qa-schema';
@@ -21,7 +21,7 @@ export async function POST(request: Request) {
   const {
     messages,
   }: {
-    messages: Array<Message>;
+    messages: Array<UIMessage>;
   } = await request.json();
 
   const result = streamText({
@@ -31,36 +31,36 @@ export async function POST(request: Request) {
       provideLinks: tool({
         description:
           'Provide links to articles found using the Web Search tool. This is compulsory and MUST be called after a web search, as it gives the user context on which URLs were used to generate the response.',
-        parameters: ProvideLinksToolSchema,
+        inputSchema: ProvideLinksToolSchema,
         execute: async ({ links }) => ({
           links,
         }),
       }),
-      webSearch: openai.tools.webSearchPreview(),
-    },
-    messages,
-    toolChoice: 'auto',
-    maxSteps: 10,
-    experimental_transform: [
-      smoothStream({
-        chunking: 'word',
+      webSearch: openai.tools.webSearchPreview({
+        searchContextSize: 'medium',
       }),
-    ],
+    },
+    messages: convertToModelMessages(messages, {
+      ignoreIncompleteToolCalls: true,
+    }),
+    toolChoice: 'auto',
+    experimental_transform: smoothStream({
+      delayInMs: 20,
+      chunking: 'line',
+    }),
     onStepFinish: async ({ toolResults }) => {
       console.log(`Step Results: ${JSON.stringify(toolResults, null, 2)}`);
     },
   });
 
-  return result.toDataStreamResponse({
-    getErrorMessage: (error) => {
+  return result.toUIMessageStreamResponse({
+    onError: (error) => {
       console.log('An error occurred: ', JSON.stringify(error));
 
       if (NoSuchToolError.isInstance(error)) {
         return 'The model tried to call a unknown tool.';
-      } else if (InvalidToolArgumentsError.isInstance(error)) {
+      } else if (InvalidToolInputError.isInstance(error)) {
         return 'The model called a tool with invalid arguments.';
-      } else if (ToolExecutionError.isInstance(error)) {
-        return 'An error occurred during tool execution.';
       } else {
         return 'An unknown error occurred.';
       }

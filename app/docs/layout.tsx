@@ -2,7 +2,7 @@ import { LargeSearchToggle } from 'fumadocs-ui/components/layout/search-toggle';
 import { DocsLayout } from 'fumadocs-ui/layouts/docs';
 import { Sparkles } from 'lucide-react';
 import type { ReactNode } from 'react';
-import { baseOptions, linkItems, logo } from '@/app/layout.config';
+import { baseOptions, linkItems } from '@/app/layout.config';
 import { AISearchTrigger } from '@/components/fumadocs/ai';
 import { buttonVariants } from '@/components/ui/button';
 import { cn } from '@/lib/cn';
@@ -69,10 +69,9 @@ export default function Layout({ children }: { children: ReactNode }) {
               ...option,
               icon: (
                 <div
-                  className='size-full rounded-lg max-md:border max-md:bg-(--tab-color)/10 max-md:p-1.5 [&_svg]:size-full'
+                  className='size-full rounded-lg text-(--tab-color) max-md:border max-md:bg-(--tab-color)/10 max-md:p-1.5 [&_svg]:size-full'
                   style={
                     {
-                      color,
                       '--tab-color': color,
                     } as object
                   }
