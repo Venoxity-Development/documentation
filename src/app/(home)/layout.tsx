@@ -9,7 +9,7 @@ export default function Layout({
 }): React.ReactElement {
   return (
     <HomeLayout
-      {...baseOptions}
+      {...baseOptions()}
       links={linkItems}
       // style={
       //   {

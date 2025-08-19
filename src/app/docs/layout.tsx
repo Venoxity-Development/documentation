@@ -43,6 +43,7 @@ export default function Layout({ children }: { children: ReactNode }) {
       }}
       nav={{
         ...base.nav,
+        mode: 'top',
         children: (
           <AISearchTrigger
             className={cn(
