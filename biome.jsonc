@@ -42,7 +42,8 @@
         "noUnusedImports": {
           "fix": "safe",
           "level": "info"
-        }
+        },
+        "useUniqueElementIds": "warn"
       },
       "suspicious": {
         "noArrayIndexKey": "off",

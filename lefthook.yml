@@ -3,13 +3,20 @@ pre-commit:
   commands:
     check:
       glob: "*.{js,ts,cjs,mjs,d.cts,d.mts,jsx,tsx,json,jsonc}"
-      run: pnpm biome check --no-errors-on-unmatched --files-ignore-unknown=true --colors=off {staged_files}
+      run: bun biome check --write --no-errors-on-unmatched --files-ignore-unknown=true --colors=off {staged_files}
       stage_fixed: true
     spelling:
-      run: pnpm check:spelling {staged_files}
+      run: bun check:spelling {staged_files}
       stage_fixed: true
+
+post-merge:
+  commands:
+    update-env:
+      run: bunx vercel env pull
+    install-deps:
+      run: bun i
 
 commit-msg:
   commands:
     "lint commit message":
-      run: pnpm commitlint --edit {1}
+      run: bun commitlint --edit {1}
