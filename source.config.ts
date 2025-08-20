@@ -17,7 +17,6 @@ import remarkMath from 'remark-math'
 import { z } from 'zod'
 
 export const docs = defineDocs({
-  dir: 'src/content/docs',
   docs: {
     async: true,
     schema: frontmatterSchema.extend({
