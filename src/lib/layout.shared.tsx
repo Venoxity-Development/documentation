@@ -2,7 +2,6 @@ import type { LinkItemType } from 'fumadocs-ui/layouts/docs'
 import type { BaseLayoutProps } from 'fumadocs-ui/layouts/shared'
 import Image from 'next/image'
 import { ThemeToggle } from '@/components/theme-toggle'
-import Logo from '../../public/logo.svg'
 
 export const title = 'Starter Kit'
 
@@ -10,8 +9,10 @@ export const logo = (
   <>
     <Image
       alt={title}
-      src={Logo}
+      src={'/logo.svg'}
       sizes='100px'
+      width={28}
+      height={28}
       className='in-[header]:size-7 size-6'
       aria-label={title}
     />
