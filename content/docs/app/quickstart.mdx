@@ -31,7 +31,7 @@ The Fumadocs template should now be initialized. You can start development!
 
 ### Start the development server
 
-Run the app in development mode and open [http://localhost:3000/docs](http://localhost:3000/docs) in your browser.
+Run the app in development mode and open [http://localhost:3000/docs/app](http://localhost:3000/docs/app) in your browser.
 
 <Tabs groupId="package-manager" persist items={['npm', 'pnpm', 'yarn', 'bun']}>
     ```bash tab="npm"
@@ -54,11 +54,11 @@ Run the app in development mode and open [http://localhost:3000/docs](http://loc
 
 ### Add your content
 
-Fumadocs uses MDX for documentation, allowing you to write Markdown combined with React components. Add your content inside the `content/docs` directory. The structure is similar to a standard Next.js app, making it easy to navigate and manage your files. To learn more about MDX, check out the [MDX page](/docs/essentials/markdown).
+Fumadocs uses MDX for documentation, allowing you to write Markdown combined with React components. Add your content inside the `content/docs` directory. The structure is similar to a standard Next.js app, making it easy to navigate and manage your files. To learn more about MDX, check out the [MDX page](/docs/app/essentials/markdown).
 
 Create your first MDX file in the `docs` folder:
 
-```mdx title="content/docs/index.mdx"
+```mdx title="content/docs/app/index.mdx"
 ---
 title: Hello World
 ---
@@ -66,7 +66,7 @@ title: Hello World
 ## Yo, what's up?
 ```
 
-The app organizes content by concerns, e.g., `content/docs/api-reference`, `content/docs`, `content/docs/changelog`, etc.
+The app organizes content by concerns, e.g., `content/docs/api-reference`, `content/docs/app`, `content/docs/changelog`, etc.
 
 ## Deploy your changes
 
@@ -95,7 +95,7 @@ Add content directly in your files using MDX syntax and React components. You ca
 <Card
   title="Add Content With MDX"
   icon={<FileIcon />}
-  href="/docs/essentials/markdown"
+  href="/docs/app/essentials/markdown"
 >
   Add content to your docs with MDX syntax.
 </Card>
@@ -103,7 +103,7 @@ Add content directly in your files using MDX syntax and React components. You ca
 <Card
   title="Add Code Blocks"
   icon={<CodeIcon />}
-  href="/docs/essentials/code"
+  href="/docs/app/essentials/code"
 >
   Add code directly to your docs with syntax highlighting.
 </Card>
