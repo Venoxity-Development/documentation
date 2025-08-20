@@ -128,7 +128,7 @@ function SearchAIInput(props: ComponentProps<'form'>) {
           className={cn(
             buttonVariants({
               color: 'ghost',
-              className: 'mt-2 rounded-full transition-full',
+              className: 'mt-2 rounded-full transition-colors',
               size: 'icon-sm',
             })
           )}

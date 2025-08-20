@@ -31,7 +31,7 @@ export default function Layout({ children }: { children: ReactNode }) {
                     variant: 'outline',
                     size: 'icon',
                     className:
-                      'bg-fd-secondary/50 bg-fd-secondary/50 text-fd-muted-foreground shadow-none dark:bg-fd-secondary/50',
+                      'bg-fd-secondary/50 text-fd-muted-foreground shadow-none dark:bg-fd-secondary/50',
                   })
                 )}
               >
@@ -73,11 +73,7 @@ export default function Layout({ children }: { children: ReactNode }) {
               icon: (
                 <div
                   className='size-full rounded-lg text-(--tab-color) max-md:border max-md:bg-(--tab-color)/10 max-md:p-1.5 [&_svg]:size-full'
-                  style={
-                    {
-                      '--tab-color': color,
-                    } as object
-                  }
+                  style={{ '--tab-color': color } as React.CSSProperties}
                 >
                   {node.icon}
                 </div>

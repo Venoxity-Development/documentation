@@ -55,11 +55,11 @@ const nextConfig: NextConfig = {
   },
   async redirects() {
     return [
-      {
-        source: '/docs/changelog',
-        destination: '/docs/changelog',
-        permanent: true,
-      },
+      // {
+      //   source: '/docs/ui/changelog',
+      //   destination: '/docs/changelog',
+      //   permanent: true,
+      // },
     ]
   },
 }
