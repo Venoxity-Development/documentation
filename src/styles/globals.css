@@ -99,7 +99,7 @@
     color: var(--color-foreground);
   }
 
-  .ui {
+  .app {
     --color-fd-primary: var(--app-color) !important;
   }
 
