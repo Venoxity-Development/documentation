@@ -10,7 +10,7 @@
     "start": "next start",
     "postinstall": "fumadocs-mdx",
     "check": "biome check .",
-    "check:spelling": "cspell -c .cspell.jsonc --no-progress --no-summary --no-must-find-files --unique",
+    "check:spelling": "cspell -c .cspell.jsonc --no-progress --no-summary --no-must-find-files --unique --cache",
     "check:unsafe": "biome check --write --unsafe .",
     "check:write": "biome check --write .",
     "lint": "fumadocs-mdx && bun ./scripts/lint.mts && biome lint",

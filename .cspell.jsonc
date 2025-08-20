@@ -48,6 +48,8 @@
     "chsh",
     "noninteractive",
     "bunx",
-    "bprogress"
+    "bprogress",
+    "contentlayer",
+    "basehub"
   ]
 }

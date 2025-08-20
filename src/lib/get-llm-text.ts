@@ -1,4 +1,4 @@
-import { remarkInstall } from 'fumadocs-docgen'
+import { remarkNpm } from 'fumadocs-core/mdx-plugins'
 import { remarkInclude } from 'fumadocs-mdx/config'
 import { remarkAutoTypeTable } from 'fumadocs-typescript'
 import { remark } from 'remark'
@@ -18,7 +18,7 @@ const processor = remark()
   .use(remarkInclude)
   .use(remarkGfm)
   .use(remarkAutoTypeTable)
-  .use(remarkInstall)
+  .use(remarkNpm)
 
 export async function getLLMText(page: Page) {
   const category = categoryMap[page.slugs[0]] ?? page.slugs[0]
@@ -27,13 +27,13 @@ export async function getLLMText(page: Page) {
     path: page.data._file.absolutePath,
     value: page.data.content,
   })
-  const path = `content/docs/${page.file.path}`
+  const path = `content/docs/${page.path}`
 
   return `# ${category}: ${page.data.title}
 URL: ${page.url}
 Source: https://raw.githubusercontent.com/${owner}/${repo}/refs/heads/main/${path}
 
-${page.data.description}
+${page.data.description ?? ''}
         
 ${processed.value}`
 }
