@@ -116,3 +116,9 @@
 .light [data-hide-on-theme='light'] {
   display: none;
 }
+
+
+#nd-sidebar {
+  @apply border-e;
+  background-color: var(--color-background);
+}
