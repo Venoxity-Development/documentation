@@ -1,7 +1,7 @@
 import { LargeSearchToggle } from 'fumadocs-ui/components/layout/search-toggle'
 import { DocsLayout } from 'fumadocs-ui/layouts/notebook'
 import { Sparkles } from 'lucide-react'
-import type { CSSProperties, ReactNode } from 'react'
+import type { CSSProperties } from 'react'
 import { AISearchTrigger } from '@/components/fumadocs/ai'
 import { buttonVariants } from '@/components/ui/button'
 import { cn } from '@/lib/cn'
@@ -10,7 +10,7 @@ import { source } from '@/lib/source'
 import 'katex/dist/katex.min.css'
 import DocsBackground from '@/components/docs-background'
 
-export default function Layout({ children }: { children: ReactNode }) {
+export default function Layout({ children }: LayoutProps<'/docs'>) {
   const base = baseOptions()
 
   return (

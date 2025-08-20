@@ -1,12 +1,7 @@
 import { HomeLayout } from 'fumadocs-ui/layouts/home'
-import type { ReactNode } from 'react'
 import { baseOptions, linkItems } from '@/lib/layout.shared'
 
-export default function Layout({
-  children,
-}: {
-  children: ReactNode
-}): React.ReactElement {
+export default function Layout({ children }: LayoutProps<'/'>) {
   const base = baseOptions()
 
   return (
@@ -26,7 +21,7 @@ export default function Layout({
   )
 }
 
-function Footer(): React.ReactElement {
+function Footer() {
   return (
     <footer className='mt-auto border-t bg-fd-card p-4 text-fd-secondary-foreground'>
       <div className='flex flex-col gap-4 sm:flex-row sm:items-end sm:justify-between'>

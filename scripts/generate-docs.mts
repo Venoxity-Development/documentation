@@ -1,16 +1,13 @@
 import * as OpenAPI from 'fumadocs-openapi'
 import { rimraf } from 'rimraf'
+import { openapi } from '@/lib/openapi';
 
 export async function generateDocs() {
-  await rimraf('./content/docs/api-reference/(generated)', {
-    filter(v) {
-      return !v.endsWith('meta.json')
-    },
-  })
+  await rimraf('./content/docs/api-reference/(generated)')
 
   await Promise.all([
     OpenAPI.generateFiles({
-      input: ['./content/docs/api-reference/openapi.yml'],
+      input: openapi,
       output: './content/docs/api-reference/(generated)',
       per: 'operation',
       includeDescription: true,

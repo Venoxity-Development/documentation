@@ -11,7 +11,7 @@ const fontBold = readFileSync('./src/app/og/[...slug]/fonts/Inter-Bold.ttf')
 
 export async function GET(
   _req: Request,
-  { params }: { params: Promise<{ slug: string[] }> }
+  { params }: RouteContext<'/og/[...slug]'>
 ) {
   const { slug } = await params
   const page = source.getPage(slug.slice(0, -1))

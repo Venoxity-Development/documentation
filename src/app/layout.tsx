@@ -2,7 +2,6 @@ import { baseUrl, createMetadata } from '@/lib/metadata'
 import '@/styles/globals.css'
 import type { Viewport } from 'next'
 import { Inter } from 'next/font/google'
-import type { ReactNode } from 'react'
 import { Body } from './layout.client'
 import { Providers } from './providers'
 import 'katex/dist/katex.css'
@@ -27,7 +26,7 @@ export const viewport: Viewport = {
   ],
 }
 
-export default function Layout({ children }: { children: ReactNode }) {
+export default function Layout({ children }: LayoutProps<'/'>) {
   return (
     <html
       lang='en'

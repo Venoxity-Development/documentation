@@ -4,11 +4,7 @@ import { useParams } from 'next/navigation'
 import type { ReactNode } from 'react'
 import { cn } from '@/lib/cn'
 
-export function Body({
-  children,
-}: {
-  children: ReactNode
-}): React.ReactElement {
+export function Body({ children }: { children: ReactNode }) {
   const mode = useMode()
 
   return (
