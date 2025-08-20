@@ -1,6 +1,6 @@
 import type { InferMetaType, InferPageType } from 'fumadocs-core/source'
 import { loader } from 'fumadocs-core/source'
-import { transformerOpenAPI } from 'fumadocs-openapi/server'
+import { attachFile } from 'fumadocs-openapi/server'
 import { icons } from 'lucide-react'
 import { createElement } from 'react'
 import { docs } from '@/.source'
@@ -13,7 +13,7 @@ export const source = loader({
   },
   source: docs.toFumadocsSource(),
   pageTree: {
-    transformers: [transformerOpenAPI()],
+    attachFile,
   },
 })
 
