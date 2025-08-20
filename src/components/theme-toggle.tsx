@@ -29,7 +29,7 @@ const itemVariants = cva(
   {
     variants: {
       active: {
-        true: 'bg-fd-accent text-fd-accent-foreground',
+        true: 'text-fd-accent-foreground',
         false: 'text-fd-muted-foreground',
       },
     },
@@ -78,7 +78,7 @@ export function ThemeToggle({
                 {isActive && (
                   <motion.div
                     layoutId='activeTheme'
-                    className='absolute inset-0 rounded-full bg-accent'
+                    className='absolute inset-0 rounded-full bg-fd-accent'
                     transition={{
                       type: 'spring',
                       duration: 0.4,
@@ -108,7 +108,7 @@ export function ThemeToggle({
           {value === key && (
             <motion.div
               layoutId='activeTheme'
-              className='absolute inset-0 rounded-full bg-accent'
+              className='absolute inset-0 rounded-full bg-fd-accent'
               transition={{
                 type: 'spring',
                 duration: 0.4,
