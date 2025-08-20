@@ -1,13 +1,17 @@
-import createBundleAnalyzer from '@next/bundle-analyzer';
-import { createMDX } from 'fumadocs-mdx/next';
-import type { NextConfig } from 'next';
+import { fileURLToPath } from 'node:url'
+import bundleAnalyzer from '@next/bundle-analyzer'
+import { createMDX } from 'fumadocs-mdx/next'
+import createJiti from 'jiti'
+import type { NextConfig } from 'next'
 
-const withAnalyzer = createBundleAnalyzer({
-  enabled: process.env.ANALYZE === 'true',
-});
+const jiti = createJiti(fileURLToPath(import.meta.url))
+jiti('./src/env')
 
-const config: NextConfig = {
+const nextConfig: NextConfig = {
   reactStrictMode: true,
+  poweredByHeader: false,
+  productionBrowserSourceMaps: process.env.SOURCE_MAPS === 'true',
+  devIndicators: false,
   logging: {
     fetches: {
       fullUrl: true,
@@ -20,11 +24,15 @@ const config: NextConfig = {
     // Replaced by root workspace command
     ignoreDuringBuilds: true,
   },
+  typescript: {
+    ignoreBuildErrors: true,
+  },
   serverExternalPackages: [
     'ts-morph',
     'typescript',
     'oxc-transform',
     'twoslash',
+    'twoslash-protocol',
     'shiki',
   ],
   images: {
@@ -43,19 +51,28 @@ const config: NextConfig = {
         source: '/docs/:path*.mdx',
         destination: '/llms.mdx/:path*',
       },
-    ];
+    ]
   },
   async redirects() {
     return [
-      {
-        source: '/docs/ui/changelog',
-        destination: '/docs/changelog',
-        permanent: true,
-      },
-    ];
+      // {
+      //   source: '/docs/ui/changelog',
+      //   destination: '/docs/changelog',
+      //   permanent: true,
+      // },
+    ]
   },
-};
+}
 
-const withMDX = createMDX();
+const bundleAnalyzerPlugin = bundleAnalyzer({
+  enabled: process.env.ANALYZE === 'true',
+})
 
-export default withAnalyzer(withMDX(config));
+const mdxPlugin = createMDX()
+
+const NextApp = () => {
+  const plugins = [bundleAnalyzerPlugin, mdxPlugin]
+  return plugins.reduce((config, plugin) => plugin(config), nextConfig)
+}
+
+export default NextApp

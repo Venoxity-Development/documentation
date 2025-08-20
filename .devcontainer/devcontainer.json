@@ -1,39 +1,39 @@
 {
-  "name": "docs",
-  // See complete list https://hub.docker.com/r/oven/bun
-  // "build": {
-  // 	// Path is relative to the devcontainer.json file.
-  // 	"dockerfile": "Dockerfile"
-  // },
-  "image": "mcr.microsoft.com/devcontainers/typescript-node:1-22-bookworm",
-  // Use 'forwardPorts' to make a list of ports inside the container available locally.
+  "name": "Bun + ZSH",
+  "build": {
+    "dockerfile": "Dockerfile"
+  },
   "forwardPorts": [
     // Http
     3000
   ],
-  // Use 'portsAttributes' to set default properties for specific forwarded ports.
-  // More info: https://containers.dev/implementors/json_reference/#port-attributes
   "portsAttributes": {
     "3000": {
       "label": "Web",
       "onAutoForward": "notify"
     }
   },
-  // Add more features. See complete list https://github.com/devcontainers/features
   "features": {
     "ghcr.io/devcontainers/features/common-utils:2": {
-      "configureZshAsDefaultShell": true
+      "installZsh": true,
+      "configureZshAsDefaultShell": true,
+      "installOhMyZsh": true,
+      "installOhMyZshConfig": true,
+      "username": "bun",
+      "userUid": "1000",
+      "userGid": "1000",
+      "upgradePackages": true
     },
-    "ghcr.io/devcontainers/features/github-cli:1": {}
-    // "ghcr.io/devcontainers/features/node:1": {}
+    "ghcr.io/devcontainers/features/git:1": {
+      "version": "latest",
+      "ppa": false
+    },
+    "ghcr.io/devcontainers/features/github-cli:1": {
+      "version": "latest"
+    }
   },
-  "containerEnv": {},
-  "remoteEnv": {},
-  // Configure tool-specific properties.
   "customizations": {
-    // Configure properties specific to VS Code.
     "vscode": {
-      // Add the IDs of extensions you want installed when the container is created.
       "extensions": [
         // TypeScript
         "bierner.lit-html",
@@ -51,7 +51,6 @@
         "streetsidesoftware.code-spell-checker",
         "bierner.comment-tagged-templates"
       ],
-      // Set *default* container specific settings.json values on container create.
       "settings": {
         "terminal.integrated.defaultProfile.linux": "zsh",
         "debug.internalConsoleOptions": "neverOpen",
@@ -69,14 +68,5 @@
       }
     }
   },
-  // Use 'updateContentCommand' to run commands after the container is successfully created.
-  "updateContentCommand": {
-    "install_xdg-utils": "bash ./.devcontainer/scripts/install_xdg-utils.sh",
-    "configure_git-repo": "bash ./.devcontainer/scripts/configure_git-repo.sh"
-  },
-  // Use 'postCreateCommand' to run commands after the container is created.
-  "postCreateCommand": {
-    //   "restore": "pnpm run clean && pnpm install",
-    "web": "pnpm install"
-  }
+  "remoteUser": "bun"
 }
