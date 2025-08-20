@@ -15,18 +15,18 @@
   },
   "features": {
     "ghcr.io/devcontainers/features/common-utils:2": {
-      "installZsh": "true",
-      "configureZshAsDefaultShell": "true",
-      "installOhMyZsh": "true",
-      "installOhMyZshConfig": "true",
+      "installZsh": true,
+      "configureZshAsDefaultShell": true,
+      "installOhMyZsh": true,
+      "installOhMyZshConfig": true,
       "username": "bun",
       "userUid": "1000",
       "userGid": "1000",
-      "upgradePackages": "true"
+      "upgradePackages": true
     },
     "ghcr.io/devcontainers/features/git:1": {
       "version": "latest",
-      "ppa": "false"
+      "ppa": false
     },
     "ghcr.io/devcontainers/features/github-cli:1": {
       "version": "latest"

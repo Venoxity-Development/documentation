@@ -1,3 +1,5 @@
+import Link from 'next/link'
+
 export default function NotFound() {
   return (
     <main className='flex flex-1'>
@@ -6,7 +8,13 @@ export default function NotFound() {
           404
         </h1>
         <h2 className='mt-2 text-muted-foreground sm:mt-0'>
-          This page could not be found.
+          This page could not be found.{' '}
+          <Link
+            href='/'
+            className='text-primary underline underline-offset-4 hover:text-primary/80'
+          >
+            Go back home
+          </Link>
         </h2>
       </div>
     </main>

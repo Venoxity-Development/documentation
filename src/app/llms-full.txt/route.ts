@@ -9,7 +9,7 @@ export async function GET() {
     .filter((file) => file.slugs[0] !== 'api-reference')
     .filter((file) => file.slugs[0] !== 'openapi')
     .map(getLLMText)
-  const scanned = await Promise.all(scan)
+  const scanned = await Promise.allSettled(scan)
 
   return new Response(scanned.join('\n\n'))
 }

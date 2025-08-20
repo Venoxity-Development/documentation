@@ -58,7 +58,12 @@ export async function POST(request: Request) {
 
   return result.toUIMessageStreamResponse({
     onError: (error) => {
-      console.log('An error occurred: ', JSON.stringify(error))
+      if (env.NODE_ENV !== 'production') {
+        console.error('An error occurred:', {
+          name: (error as Error).name,
+          message: (error as Error).message,
+        })
+      }
 
       if (NoSuchToolError.isInstance(error)) {
         return 'The model tried to call an unknown tool.'
