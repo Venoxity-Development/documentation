@@ -23,6 +23,7 @@
   "dependencies": {
     "@ai-sdk/openai": "^2.0.16",
     "@ai-sdk/react": "^2.0.16",
+    "@bprogress/next": "^3.2.12",
     "@fumadocs/mdx-remote": "^1.4.0",
     "@inkeep/ai-api": "^0.8.0",
     "@next/bundle-analyzer": "^15.3.4",

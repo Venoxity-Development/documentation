@@ -8,13 +8,14 @@ import {
   tool,
   type UIMessage,
 } from 'ai'
+import { env } from '@/env'
 import { systemPrompt } from '@/lib/ai/prompts'
 import { ProvideLinksToolSchema } from '@/lib/ai/qa-schema'
 
 export const runtime = 'edge'
 
 const openai = createOpenAI({
-  apiKey: process.env.OPENAI_API_KEY,
+  apiKey: env.OPENAI_API_KEY,
 })
 
 export async function POST(request: Request) {
@@ -49,7 +50,9 @@ export async function POST(request: Request) {
       chunking: 'line',
     }),
     onStepFinish: async ({ toolResults }) => {
-      console.log(`Step Results: ${JSON.stringify(toolResults, null, 2)}`)
+      if (env.NODE_ENV !== 'production') {
+        console.log(`Step Results: ${JSON.stringify(toolResults, null, 2)}`)
+      }
     },
   })
 
@@ -58,7 +61,7 @@ export async function POST(request: Request) {
       console.log('An error occurred: ', JSON.stringify(error))
 
       if (NoSuchToolError.isInstance(error)) {
-        return 'The model tried to call a unknown tool.'
+        return 'The model tried to call an unknown tool.'
       } else if (InvalidToolInputError.isInstance(error)) {
         return 'The model called a tool with invalid arguments.'
       } else {

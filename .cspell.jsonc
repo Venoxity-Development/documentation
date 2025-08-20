@@ -47,6 +47,7 @@
     "autoremove",
     "chsh",
     "noninteractive",
-    "bunx"
+    "bunx",
+    "bprogress"
   ]
 }

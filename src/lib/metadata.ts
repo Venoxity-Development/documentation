@@ -1,4 +1,5 @@
 import type { Metadata } from 'next'
+import { env } from '@/env'
 import { title } from '@/lib/layout.shared'
 
 export function createMetadata(override: Metadata): Metadata {
@@ -24,6 +25,6 @@ export function createMetadata(override: Metadata): Metadata {
 }
 
 export const baseUrl =
-  process.env.NODE_ENV === 'development' || !process.env.NEXT_PUBLIC_BASE_URL
+  env.NODE_ENV === 'development' || !env.NEXT_PUBLIC_BASE_URL
     ? new URL('http://localhost:3000')
-    : new URL(`https://${process.env.NEXT_PUBLIC_BASE_URL}`)
+    : new URL(`https://${env.NEXT_PUBLIC_BASE_URL}`)
