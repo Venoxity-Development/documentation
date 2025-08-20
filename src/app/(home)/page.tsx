@@ -1,7 +1,7 @@
-import { BookIcon, RocketIcon } from 'lucide-react'
+import { BookIcon, type LucideIcon, RocketIcon } from 'lucide-react'
 import type { LinkProps } from 'next/link'
 import Link from 'next/link'
-import type { ComponentType, ReactElement, ReactNode } from 'react'
+import type { ReactElement, ReactNode } from 'react'
 import { cn } from '@/lib/cn'
 
 export default function DocsPage(): ReactElement {
@@ -42,7 +42,7 @@ function DocumentationItem({
   title: string
   description: string
   icon: {
-    icon: ComponentType<{ className?: string }>
+    icon: LucideIcon
     id: string
   }
   href: string
