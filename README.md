@@ -9,11 +9,7 @@ It’s powered by [Next.js](https://nextjs.org) and was generated using [Create 
 Run the development server:
 
 ```bash
-npm run dev
-# or
-pnpm dev
-# or
-yarn dev
+bun dev
 ```
 
 Then open [http://localhost:3000](http://localhost:3000) in your browser.
