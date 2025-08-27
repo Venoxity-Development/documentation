@@ -6,28 +6,27 @@ It is powered by [Next.js](https://nextjs.org) and was generated using [Create F
 
 ## Prerequisites
 
-* Node 18.18+ or 20+
-* One package manager: pnpm or bun or npm
-* Git installed
-* Optional if you plan to use AI or search right away:
-
+* Node 22+
+* A package manager
+* Git
+* Optional if you plan to use AI right away:
   * An OpenAI compatible API key for Vercel AI SDK
-  * Orama index credentials
 
 ## 1) Install dependencies
 
 Clone your repo and install packages with your preferred manager.
 
-**pnpm**
-
-```bash
-pnpm install
-```
 
 **bun**
 
 ```bash
 bun install
+```
+
+**pnpm**
+
+```bash
+pnpm install
 ```
 
 ## 2) Environment variables
@@ -48,16 +47,16 @@ If you are not enabling AI, just set a dummy value, like `sk-123`.
 
 Start the dev server:
 
-**pnpm**
-
-```bash
-pnpm dev
-```
-
 **bun**
 
 ```bash
 bun dev
+```
+
+**pnpm**
+
+```bash
+pnpm dev
 ```
 
 Then open [http://localhost:3000](http://localhost:3000) in your browser.
