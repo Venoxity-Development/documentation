@@ -50,6 +50,13 @@
     "bunx",
     "bprogress",
     "contentlayer",
-    "basehub"
+    "basehub",
+    "Venoxity",
+    "extramanager",
+    "licenseplatechanger",
+    "simpleemotes",
+    "simplectrl",
+    "simplehud",
+    "weaponcontrol"
   ]
 }
