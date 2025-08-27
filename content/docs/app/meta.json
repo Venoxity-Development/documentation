@@ -4,15 +4,11 @@
   "icon": "Book",
   "root": true,
   "pages": [
-    "---Getting Started---",
     "index",
+    "---Getting Started---",
     "quickstart",
-    "---Essentials---",
-    "...essentials",
-    "---Features---",
-    "...features",
-    "---Guides---",
-    "...guides",
+    "---Plugins---",
+    "...plugins",
     "..."
   ]
 }

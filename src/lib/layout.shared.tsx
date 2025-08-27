@@ -3,13 +3,13 @@ import type { BaseLayoutProps } from 'fumadocs-ui/layouts/shared'
 import Image from 'next/image'
 import { ThemeToggle } from '@/components/theme-toggle'
 
-export const title = 'Starter Kit'
+export const title = 'Venoxity Development'
 
 export const logo = (
   <>
     <Image
       alt={title}
-      src={'/logo.svg'}
+      src={'/logo.png'}
       sizes='100px'
       width={28}
       height={28}

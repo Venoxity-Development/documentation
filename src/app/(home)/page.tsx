@@ -1,39 +1,16 @@
-import { BookIcon, type LucideIcon, RocketIcon } from 'lucide-react'
+import type { LucideIcon } from 'lucide-react'
 import type { LinkProps } from 'next/link'
 import Link from 'next/link'
+import { redirect } from 'next/navigation'
 import type { ReactElement, ReactNode } from 'react'
 import { cn } from '@/lib/cn'
 
-export default function DocsPage(): ReactElement {
-  return (
-    <main className='container flex flex-col py-16'>
-      <h1 className='font-semibold text-2xl md:text-3xl'>
-        Welcome to the Starter Kit
-      </h1>
-      <p className='mt-1 text-fd-muted-foreground text-lg'>
-        Get started with Fumadocs.
-      </p>
-
-      <div className='mt-8 grid grid-cols-1 gap-4 text-left md:grid-cols-2'>
-        <DocumentationItem
-          title='Documentation'
-          description='Get started with the Fumadocs framework.'
-          icon={{ icon: BookIcon, id: 'app' }}
-          href='/docs/app'
-        />
-
-        <DocumentationItem
-          title='API Reference'
-          description="Get started with Fumadocs's API reference feature."
-          icon={{ icon: RocketIcon, id: 'api-reference' }}
-          href='/docs/api-reference'
-        />
-      </div>
-    </main>
-  )
+export default function DocsPage() {
+  redirect('/app')
+  return 'Loading...'
 }
 
-function DocumentationItem({
+function _DocumentationItem({
   title,
   description,
   icon: { icon: ItemIcon, id },

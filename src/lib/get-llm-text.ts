@@ -9,7 +9,6 @@ import type { Page } from '@/lib/source'
 
 export const categoryMap: Record<string, string> = {
   ui: 'UI Framework',
-  'api-reference': 'API Reference',
   changelog: 'Changelog',
 }
 

@@ -1,111 +1,18 @@
 ---
 title: Quickstart
-description: Start building awesome documentation in under 5 minutes
-icon: Play
+description: A Brief Overview of Getting Started with Venoxity Development Plugins
+icon: Target
 ---
 
-## Setup your development environment
+In this article, I’ll guide you through how to get started with Venoxity Development plugins to enhance your **GTA V** experience. You will learn how to **download** and **install** each plugin for seamless integration.
 
-A minimum version of Node.js 18 is required. Note that Node.js 23.1 might have issues with the Next.js production build.
+<Callout>If you're already a **user of our plugins** and have them **installed**, you can skip to the [**Essential Knowledge**](../basics/essential-knowledge.md) section for **advanced tips** and **updates**.</Callout>
 
-<Tabs groupId="package-manager" persist items={['npm', 'pnpm', 'yarn', 'bun']}>
-  ```bash tab="npm"
-  npx create-next-app -e https://github.com/techwithanirudh/fumadocs-starter
-  ```
-
-```bash tab="pnpm"
-npx create-next-app -e https://github.com/techwithanirudh/fumadocs-starter --use-pnpm
-```
-
-```bash tab="yarn"
-npx create-next-app -e https://github.com/techwithanirudh/fumadocs-starter --use-yarn
-```
-
-```bash tab="bun"
-npx create-next-app -e https://github.com/techwithanirudh/fumadocs-starter --use-bun
-```
-
-</Tabs>
-
-The Fumadocs template should now be initialized. You can start development!
-
-### Start the development server
-
-Run the app in development mode and open [http://localhost:3000/docs/app](http://localhost:3000/docs/app) in your browser.
-
-<Tabs groupId="package-manager" persist items={['npm', 'pnpm', 'yarn', 'bun']}>
-    ```bash tab="npm"
-    npm run dev
-    ```
-
-    ```bash tab="pnpm"
-    pnpm run dev
-    ```
-
-    ```bash tab="yarn"
-    yarn dev
-    ```
-
-    ```bash tab="bun"
-    bun run dev
-    ```
-
-</Tabs>
-
-### Add your content
-
-Fumadocs uses MDX for documentation, allowing you to write Markdown combined with React components. Add your content inside the `content/docs` directory. The structure is similar to a standard Next.js app, making it easy to navigate and manage your files. To learn more about MDX, check out the [MDX page](/docs/app/essentials/markdown).
-
-Create your first MDX file in the `docs` folder:
-
-```mdx title="content/docs/app/index.mdx"
----
-title: Hello World
----
-
-## Yo, what's up?
-```
-
-The app organizes content by concerns, e.g., `content/docs/api-reference`, `content/docs/app`, `content/docs/changelog`, etc.
-
-## Deploy your changes
-
-This template works out-of-the-box with Vercel or Netlify. You can deploy your documentation site with a single click.
-
-### Docker Deployment
-
-If you want to deploy your Fumadocs app using Docker with **Fumadocs MDX configured**, make sure to add the `source.config.ts` file to the `WORKDIR` in the Dockerfile.
-The following snippet is taken from the official [Next.js Dockerfile Example](https://github.com/vercel/next.js/blob/canary/examples/with-docker/Dockerfile):
-
-```zsh title="Dockerfile"
-WORKDIR /app
-
-# Install dependencies based on the preferred package manager
-COPY package.json yarn.lock* package-lock.json* pnpm-lock.yaml* .npmrc* source.config.ts ./  # [!code highlight]
-```
-
-This ensures Fumadocs MDX can access your configuration file during builds.
-
-## Update your docs
-
-Add content directly in your files using MDX syntax and React components. You can use built-in components or create your own.
-
-<Cards>
-
-<Card
-  title="Add Content With MDX"
-  icon={<FileIcon />}
-  href="/docs/app/essentials/markdown"
->
-  Add content to your docs with MDX syntax.
-</Card>
-
-<Card
-  title="Add Code Blocks"
-  icon={<CodeIcon />}
-  href="/docs/app/essentials/code"
->
-  Add code directly to your docs with syntax highlighting.
-</Card>
-
-</Cards>
+<div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3">
+  <Card icon={<Settings />} title="ExtraManager">A simple, effective plugin for Grand Theft Auto V that lets you configure and control vehicle extras using XML so your setup looks exactly how you want, every time.</Card>
+  <Card icon={<Tag />} title="LicensePlateChanger">A flexible, detailed plugin for Grand Theft Auto V that lets you customize license plates with realistic formats based on vehicle class—bringing authenticity and variety to every ride.</Card>
+  <Card icon={<Smile />} title="SimpleEmotes">A user-friendly plugin that adds a built-in emote menu and smooth animation controls to Grand Theft Auto V, making player expression quick and immersive.</Card>
+  <Card icon={<Car />} title="SimpleCTRL">A friendly, feature-packed plugin that brings realistic vehicle control and immersive driving mechanics to Grand Theft Auto V.</Card>
+  <Card icon={<BookText />} title="SimpleHUD">A lightweight script for Grand Theft Auto V that displays your location, compass, and time in a clean, customizable HUD keeping important info visible without distraction.</Card>
+  <Card icon={<Shield />} title="WeaponControl">A lightweight, intuitive plugin that adds custom firing modes, safety toggles, and smarter weapon handling to Grand Theft Auto V for more realistic combat control.</Card>
+</div>

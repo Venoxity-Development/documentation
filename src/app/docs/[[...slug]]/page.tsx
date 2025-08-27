@@ -2,18 +2,17 @@
 import * as path from 'node:path'
 import Link from 'fumadocs-core/link'
 import { getPageTreePeers } from 'fumadocs-core/server'
-import { APIPage } from 'fumadocs-openapi/ui'
 import * as Twoslash from 'fumadocs-twoslash/ui'
 import { createGenerator } from 'fumadocs-typescript'
 import { AutoTypeTable } from 'fumadocs-typescript/ui'
 import { Banner } from 'fumadocs-ui/components/banner'
 import { Callout } from 'fumadocs-ui/components/callout'
 import { Card, Cards } from 'fumadocs-ui/components/card'
+import { ImageZoom } from 'fumadocs-ui/components/image-zoom'
 import { TypeTable } from 'fumadocs-ui/components/type-table'
 import {
   PageArticle,
   PageBreadcrumb,
-  PageFooter,
   PageLastUpdate,
   PageRoot,
   PageTOC,
@@ -39,7 +38,6 @@ import {
 } from '@/components/ui/hover-card'
 import { owner, repo } from '@/lib/github'
 import { createMetadata } from '@/lib/metadata'
-import { openapi } from '@/lib/openapi'
 import { source } from '@/lib/source'
 import { getMDXComponents } from '@/mdx-components'
 
@@ -63,6 +61,7 @@ export default async function Page(
         toc,
         single: false,
       }}
+      className='mb-4'
     >
       {toc.length > 0 && (
         <PageTOCPopover>
@@ -126,16 +125,14 @@ export default async function Page(
               blockquote: Callout as unknown as FC<
                 ComponentProps<'blockquote'>
               >,
-              APIPage: (props) => (
-                <APIPage {...openapi.getAPIPageProps(props)} />
-              ),
               DocsCategory: ({ url }) => <DocsCategory url={url ?? page.url} />,
+              img: (props) => <ImageZoom {...(props as any)} />,
             })}
           />
           {page.data.index ? <DocsCategory url={page.url} /> : null}
         </div>
         {lastModified && <PageLastUpdate date={lastModified} />}
-        <PageFooter />
+        {/* <PageFooter /> */}
       </PageArticle>
       {toc.length > 0 && (
         <PageTOC>
@@ -179,7 +176,7 @@ export async function generateMetadata(
     title: page.data.title,
     description,
     openGraph: {
-      url: `/docs/${page.slugs.join('/')}`,
+      url: `/${page.slugs.join('/')}`,
       images: [image],
     },
     twitter: {
