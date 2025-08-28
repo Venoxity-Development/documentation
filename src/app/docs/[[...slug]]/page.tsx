@@ -46,7 +46,7 @@ const generator = createGenerator()
 export const revalidate = false
 
 export default async function Page(
-  props: PageProps<'/[[...slug]]'>
+  props: PageProps<'/docs/[[...slug]]'>
 ): Promise<ReactElement> {
   const params = await props.params
   const page = source.getPage(params.slug)
@@ -157,7 +157,7 @@ function DocsCategory({ url }: { url: string }) {
 }
 
 export async function generateMetadata(
-  props: PageProps<'/[[...slug]]'>
+  props: PageProps<'/docs/[[...slug]]'>
 ): Promise<Metadata> {
   const { slug = [] } = await props.params
   const page = source.getPage(slug)
@@ -176,7 +176,7 @@ export async function generateMetadata(
     title: page.data.title,
     description,
     openGraph: {
-      url: `/${page.slugs.join('/')}`,
+      url: `/docs/${page.slugs.join('/')}`,
       images: [image],
     },
     twitter: {
