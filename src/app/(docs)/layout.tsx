@@ -10,7 +10,7 @@ import 'katex/dist/katex.min.css'
 import type { CSSProperties } from 'react'
 import DocsBackground from '@/components/docs-background'
 
-export default function Layout({ children }: LayoutProps<'/docs'>) {
+export default function Layout({ children }: LayoutProps<'/'>) {
   const base = baseOptions()
 
   return (
