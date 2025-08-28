@@ -73,11 +73,15 @@
   :root {
     --app-color: hsl(249deg, 100%, 82%);
     --changelog-color: var(--color-fd-foreground);
+
+    --color-fd-primary: var(--app-color) !important;
   }
 
   .dark {
     --app-color: hsl(249deg, 100%, 82%);
     --changelog-color: var(--color-fd-foreground);
+
+    --color-fd-primary: var(--app-color) !important;
   }
 }
 

@@ -1,3 +1,14 @@
 {
-  "pages": ["app", "changelog"]
+  "title": "Documentation",
+  "description": "Set up your documentation",
+  "icon": "Book",
+  "root": true,
+  "pages": [
+    "index",
+    "---Getting Started---",
+    "quickstart",
+    "---Plugins---",
+    "...plugins",
+    "..."
+  ]
 }

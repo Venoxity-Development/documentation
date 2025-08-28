@@ -14,7 +14,12 @@ export function Body({ children }: { children: ReactNode }) {
   )
 }
 
-export function useMode(): string | undefined {
+export function useMode(): 'app' | 'changelog' | undefined {
   const { slug } = useParams()
-  return Array.isArray(slug) && slug.length > 0 ? slug[0] : undefined
+
+  if (Array.isArray(slug) && slug.length > 0) {
+    return slug[0] === 'changelog' ? 'changelog' : 'app'
+  }
+
+  return undefined
 }
