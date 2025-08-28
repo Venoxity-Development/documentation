@@ -56,3 +56,14 @@ export function baseOptions(): BaseLayoutProps {
     },
   }
 }
+
+export const tabs = [
+  {
+    title: 'Docs',
+    url: '/',
+  },
+  {
+    title: 'Changelog',
+    url: '/changelog',
+  },
+]

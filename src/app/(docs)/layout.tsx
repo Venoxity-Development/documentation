@@ -4,7 +4,7 @@ import { Sparkles } from 'lucide-react'
 import { AISearchTrigger } from '@/components/fumadocs/ai'
 import { buttonVariants } from '@/components/ui/button'
 import { cn } from '@/lib/cn'
-import { baseOptions, linkItems } from '@/lib/layout.shared'
+import { baseOptions, linkItems, tabs } from '@/lib/layout.shared'
 import { source } from '@/lib/source'
 import 'katex/dist/katex.min.css'
 import DocsBackground from '@/components/docs-background'
@@ -18,16 +18,7 @@ export default function Layout({ children }: LayoutProps<'/'>) {
       tree={source.pageTree}
       sidebar={{
         collapsible: false,
-        tabs: [
-          {
-            title: 'Docs',
-            url: '/',
-          },
-          {
-            title: 'Changelog',
-            url: '/changelog',
-          },
-        ],
+        tabs,
       }}
       tabMode='navbar'
       // just icon items
