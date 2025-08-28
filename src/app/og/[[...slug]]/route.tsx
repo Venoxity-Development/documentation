@@ -14,7 +14,7 @@ export async function GET(
   { params }: RouteContext<'/og/[[...slug]]'>
 ) {
   const slug = (await params).slug
-  const page = source.getPage(slug)
+  const page = source.getPage(slug?.slice(0, -1))
   if (!page) notFound()
 
   return generateOGImage({

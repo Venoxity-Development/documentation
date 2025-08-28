@@ -4,7 +4,11 @@ import { useParams } from 'next/navigation'
 import type { ReactNode } from 'react'
 import { cn } from '@/lib/cn'
 
-export function Body({ children }: { children: ReactNode }) {
+export function Body({
+  children,
+}: {
+  children: ReactNode
+}): React.ReactElement {
   const mode = useMode()
 
   return (
@@ -14,12 +18,7 @@ export function Body({ children }: { children: ReactNode }) {
   )
 }
 
-export function useMode(): 'app' | 'changelog' | undefined {
+export function useMode(): string | undefined {
   const { slug } = useParams()
-
-  if (Array.isArray(slug) && slug.length > 0) {
-    return slug[0] === 'changelog' ? 'changelog' : 'app'
-  }
-
-  return undefined
+  return Array.isArray(slug) && slug.length > 0 ? slug[0] : undefined
 }
