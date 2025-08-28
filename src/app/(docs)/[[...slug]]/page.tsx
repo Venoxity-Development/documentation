@@ -132,7 +132,7 @@ export default async function Page(
         </div>
         {lastModified && <PageLastUpdate date={lastModified} />}
         {/* <PageFooter /> */}
-        <div className='pb-6' />
+        <div className='pb-2' />
       </PageArticle>
       {toc.length > 0 && (
         <PageTOC>
