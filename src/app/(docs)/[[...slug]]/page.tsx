@@ -61,7 +61,6 @@ export default async function Page(
         toc,
         single: false,
       }}
-      className='mb-4'
     >
       {toc.length > 0 && (
         <PageTOCPopover>
@@ -133,6 +132,7 @@ export default async function Page(
         </div>
         {lastModified && <PageLastUpdate date={lastModified} />}
         {/* <PageFooter /> */}
+        <div className='pb-6' />
       </PageArticle>
       {toc.length > 0 && (
         <PageTOC>
