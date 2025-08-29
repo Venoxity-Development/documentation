@@ -22,7 +22,7 @@ export const logo = (
 export const linkItems: LinkItemType[] = [
   {
     type: 'icon',
-    url: 'https://github.com/techwithanirudh/fumadocs-starter',
+    url: 'https://github.com/Venoxity-Development/documentation',
     text: 'Github',
     icon: (
       <svg role='img' viewBox='0 0 24 24' fill='currentColor'>
