@@ -21,7 +21,7 @@ export async function GET(
     primaryTextColor: 'rgb(240,240,240)',
     title: page.data.title,
     description: page.data.description,
-    tag: page.slugs[0],
+    tag: page.slugs[0] ?? '',
     fonts: [
       {
         name: 'Inter',

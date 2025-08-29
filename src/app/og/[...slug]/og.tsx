@@ -74,7 +74,7 @@ export function generate({
             {title}
           </p>
         </div>
-        {/* <p
+        <p
           style={{
             fontWeight: 600,
             fontSize: '26px',
@@ -82,7 +82,7 @@ export function generate({
           }}
         >
           {props.tag.replace(/-/g, ' ')}
-        </p> */}
+        </p>
         <p
           style={{
             fontWeight: 600,
