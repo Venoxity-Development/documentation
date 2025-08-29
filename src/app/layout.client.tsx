@@ -3,13 +3,8 @@
 import { useParams } from 'next/navigation'
 import type { ReactNode } from 'react'
 import { cn } from '@/lib/cn'
-import { tabs } from '@/lib/layout.shared'
 
-export function Body({
-  children,
-}: {
-  children: ReactNode
-}): React.ReactElement {
+export function Body({ children }: { children: ReactNode }) {
   const mode = useMode()
 
   return (
@@ -19,17 +14,7 @@ export function Body({
   )
 }
 
-function normalizePath(path: string): string {
-  return path.replace(/^\/+|\/+$/g, '') // strips leading & trailing slashes
-}
-
 export function useMode(): string | undefined {
   const { slug } = useParams()
-
-  if (!Array.isArray(slug) || slug.length === 0) return undefined
-
-  const first = normalizePath(slug[0])
-  const match = tabs.find((t) => normalizePath(t.url) === first)
-
-  return match ? first : undefined
+  return Array.isArray(slug) && slug.length > 0 ? slug[0] : undefined
 }
