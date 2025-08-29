@@ -68,8 +68,9 @@ export function findPageBySlugs(
 
 export function useMode(tree: PageTree.Root): string {
   const { slug } = useParams()
-  const root = Array.isArray(slug) && slug.length > 0 ? slug : ['app']
+  const root = Array.isArray(slug) && slug.length > 0 ? slug : []
   const page = findPageBySlugs(tree, root)
 
-  return page?.$id ?? 'app'
+  const id = page?.$id ?? '(index)'
+  return id.split('/')[0] ?? '(index)'
 }
