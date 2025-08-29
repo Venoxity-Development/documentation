@@ -31,7 +31,6 @@ export function useMode(tree: PageTree.Root): string {
   const pathname = usePathname()
   const page = findPage(tree, pathname)
 
-  console.log(pathname, page)
   const id = page?.$id ?? '(index)'
   return id.split('/')[0] ?? '(index)'
 }
