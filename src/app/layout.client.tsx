@@ -6,11 +6,6 @@ import type { ReactNode } from 'react'
 import { cn } from '@/lib/cn'
 import { findPage } from '@/lib/page-tree'
 
-/**
- * Roots are the top-level directories that can be used to determine the mode
- */
-export const ROOTS = ['changelog', 'api-reference']
-
 export function Body({
   children,
   tree,
