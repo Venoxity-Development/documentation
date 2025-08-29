@@ -18,8 +18,8 @@ export default function DocsPage(): ReactElement {
         <DocumentationItem
           title='Documentation'
           description='Get started with the Fumadocs framework.'
-          icon={{ icon: BookIcon, id: 'app' }}
-          href='/docs/app'
+          icon={{ icon: BookIcon, id: '(index)' }}
+          href='/docs'
         />
 
         <DocumentationItem
