@@ -53,15 +53,6 @@ const nextConfig: NextConfig = {
       },
     ]
   },
-  async redirects() {
-    return [
-      // {
-      //   source: '/docs/ui/changelog',
-      //   destination: '/docs/changelog',
-      //   permanent: true,
-      // },
-    ]
-  },
 }
 
 const bundleAnalyzerPlugin = bundleAnalyzer({
