@@ -74,14 +74,14 @@ Edit `globals.css` in the `styles` directory to define colors for your new folde
 ```css
 @layer base {
   :root {
-    --app-color: hsl(220deg 91% 54%);
+    --index-color: hsl(220deg 91% 54%);
     --api-reference-color: hsl(250 80% 54%);
     --changelog-color: var(--color-fd-foreground);
     --cli-color: hsl(120 100% 54%); /* [!code ++] */
   }
 
   .dark {
-    --app-color: hsl(217deg 92% 76%);
+    --index-color: hsl(217deg 92% 76%);
     --api-reference-color: hsl(250 100% 80%);
     --changelog-color: var(--color-fd-foreground);
     --cli-color: hsl(120 100% 80%); /* [!code ++] */
@@ -98,8 +98,8 @@ Update the base styles to apply the new color:
     background-color: var(--color-fd-background);
   }
 
-  .app {
-    --color-fd-primary: var(--app-color) !important;
+  .\(index\) {
+    --color-fd-primary: var(--index-color) !important;
   }
 
   .api-reference {
