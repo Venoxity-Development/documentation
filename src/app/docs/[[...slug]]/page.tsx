@@ -46,7 +46,7 @@ const generator = createGenerator()
 export const revalidate = false
 
 export default async function Page(
-  props: PageProps<'/docs/[[...slug]]'>
+  props: PageProps<'/[[...slug]]'>
 ): Promise<ReactElement> {
   const params = await props.params
   const page = source.getPage(params.slug)
@@ -61,7 +61,6 @@ export default async function Page(
         toc,
         single: false,
       }}
-      className='mb-4'
     >
       {toc.length > 0 && (
         <PageTOCPopover>
@@ -81,7 +80,7 @@ export default async function Page(
           <LLMCopyButton markdownUrl={`${page.url}.mdx`} />
           <ViewOptions
             markdownUrl={`${page.url}.mdx`}
-            githubUrl={`https://github.com/${owner}/${repo}/blob/main/${page.path}`}
+            githubUrl={`https://github.com/${owner}/${repo}/blob/main/content/docs/${page.path}`}
           />
         </div>
         <div className='prose flex-1 text-fd-foreground/80'>
@@ -133,6 +132,7 @@ export default async function Page(
         </div>
         {lastModified && <PageLastUpdate date={lastModified} />}
         {/* <PageFooter /> */}
+        <div className='pb-2' />
       </PageArticle>
       {toc.length > 0 && (
         <PageTOC>
@@ -157,7 +157,7 @@ function DocsCategory({ url }: { url: string }) {
 }
 
 export async function generateMetadata(
-  props: PageProps<'/docs/[[...slug]]'>
+  props: PageProps<'/[[...slug]]'>
 ): Promise<Metadata> {
   const { slug = [] } = await props.params
   const page = source.getPage(slug)
