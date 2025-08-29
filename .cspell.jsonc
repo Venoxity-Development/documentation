@@ -50,6 +50,7 @@
     "bunx",
     "bprogress",
     "contentlayer",
-    "basehub"
+    "basehub",
+    "segs"
   ]
 }
