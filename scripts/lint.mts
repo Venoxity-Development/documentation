@@ -73,10 +73,6 @@ async function checkLinks() {
     await glob('content/docs/**/*.mdx').then((files) => files.map(readFromPath))
   )
 
-  const blogFiles = await Promise.all(
-    await glob('content/blog/**/*.mdx').then((files) => files.map(readFromPath))
-  )
-
   const docs = docsFiles.map(async (file) => {
     const info = parseFilePath(path.relative('content/docs', file.path))
 
@@ -86,18 +82,8 @@ async function checkLinks() {
     }
   })
 
-  const blogs = blogFiles.map(async (file) => {
-    const info = parseFilePath(path.relative('content/blog', file.path))
-
-    return {
-      value: getSlugs(info)[0],
-      hashes: await getHeadings(file.path, file.content),
-    }
-  })
-
   const scanned = await scanURLs({
     populate: {
-      '(home)/blog/[slug]': await Promise.all(blogs),
       'docs/[...slug]': await Promise.all(docs),
     },
   })
@@ -108,7 +94,7 @@ async function checkLinks() {
 
   const getUrl = createGetUrl('/docs')
   printErrors(
-    await validateFiles([...docsFiles, ...blogFiles], {
+    await validateFiles([...docsFiles], {
       scanned,
 
       pathToUrl(value) {

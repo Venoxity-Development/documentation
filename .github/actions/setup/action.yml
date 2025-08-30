@@ -11,3 +11,11 @@ runs:
     - name: Install dependencies
       shell: bash
       run: bun install --frozen-lockfile
+
+    - name: Create environment variables file
+      shell: bash
+      run: |
+        cat << EOF > .env.local
+        OPENAI_API_KEY=sk-proj-1234567890
+        NEXT_PUBLIC_BASE_URL=http://localhost:3000
+        EOF
