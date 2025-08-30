@@ -103,7 +103,7 @@ export function ThemeToggle({
             className='relative size-6.5 rounded-full p-1.5'
             onClick={() => setTheme(key)}
           >
-            {value === key && (
+            {isActive && (
               <motion.div
                 layoutId='activeTheme'
                 className='absolute inset-0 rounded-full bg-accent'
