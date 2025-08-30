@@ -3,6 +3,15 @@
 import type { PageTree } from 'fumadocs-core/server'
 
 /**
+ * normalize url
+ * adapted from: https://github.com/fuma-nama/fumadocs/blob/dc6d8a05706c2664e87acdb9382b4dc5132682dc/packages/ui/src/utils/is-active.ts
+ */
+export function normalize(url: string) {
+  if (url.length > 1 && url.endsWith('/')) return url.slice(0, -1)
+  return url
+}
+
+/**
  * Flatten tree to an array of page nodes
  */
 export function flattenTree(nodes: PageTree.Node[]): PageTree.Item[] {
@@ -36,7 +45,7 @@ export function findPage(
 
   for (const root of roots) {
     const list = flattenTree(root.children)
-    const page = list.find((item) => item.url === url)
+    const page = list.find((item) => item.url === normalize(url))
 
     if (page) return page
   }
