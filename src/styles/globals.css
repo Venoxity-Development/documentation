@@ -101,8 +101,8 @@
     color: var(--color-foreground);
   }
 
-  .app {
-    --color-fd-primary: var(--app-color) !important;
+  .\(index\) {
+    --color-fd-primary: var(--index-color) !important;
   }
 
   .changelog {

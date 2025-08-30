@@ -5,6 +5,7 @@ import { Inter } from 'next/font/google'
 import { Body } from './layout.client'
 import { Providers } from './providers'
 import 'katex/dist/katex.css'
+import { source } from '@/lib/source'
 
 const inter = Inter({
   subsets: ['latin'],
@@ -33,7 +34,7 @@ export default function Layout({ children }: LayoutProps<'/'>) {
       className={`${inter.className} dark`}
       suppressHydrationWarning
     >
-      <Body>
+      <Body tree={source.pageTree}>
         <Providers>{children}</Providers>
       </Body>
     </html>

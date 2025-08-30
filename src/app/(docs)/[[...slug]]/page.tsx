@@ -80,7 +80,7 @@ export default async function Page(
           <LLMCopyButton markdownUrl={`${page.url}.mdx`} />
           <ViewOptions
             markdownUrl={`${page.url}.mdx`}
-            githubUrl={`https://github.com/${owner}/${repo}/blob/main/${page.path}`}
+            githubUrl={`https://github.com/${owner}/${repo}/blob/main/content/docs/${page.path}`}
           />
         </div>
         <div className='prose flex-1 text-fd-foreground/80'>
