@@ -4,7 +4,7 @@ import type { PageTree } from 'fumadocs-core/server'
 
 /**
  * normalize url
- * adapted from: https://github.com/fuma-nama/fumadocs/blob/dc6d8a05706c2664e87acdb9382b4dc5132682dc/packages/ui/src/utils/is-active.ts
+ * adapted from: https://github.com/fuma-nama/fumadocs/blob/dev/packages/ui/src/utils/is-active.ts
  */
 export function normalize(url: string) {
   if (url.length > 1 && url.endsWith('/')) return url.slice(0, -1)
