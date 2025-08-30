@@ -1,5 +1,5 @@
 @import 'tailwindcss' source(none);
-@import 'fumadocs-ui/css/neutral.css';
+@import 'fumadocs-ui/css/vitepress.css';
 @import 'fumadocs-ui/css/preset.css';
 @import 'fumadocs-twoslash/twoslash.css';
 @import 'fumadocs-openapi/css/preset.css';
@@ -71,17 +71,17 @@
 
 @layer base {
   :root {
-    --app-color: hsl(249deg, 100%, 82%);
+    --index-color: hsl(249deg, 100%, 82%);
     --changelog-color: var(--color-fd-foreground);
 
-    --color-fd-primary: var(--app-color) !important;
+    --color-fd-primary: var(--index-color) !important;
   }
 
   .dark {
-    --app-color: hsl(249deg, 100%, 82%);
+    --index-color: hsl(249deg, 100%, 82%);
     --changelog-color: var(--color-fd-foreground);
 
-    --color-fd-primary: var(--app-color) !important;
+    --color-fd-primary: var(--index-color) !important;
   }
 }
 
