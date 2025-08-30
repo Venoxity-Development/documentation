@@ -71,17 +71,17 @@
 
 @layer base {
   :root {
-    --app-color: hsl(249deg, 100%, 82%);
+    --index-color: hsl(249deg, 100%, 82%);
     --changelog-color: var(--color-fd-foreground);
 
-    --color-fd-primary: var(--app-color) !important;
+    --color-fd-primary: var(--index-color) !important;
   }
 
   .dark {
-    --app-color: hsl(249deg, 100%, 82%);
+    --index-color: hsl(249deg, 100%, 82%);
     --changelog-color: var(--color-fd-foreground);
 
-    --color-fd-primary: var(--app-color) !important;
+    --color-fd-primary: var(--index-color) !important;
   }
 }
 
@@ -101,8 +101,8 @@
     color: var(--color-foreground);
   }
 
-  .app {
-    --color-fd-primary: var(--app-color) !important;
+  .\(index\) {
+    --color-fd-primary: var(--index-color) !important;
   }
 
   .changelog {
