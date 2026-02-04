@@ -6,8 +6,6 @@
   "pages": [
     "index",
     "---Getting Started---",
-    "quickstart",
-    "---Plugins---",
-    "...plugins"
+    "quickstart"
   ]
 }
